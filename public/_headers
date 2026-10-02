@@ -1,0 +1,6 @@
+/x-11e88bec/*
+  X-Robots-Tag: noindex, nofollow
+/admin/*
+  X-Robots-Tag: noindex
+/media/*
+  Cache-Control: public, max-age=31536000

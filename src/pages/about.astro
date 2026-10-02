@@ -1,0 +1,28 @@
+---
+import { getEntry, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+const page = await getEntry('pages', 'about');
+if (!page) throw new Error('src/content/pages/about.md is missing');
+const { Content } = await render(page);
+---
+<Base title="About">
+  <section class="wrap about">
+    <div class="side">
+      <h1 class="display">Igor Sanin</h1>
+      <p class="role">{page.data.headline}</p>
+      {page.data.portrait && <img class="portrait" src={page.data.portrait} alt="Igor Sanin" />}
+    </div>
+    <div class="text"><Content /></div>
+  </section>
+</Base>
+<style>
+  .about { display: grid; grid-template-columns: 5fr 7fr; gap: 40px clamp(32px, 6vw, 96px); padding-top: clamp(32px, 6vw, 80px); }
+  h1 { font-size: clamp(48px, 7vw, 108px); }
+  .role { margin: 16px 0 0; font-size: 18px; color: var(--dim); }
+  .portrait { margin-top: 40px; width: 100%; max-width: 420px; aspect-ratio: 4/5; object-fit: cover; }
+  .text { font-size: clamp(18px, 1.5vw, 21px); max-width: 62ch; }
+  .text :global(p) { margin: 0 0 1.1em; }
+  .text :global(p:first-child) { font-size: 1.3em; line-height: 1.35; font-weight: 500; }
+  .text :global(h2) { font-weight: 900; letter-spacing: -0.02em; font-size: 1.3em; margin: 1.8em 0 .5em; }
+  @media (max-width: 860px) { .about { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,17 @@
+---
+// Private project pages: /<vault>/<slug>. The vault prefix lives in src/data/site.json
+// and is never linked from public pages, so these URLs can't be guessed. noindex.
+import Base from '../../layouts/Base.astro';
+import ProjectView from '../../components/ProjectView.astro';
+import site from '../../data/site.json';
+import { builtProjects } from '../../lib/projects';
+
+export async function getStaticPaths() {
+  const list = (await builtProjects()).filter((p) => p.data.visibility === 'private');
+  return list.map((project) => ({ params: { vault: site.vault, slug: project.id }, props: { project } }));
+}
+const { project } = Astro.props;
+---
+<Base title={project.data.title} noindex>
+  <ProjectView project={project} />
+</Base>

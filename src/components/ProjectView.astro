@@ -1,0 +1,87 @@
+---
+import { render } from 'astro:content';
+import Player from './Player.astro';
+import Card from './Card.astro';
+import type { Project } from '../lib/projects';
+interface Props { project: Project; next?: Project }
+const { project, next } = Astro.props;
+const d = project.data;
+const { Content } = await render(project);
+const facts = [
+  ['Year', String(d.year)],
+  ['Client', d.client],
+  ['Role', d.role],
+  ['Production', d.production || (d.agency ? `with ${d.agency}` : '')],
+].filter(([, v]) => v);
+const isVideo = (s: string) => /\.(mp4|webm)$/i.test(s);
+---
+<article class="wrap proj">
+  <header class="head">
+    <h1 class="display">{d.title}</h1>
+    {d.summary && <p class="lede">{d.summary}</p>}
+  </header>
+
+  <Player vimeo={d.video.vimeo} youtube={d.video.youtube} legacy={d.video.legacy} title={d.title} />
+  {!d.video.vimeo && !d.video.youtube && !d.video.legacy && d.cover && <img class="hero-img" src={d.cover} alt="" />}
+
+  <div class="body">
+    <dl class="facts">
+      {facts.map(([k, v]) => (<div><dt class="meta">{k}</dt><dd>{v}</dd></div>))}
+      {d.award && <div><dt class="meta">Award</dt><dd>{d.award}</dd></div>}
+    </dl>
+    <div class="text">
+      <Content />
+      {d.credits && <p class="credits">{d.credits}</p>}
+    </div>
+  </div>
+
+  {d.video.more.length > 0 && (
+    <div class="more">
+      {d.video.more.map((v) => v.startsWith('yt:')
+        ? <Player youtube={v.slice(3)} title={d.title} />
+        : <Player vimeo={v.replace('vimeo:', '')} title={d.title} />)}
+    </div>
+  )}
+
+  {d.gallery.length > 0 && (
+    <div class="gallery">
+      {d.gallery.map((g) =>
+        isVideo(g)
+          ? <video src={g} poster={g.replace(/\.(mp4|webm)$/i, '.jpg')} autoplay muted loop playsinline preload="metadata"></video>
+          : <img src={g} alt="" loading="lazy" decoding="async" />
+      )}
+    </div>
+  )}
+
+  {next && (
+    <nav class="next" aria-label="Next project">
+      <p class="meta"><span class="rec"></span>Next</p>
+      <Card project={next} />
+    </nav>
+  )}
+</article>
+
+<style>
+  .proj { padding-top: clamp(32px, 6vw, 80px); }
+  .head { margin-bottom: clamp(28px, 4vw, 48px); max-width: 1100px; }
+  h1 { font-size: clamp(40px, 7vw, 104px); }
+  .lede { font-size: clamp(18px, 1.6vw, 22px); color: rgba(244,242,239,.82); max-width: 52ch; margin: 24px 0 0; }
+  .hero-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+  .body { display: grid; grid-template-columns: 1fr 2fr; gap: 32px clamp(24px, 5vw, 80px); margin: clamp(40px, 6vw, 72px) 0; }
+  .facts { margin: 0; display: grid; gap: 18px; align-content: start; }
+  .facts dt { color: var(--dim); margin-bottom: 4px; }
+  .facts dd { margin: 0; font-weight: 500; }
+  .text { max-width: 68ch; font-size: 18px; }
+  .text :global(p) { margin: 0 0 1em; }
+  .credits { color: var(--dim); font-size: 14px; white-space: pre-line; border-top: 1px solid var(--line); padding-top: 18px; margin-top: 28px; }
+  .more { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(8px, 1.2vw, 16px); margin-bottom: clamp(8px, 1.2vw, 16px); }
+  .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(8px, 1.2vw, 16px); }
+  .gallery > * { width: 100%; height: auto; background: #161617; }
+  .gallery > :nth-child(3n+1) { grid-column: 1 / -1; }
+  .next { margin-top: clamp(72px, 10vw, 140px); max-width: 720px; margin-left: auto; }
+  .next .meta { color: var(--dim); }
+  @media (max-width: 760px) {
+    .body { grid-template-columns: 1fr; }
+    .gallery, .more { grid-template-columns: 1fr; }
+  }
+</style>

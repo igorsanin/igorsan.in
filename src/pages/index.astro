@@ -1,0 +1,75 @@
+---
+import Base from '../layouts/Base.astro';
+import Card from '../components/Card.astro';
+import site from '../data/site.json';
+import { featuredProjects } from '../lib/projects';
+const selected = await featuredProjects();
+const poster = selected[0]?.data.cover ?? '';
+---
+<Base>
+  <section class="hero">
+    <div class="reel" aria-hidden="true">
+      {poster && <img src={poster} alt="" />}
+      {site.reelVimeo && <iframe src={`https://player.vimeo.com/video/${site.reelVimeo}?background=1&dnt=1`} title="Showreel" allow="autoplay" tabindex="-1" onload="setTimeout(()=>this.classList.add('on'),900)"></iframe>}
+    </div>
+    <div class="pane glass">
+      <div class="wrap-in">
+        <h1 class="display">{site.heroLine}</h1>
+        <p class="sub">{site.heroSub}</p>
+        {site.reelVimeo && <a class="watch" href={`https://vimeo.com/${site.reelVimeo}`}><span class="rec"></span>Watch the reel</a>}
+      </div>
+    </div>
+  </section>
+
+  {site.clients.length > 0 && (
+    <section class="wrap clients" aria-label="Brands I've worked on">
+      <ul>{site.clients.map((c) => <li>{c}</li>)}</ul>
+    </section>
+  )}
+
+  <section class="wrap selected" aria-labelledby="sel">
+    <div class="sel-head">
+      <h2 id="sel" class="display">Selected work</h2>
+      <a href="/work">All work</a>
+    </div>
+    <div class="grid">
+      {selected.map((p, i) => <Card project={p} eager={i < 2} />)}
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero {
+    position: relative;
+    height: min(86vh, 900px); min-height: 520px;
+    margin-top: -92px; /* run under the header */
+    overflow: hidden;
+  }
+  .reel, .reel img, .reel iframe { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border: 0; }
+  .reel iframe { width: 177.78vh; min-width: 100%; height: 56.25vw; min-height: 100%; left: 50%; top: 50%; right: auto; bottom: auto; transform: translate(-50%, -50%); opacity: 0; transition: opacity 1.2s ease; }
+  .reel iframe.on { opacity: 1; }
+  .pane { position: absolute; inset: 0 32% 0 0; display: flex; align-items: flex-end; }
+  .wrap-in { padding: 0 var(--gutter) clamp(40px, 8vh, 88px); max-width: 860px; }
+  h1 { font-size: clamp(44px, 7.4vw, 112px); max-width: 11ch; }
+  .sub { margin: 28px 0 0; font-size: clamp(16px, 1.4vw, 19px); max-width: 46ch; color: rgba(244,242,239,.86); }
+  .watch { display: inline-block; margin-top: 28px; font-weight: 500; text-decoration: none; border-bottom: 1px solid rgba(244,242,239,.4); padding-bottom: 3px; }
+  .watch:hover { border-color: var(--light); }
+
+  .clients { padding-top: 36px; padding-bottom: 36px; border-bottom: 1px solid var(--line); }
+  .clients ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 14px clamp(24px, 4vw, 56px); }
+  .clients li { font-weight: 500; font-size: clamp(16px, 1.5vw, 20px); color: var(--dim); }
+
+  .selected { padding-top: clamp(64px, 9vw, 120px); }
+  .sel-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 32px; }
+  h2 { font-size: clamp(32px, 4.4vw, 60px); }
+  .sel-head a { color: var(--dim); text-decoration: none; font-weight: 500; }
+  .sel-head a:hover { color: var(--light); }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(28px, 3.5vw, 48px) clamp(16px, 2vw, 28px); }
+
+  @media (max-width: 760px) {
+    .hero { height: 78vh; }
+    .pane { inset: 0; }
+    .pane::after { display: none; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>

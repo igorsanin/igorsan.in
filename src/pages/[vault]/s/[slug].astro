@@ -1,0 +1,38 @@
+---
+// Private selections: /<vault>/s/<slug>, e.g. a page for Gulf exhibition agencies. noindex.
+import { getCollection, render } from 'astro:content';
+import Base from '../../../layouts/Base.astro';
+import Card from '../../../components/Card.astro';
+import site from '../../../data/site.json';
+import { builtProjects, projectUrl } from '../../../lib/projects';
+
+export async function getStaticPaths() {
+  const sels = await getCollection('selections');
+  return sels.map((s) => ({ params: { vault: site.vault, slug: s.id }, props: { sel: s } }));
+}
+const { sel } = Astro.props;
+const all = await builtProjects();
+const items = sel.data.projects
+  .map((slug) => all.find((p) => p.id === slug))
+  .filter((p): p is NonNullable<typeof p> => Boolean(p));
+const { Content } = await render(sel);
+---
+<Base title={sel.data.title} noindex>
+  <section class="wrap">
+    <p class="meta tag"><span class="rec"></span>Private selection</p>
+    <h1 class="display">{sel.data.title}</h1>
+    {sel.data.intro && <p class="intro">{sel.data.intro}</p>}
+    <div class="note"><Content /></div>
+    <div class="grid">
+      {items.map((p, i) => <Card project={p} href={projectUrl(p)} eager={i < 2} />)}
+    </div>
+  </section>
+</Base>
+<style>
+  .tag { color: var(--dim); margin: clamp(32px, 6vw, 80px) 0 20px; }
+  h1 { font-size: clamp(40px, 6.5vw, 96px); max-width: 16ch; }
+  .intro { font-size: clamp(18px, 1.6vw, 22px); max-width: 56ch; color: rgba(244,242,239,.85); margin: 24px 0 0; }
+  .note { max-width: 64ch; color: var(--dim); margin-bottom: clamp(36px, 5vw, 64px); }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(28px, 3.5vw, 48px) clamp(16px, 2vw, 28px); }
+  @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+</style>

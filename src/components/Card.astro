@@ -1,0 +1,51 @@
+---
+// Work cover: clean frame at rest; on hover the left 68% slides under fluted glass
+// with REC dot + "YEAR · CLIENT", title and role (brand cover template, 02.10.2026).
+import { projectUrl, metaLine, type Project } from '../lib/projects';
+interface Props { project: Project; href?: string; eager?: boolean }
+const { project, href, eager = false } = Astro.props;
+const d = project.data;
+const url = href ?? projectUrl(project);
+---
+<a class="card" href={url}>
+  <div class="frame">
+    {d.cover
+      ? <img src={d.cover} alt="" loading={eager ? 'eager' : 'lazy'} decoding="async" width="1920" height="1080" />
+      : <div class="blank"></div>}
+    <div class="pane glass" aria-hidden="true">
+      <p class="meta"><span class="rec"></span>{metaLine(project)}</p>
+      <div>
+        <p class="t display">{d.title}</p>
+        {d.role && <p class="r">{d.role}</p>}
+      </div>
+    </div>
+  </div>
+  <div class="cap">
+    <span class="ct">{d.title}</span>
+    <span class="meta cm">{metaLine(project)}</span>
+  </div>
+</a>
+
+<style>
+  .card { display: block; text-decoration: none; color: var(--light); }
+  .frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #161617; }
+  .frame img, .blank { width: 100%; height: 100%; object-fit: cover; }
+  .pane {
+    position: absolute; inset: 0 32% 0 0;
+    display: flex; flex-direction: column; justify-content: space-between;
+    padding: 20px 22px;
+    opacity: 0; transform: translateX(-12px);
+    transition: opacity .35s ease, transform .45s cubic-bezier(.2,.7,.2,1);
+  }
+  .pane .meta { margin: 0; }
+  .t { font-size: clamp(22px, 2.3vw, 30px); max-width: 13ch; }
+  .r { margin: 8px 0 0; font-size: 12px; color: rgba(244,242,239,.8); }
+  .card:hover .pane, .card:focus-visible .pane { opacity: 1; transform: none; }
+
+  .cap { display: flex; justify-content: space-between; gap: 16px; padding-top: 12px; align-items: baseline; }
+  .ct { font-weight: 500; }
+  .cm { color: var(--dim); white-space: nowrap; }
+
+  /* touch screens never hover: keep the caption, skip the glass */
+  @media (hover: none) { .pane { display: none; } }
+</style>

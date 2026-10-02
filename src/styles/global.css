@@ -1,0 +1,81 @@
+@import '@fontsource/golos-text/400.css';
+@import '@fontsource/golos-text/500.css';
+@import '@fontsource/golos-text/900.css';
+@import '@fontsource/jetbrains-mono/400.css';
+
+:root {
+  --red: #E5141B;
+  --dark: #0C0C0D;
+  --light: #F4F2EF;
+  --dim: #8E8B87;          /* secondary text on dark */
+  --line: #2A2A2C;         /* hairlines on dark */
+  --glass-dark: rgba(12, 12, 13, .5);
+
+  --sans: 'Golos Text', system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --gutter: clamp(16px, 4vw, 48px);
+  --max: 1440px;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--dark);
+  color: var(--light);
+  font: 400 17px/1.55 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+img, video, iframe { display: block; max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter); }
+
+.display {
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: .98;
+  margin: 0;
+}
+.meta {
+  font: 400 11px/1.4 var(--mono);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+/* REC dot — the brand's one red element */
+.rec {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--red);
+  margin-right: 8px;
+  vertical-align: 1px;
+}
+
+/* Fluted glass: vertical ribs over a blurred backdrop */
+.glass {
+  position: relative;
+  -webkit-backdrop-filter: blur(18px) saturate(1.1);
+  backdrop-filter: blur(18px) saturate(1.1);
+  background:
+    repeating-linear-gradient(90deg,
+      rgba(255,255,255,.07) 0px,
+      rgba(255,255,255,0) 5px,
+      rgba(0,0,0,.18) 11px,
+      rgba(255,255,255,.04) 14px),
+    var(--glass-dark);
+}
+.glass::after {           /* thin light edge where glass meets the clear image */
+  content: '';
+  position: absolute; top: 0; bottom: 0; right: 0;
+  width: 1px;
+  background: rgba(244, 242, 239, .5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

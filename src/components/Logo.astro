@@ -1,0 +1,51 @@
+---
+// "igor / sanin" (brand v2): both i's are drawn as bare stems (0.19 × 0.54 em) on one
+// vertical axis, sharing a single red dot (0.25 em) between the lines. Line spacing 0.92.
+// Kerning from the brand sheet: tracking −0.02; after igor's i +0.015;
+// around sanin's i: left 0.035, right 0.015; sanin row shifted −0.03.
+const { size = 28, href = '/' } = Astro.props;
+---
+<a class="logo" href={href} aria-label="Igor Sanin — home" style={`font-size:${size}px`}>
+  <span class="g" aria-hidden="true">
+    <span class="r1 c2"><span class="stem up"><span class="dot"></span></span></span>
+    <span class="r1 c3 gor">gor</span>
+    <span class="r2 c1 san">san</span>
+    <span class="r2 c2"><span class="stem"></span></span>
+    <span class="r2 c3 n">n</span>
+  </span>
+</a>
+
+<style>
+  .logo { display: inline-block; text-decoration: none; color: var(--light); }
+  .g {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: .92;
+    margin-left: .03em;          /* room for the −0.03 shift of "sanin" */
+  }
+  .g > span { line-height: .92; white-space: nowrap; }
+  .r1 { grid-row: 1; } .r2 { grid-row: 2; }
+  .c1 { grid-column: 1; justify-self: end; }
+  .c2 { grid-column: 2; }
+  .c3 { grid-column: 3; justify-self: start; }
+  .gor { padding-left: .015em; }
+  .san { margin-left: -.03em; padding-right: .035em; }
+  .n { padding-left: .015em; }
+  .stem {
+    display: inline-block;
+    width: .19em; height: .54em;
+    background: currentColor;
+    position: relative;
+    vertical-align: baseline;
+  }
+  /* shared dot hangs below igor's stem, centred on the axis */
+  .dot {
+    position: absolute;
+    width: .25em; height: .25em; border-radius: 50%;
+    background: var(--red);
+    left: -.03em;
+    top: calc(.54em + (.92em - .54em - .25em) / 2);
+  }
+</style>

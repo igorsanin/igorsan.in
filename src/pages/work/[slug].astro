@@ -1,0 +1,17 @@
+---
+import Base from '../../layouts/Base.astro';
+import ProjectView from '../../components/ProjectView.astro';
+import { publicProjects } from '../../lib/projects';
+
+export async function getStaticPaths() {
+  const list = await publicProjects();
+  return list.map((project, i) => ({
+    params: { slug: project.id },
+    props: { project, next: list[(i + 1) % list.length] },
+  }));
+}
+const { project, next } = Astro.props;
+---
+<Base title={project.data.title} description={project.data.summary || undefined} image={project.data.cover || undefined}>
+  <ProjectView project={project} next={next} />
+</Base>

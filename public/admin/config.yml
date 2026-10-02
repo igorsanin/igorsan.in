@@ -1,0 +1,129 @@
+# Admin for igorsan.in (Sveltia CMS). Every save is a commit to GitHub;
+# Cloudflare Pages rebuilds the site in about a minute.
+backend:
+  name: github
+  repo: igorsanin/igorsan.in
+  branch: main
+  commit_messages:
+    create: 'Add {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: 'Upload “{{path}}”'
+    deleteMedia: 'Delete “{{path}}”'
+
+site_url: https://igorsan.in
+display_url: https://igorsan.in
+locale: en
+
+media_folder: public/media
+public_folder: /media
+
+collections:
+  - name: projects
+    label: Projects
+    label_singular: Project
+    folder: src/content/projects
+    create: true
+    slug: '{{slug}}'
+    identifier_field: title
+    summary: '{{year}} · {{title}} · {{visibility}}'
+    sortable_fields: [year, title, order, visibility, tier]
+    view_filters:
+      - { label: Public, field: visibility, pattern: public }
+      - { label: Private, field: visibility, pattern: private }
+      - { label: Hidden, field: visibility, pattern: hidden }
+      - { label: Selected on home, field: featured, pattern: true }
+    view_groups:
+      - { label: Year, field: year }
+      - { label: Risk tier, field: tier }
+    media_folder: /public/media/{{slug}}
+    public_folder: /media/{{slug}}
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: year, label: Year, widget: number, value_type: int }
+      - { name: client, label: Client (as shown on site; leave empty to anonymise), widget: string, required: false }
+      - { name: agency, label: Partner studio / agency, widget: string, required: false }
+      - { name: role, label: My role, widget: string, required: false, hint: 'e.g. Script & Direction' }
+      - { name: production, label: Production credit, widget: string, required: false, hint: 'Production: Digital Lab — or — Production: Igor Sanin & team' }
+      - { name: summary, label: One-line summary, widget: string, required: false }
+      - name: visibility
+        label: Visibility
+        widget: select
+        default: private
+        options:
+          - { label: 'Public — listed and indexed', value: public }
+          - { label: 'Private — direct link and selections only', value: private }
+          - { label: 'Hidden — not on the site', value: hidden }
+      - name: tier
+        label: Risk tier (internal)
+        widget: select
+        default: C
+        options:
+          - { label: 'A — international, show anywhere', value: A }
+          - { label: 'B — private RU client', value: B }
+          - { label: 'C — state / sanctioned, private only', value: C }
+          - { label: 'D — never outside RU', value: D }
+      - { name: featured, label: Show in Selected on home, widget: boolean, default: false }
+      - { name: order, label: Order in Selected (lower = earlier), widget: number, value_type: int, default: 100 }
+      - { name: cover, label: 'Cover 16:9', widget: image, required: false }
+      - name: video
+        label: Main video
+        widget: object
+        collapsed: false
+        fields:
+          - { name: vimeo, label: Vimeo ID, widget: string, required: false, hint: 'The number from vimeo.com/123456789' }
+          - { name: youtube, label: YouTube ID, widget: string, required: false }
+          - { name: legacy, label: Old Adobe player ID (temporary), widget: string, required: false }
+          - { name: more, label: 'More videos (vimeo:123456 or yt:abcDEF)', widget: list, required: false }
+      - { name: body, label: Description, widget: markdown }
+      - { name: gallery, label: Gallery (images or mp4), widget: list, required: false, field: { name: item, label: File, widget: file } }
+      - { name: credits, label: Credits, widget: text, required: false }
+      - { name: award, label: Award, widget: string, required: false }
+      - { name: sectors, label: Sectors, widget: list, required: false }
+      - { name: formats, label: Formats, widget: list, required: false }
+
+  - name: selections
+    label: Private selections
+    label_singular: Selection
+    folder: src/content/selections
+    create: true
+    slug: '{{slug}}'
+    summary: '{{title}} — /s/{{slug}}'
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: intro, label: Intro line, widget: string, required: false }
+      - name: projects
+        label: Projects (in order)
+        widget: relation
+        collection: projects
+        search_fields: [title, client, year]
+        value_field: '{{slug}}'
+        display_fields: ['{{year}} · {{title}}']
+        multiple: true
+      - { name: body, label: Note under the intro, widget: markdown, required: false }
+
+  - name: pages
+    label: Pages
+    files:
+      - name: about
+        label: About
+        file: src/content/pages/about.md
+        fields:
+          - { name: title, label: Title, widget: hidden, default: About }
+          - { name: headline, label: Headline, widget: string }
+          - { name: portrait, label: Portrait, widget: image, required: false }
+          - { name: body, label: Text, widget: markdown }
+      - name: settings
+        label: Site settings
+        file: src/data/site.json
+        fields:
+          - { name: heroLine, label: Home headline, widget: string }
+          - { name: heroSub, label: Home subline, widget: text }
+          - { name: reelVimeo, label: Showreel Vimeo ID (home background), widget: string, required: false }
+          - { name: clients, label: Client names strip, widget: list }
+          - { name: footerLead, label: Footer line, widget: string }
+          - { name: email, label: Email, widget: string }
+          - { name: linkedin, label: LinkedIn URL, widget: string, required: false }
+          - { name: vimeo, label: Vimeo profile URL, widget: string, required: false }
+          - { name: aiSite, label: AI site URL, widget: string, required: false }
+          - { name: location, label: Location line, widget: string }
