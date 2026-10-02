@@ -13,5 +13,5 @@ export async function getStaticPaths() {
 const { project } = Astro.props;
 ---
 <Base title={project.data.title} noindex>
-  <ProjectView project={project} />
+  <ProjectView project={project} back={false} />
 </Base>

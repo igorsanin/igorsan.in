@@ -18,5 +18,41 @@
     "Coral Travel"
   ],
   "footerLead": "Have a film, a pavilion or a screen to fill?",
-  "vault": "x-11e88bec"
+  "vault": "x-11e88bec",
+  "services": [
+    {
+      "title": "Creative direction",
+      "text": "Concepts, scripts and direction for brand, corporate and exhibition films."
+    },
+    {
+      "title": "Hybrid production",
+      "text": "Turnkey with my team: live action, CG and AI, from pavilion screens to launch films."
+    },
+    {
+      "title": "AI pipelines & training",
+      "text": "Controllable AI workflows and hands-on training for in-house teams."
+    }
+  ],
+  "awards": [
+    {
+      "year": "2019",
+      "title": "Cannes Corporate — Silver Dolphin ×2",
+      "work": ""
+    },
+    {
+      "year": "2018",
+      "title": "New York Festivals — Silver World Medal",
+      "work": "Food Premium TV branding"
+    },
+    {
+      "year": "2020",
+      "title": "Metal Vision — Best Graphics",
+      "work": "Severstal"
+    },
+    {
+      "year": "2023",
+      "title": "AKMR — Best HR Video",
+      "work": ""
+    }
+  ]
 }

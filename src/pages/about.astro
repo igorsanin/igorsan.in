@@ -1,28 +1,84 @@
 ---
 import { getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
 const page = await getEntry('pages', 'about');
 if (!page) throw new Error('src/content/pages/about.md is missing');
 const { Content } = await render(page);
 ---
 <Base title="About">
-  <section class="wrap about">
-    <div class="side">
-      <h1 class="display">Igor Sanin</h1>
-      <p class="role">{page.data.headline}</p>
-      {page.data.portrait && <img class="portrait" src={page.data.portrait} alt="Igor Sanin" />}
-    </div>
-    <div class="text"><Content /></div>
-  </section>
+  <div class="wrap about">
+    <section class="intro">
+      <div class="portrait">
+        {page.data.portrait && <img src={page.data.portrait} alt="Igor Sanin" />}
+        <span class="strip bg-glass" style="background-image:url(/brand/glass_04_flood.webp)" aria-hidden="true"></span>
+      </div>
+      <div class="text">
+        <p class="eyebrow">About</p>
+        <h1 class="display">{page.data.headline}</h1>
+        <div class="body"><Content /></div>
+      </div>
+    </section>
+
+    {site.services?.length > 0 && (
+      <section class="services">
+        {site.services.map((s) => (
+          <div><h2>{s.title}</h2><p>{s.text}</p></div>
+        ))}
+      </section>
+    )}
+
+    {site.awards?.length > 0 && (
+      <section class="row">
+        <h2 class="display">Awards</h2>
+        <ul class="awards">
+          {site.awards.map((a) => (
+            <li><span class="y">{a.year}</span><span>{a.title}</span><span class="w">{a.work}</span></li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {site.clients.length > 0 && (
+      <section class="row">
+        <h2 class="display">Brands I've worked on</h2>
+        <ul class="brands">{site.clients.map((c) => <li>{c}</li>)}</ul>
+      </section>
+    )}
+  </div>
 </Base>
 <style>
-  .about { display: grid; grid-template-columns: 5fr 7fr; gap: 40px clamp(32px, 6vw, 96px); padding-top: clamp(32px, 6vw, 80px); }
-  h1 { font-size: clamp(48px, 7vw, 108px); }
-  .role { margin: 16px 0 0; font-size: 18px; color: var(--dim); }
-  .portrait { margin-top: 40px; width: 100%; max-width: 420px; aspect-ratio: 4/5; object-fit: cover; }
-  .text { font-size: clamp(18px, 1.5vw, 21px); max-width: 62ch; }
-  .text :global(p) { margin: 0 0 1.1em; }
-  .text :global(p:first-child) { font-size: 1.3em; line-height: 1.35; font-weight: 500; }
-  .text :global(h2) { font-weight: 900; letter-spacing: -0.02em; font-size: 1.3em; margin: 1.8em 0 .5em; }
-  @media (max-width: 860px) { .about { grid-template-columns: 1fr; } }
+  .about { display: flex; flex-direction: column; gap: clamp(64px, 8vw, 96px); padding-top: clamp(16px, 3vw, 40px); }
+  .intro { display: grid; grid-template-columns: minmax(0, 480px) minmax(0, 1fr); gap: 40px clamp(40px, 6vw, 72px); align-items: start; }
+  .portrait { position: relative; aspect-ratio: 4 / 5; border-radius: 16px; overflow: hidden; background: #19191B; }
+  .portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .strip { position: absolute; top: 0; right: 0; bottom: 0; width: 32%; opacity: .9; mix-blend-mode: screen; }
+  .text { display: flex; flex-direction: column; gap: 28px; max-width: 760px; }
+  h1 { font-size: clamp(44px, 5vw, 64px); line-height: .95; letter-spacing: -.03em; }
+  .body { font-size: 18px; line-height: 1.6; color: #CFCBC5; }
+  .body :global(p) { margin: 0 0 1.1em; }
+  .body :global(p:first-child) { font-size: clamp(19px, 1.7vw, 22px); line-height: 1.45; font-weight: 500; color: var(--light); }
+  .body :global(h2) { display: none; } /* services are shown below as cards */
+
+  .services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .services div { border-top: 2px solid var(--red); padding-top: 20px; }
+  .services h2 { margin: 0 0 10px; font-weight: 900; font-size: 24px; letter-spacing: -.01em; }
+  .services p { margin: 0; color: #CFCBC5; line-height: 1.5; }
+
+  .row { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 24px 72px; }
+  .row h2.display { font-size: clamp(32px, 3.4vw, 40px); letter-spacing: -.02em; }
+  .awards { list-style: none; margin: 0; padding: 0; }
+  .awards li { display: grid; grid-template-columns: 90px minmax(0, 1fr) minmax(0, 260px); gap: 16px; padding: 18px 0; border-bottom: 1px solid var(--line); font-size: 17px; }
+  .y { font: 400 13px var(--mono); color: var(--dim); padding-top: 3px; }
+  .w { color: var(--dim); }
+  .brands { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+  .brands li { background: var(--dark); padding: 28px 20px; font: 400 13px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+
+  @media (max-width: 900px) {
+    .intro, .row { grid-template-columns: 1fr; }
+    .services { grid-template-columns: 1fr; }
+    .awards li { grid-template-columns: 70px 1fr; }
+    .w { grid-column: 2; }
+    .brands { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  }
 </style>

@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import Logo from '../components/Logo.astro';
+import ReelDialog from '../components/ReelDialog.astro';
 import site from '../data/site.json';
 
 interface Props {
@@ -17,11 +18,7 @@ const {
 } = Astro.props;
 const fullTitle = title ? `${title} — Igor Sanin` : 'Igor Sanin — Creative Director & Filmmaker';
 const path = Astro.url.pathname;
-const nav = [
-  { href: '/work', label: 'Work' },
-  { href: '/about', label: 'About' },
-  { href: '#contact', label: 'Contact' },
-];
+const isActive = (href: string) => path === href || path.startsWith(href + '/');
 ---
 <!doctype html>
 <html lang="en">
@@ -41,55 +38,68 @@ const nav = [
   <meta name="theme-color" content="#0C0C0D" />
 </head>
 <body>
-  <header class="site-head wrap">
-    <Logo size={30} />
-    <nav aria-label="Main">
-      {nav.map((n) => (
-        <a href={n.href} aria-current={path.startsWith(n.href) ? 'page' : undefined}>{n.label}</a>
-      ))}
-    </nav>
+  <header class="site-head">
+    <div class="wrap head-in">
+      <Logo size={34} />
+      <nav aria-label="Main">
+        <a href="/work" aria-current={isActive('/work') ? 'page' : undefined}>Work</a>
+        {site.reelVimeo && <a href="/reel" data-reel aria-current={isActive('/reel') ? 'page' : undefined}>Reel</a>}
+        <a href="/about" aria-current={isActive('/about') ? 'page' : undefined}>About</a>
+        <a class="pill pill-red talk" href="#contact">Let's talk</a>
+      </nav>
+    </div>
   </header>
 
   <main><slot /></main>
 
-  <footer id="contact" class="site-foot">
-    <div class="wrap foot-grid">
-      <div>
-        <p class="foot-lead display">{site.footerLead}</p>
-        <a class="mail" href={`mailto:${site.email}`}>{site.email}</a>
+  <footer class="site-foot wrap">
+    <section id="contact" class="contact bg-glass" style="background-image:url(/brand/glass_01_corner.webp)">
+      <h2 class="display">{site.footerLead}</h2>
+      <div class="contact-links">
+        <a class="pill pill-light" href={`mailto:${site.email}`}>{site.email}</a>
+        <p class="links">
+          {site.linkedin && <a href={site.linkedin} rel="me">LinkedIn</a>}
+          {site.vimeo && <a href={site.vimeo} rel="me">Vimeo</a>}
+          {site.aiSite && <a href={site.aiSite}>iigor.pro</a>}
+        </p>
       </div>
-      <ul class="foot-links">
-        {site.linkedin && <li><a href={site.linkedin} rel="me">LinkedIn</a></li>}
-        {site.vimeo && <li><a href={site.vimeo} rel="me">Vimeo</a></li>}
-        {site.aiSite && <li><a href={site.aiSite}>AI production: iigor.pro</a></li>}
-      </ul>
-      <p class="meta foot-meta">{site.location}</p>
-    </div>
+    </section>
+    <p class="foot-meta"><span>© {new Date().getFullYear()} Igor Sanin</span><span>{site.location}</span></p>
   </footer>
 
-  <style>
-    .site-head {
-      display: flex; height: 92px; box-sizing: border-box; align-items: center; justify-content: space-between;
-      padding-top: 22px; padding-bottom: 22px;
-      position: absolute; top: 0; left: 0; right: 0; z-index: 5;
-    }
-    main { padding-top: 92px; }
-    nav { display: flex; gap: clamp(16px, 3vw, 36px); }
-    nav a {
-      text-decoration: none; font-weight: 500; font-size: 15px;
-      color: var(--dim); transition: color .15s;
-    }
-    nav a:hover, nav a[aria-current] { color: var(--light); }
+  {site.reelVimeo && <ReelDialog vimeo={site.reelVimeo} />}
 
-    .site-foot { border-top: 1px solid var(--line); margin-top: 120px; padding: 72px 0 40px; }
-    .foot-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px 32px; align-items: end; }
-    .foot-lead { font-size: clamp(32px, 5vw, 64px); max-width: 14ch; margin-bottom: 28px; }
-    .mail { font-size: clamp(18px, 2vw, 24px); font-weight: 500; text-decoration-color: var(--red); text-underline-offset: 6px; }
-    .foot-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
-    .foot-links a { text-decoration: none; color: var(--dim); }
-    .foot-links a:hover { color: var(--light); }
-    .foot-meta { grid-column: 1 / -1; color: var(--dim); margin: 24px 0 0; }
-    @media (max-width: 700px) { .foot-grid { grid-template-columns: 1fr; } }
+  <style>
+    .site-head { position: absolute; top: 0; left: 0; right: 0; z-index: 5; }
+    .head-in { display: flex; align-items: center; justify-content: space-between; height: 108px; }
+    main { padding-top: 108px; }
+    nav { display: flex; align-items: center; gap: clamp(18px, 3vw, 36px); }
+    nav a { text-decoration: none; font-weight: 500; font-size: 16px; color: var(--light); transition: color .15s; }
+    nav a:hover, nav a[aria-current] { color: var(--red); }
+    nav a.talk, nav a.talk:hover { color: var(--light); height: 44px; padding: 0 22px; }
+    nav a.talk:hover { color: var(--dark); }
+
+    .site-foot { margin-top: clamp(96px, 12vw, 160px); padding-bottom: 32px; }
+    .contact {
+      border-radius: 20px; overflow: hidden; min-height: 320px;
+      padding: clamp(32px, 5vw, 56px);
+      display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; flex-wrap: wrap;
+    }
+    .contact h2 { font-size: clamp(36px, 5vw, 64px); line-height: .95; letter-spacing: -.03em; max-width: 12ch; }
+    .contact-links { display: flex; flex-direction: column; gap: 14px; align-items: flex-end; }
+    .links { margin: 0; display: flex; gap: 20px; font: 400 13px var(--mono); text-transform: uppercase; letter-spacing: .06em; }
+    .links a { text-decoration: none; color: var(--light); }
+    .links a:hover { color: var(--dark); }
+    .foot-meta {
+      display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+      margin: 24px 0 0; font: 400 12px var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--dim);
+    }
+    @media (max-width: 760px) {
+      .head-in { height: 84px; }
+      main { padding-top: 84px; }
+      nav a:not(.talk) { display: none; }
+      .contact-links { align-items: flex-start; }
+    }
   </style>
 </body>
 </html>

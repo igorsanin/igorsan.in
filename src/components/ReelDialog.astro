@@ -1,0 +1,50 @@
+---
+// Showreel in a popup. Any link with [data-reel] opens it; without JS the link goes to /reel.
+interface Props { vimeo: string }
+const { vimeo } = Astro.props;
+const src = `https://player.vimeo.com/video/${vimeo}?autoplay=1&dnt=1&title=0&byline=0&portrait=0&color=E5141B`;
+---
+<dialog id="reel-dialog" class="reel-dialog" aria-label="Showreel" data-src={src}>
+  <div class="frame"><iframe title="Showreel" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+  <button type="button" class="close" aria-label="Close showreel">
+    <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="2" /></svg>
+  </button>
+</dialog>
+
+<script>
+  const dlg = document.getElementById('reel-dialog') as HTMLDialogElement | null;
+  if (dlg) {
+    const iframe = dlg.querySelector('iframe')!;
+    const close = () => { dlg.close(); };
+    dlg.addEventListener('close', () => { iframe.removeAttribute('src'); document.documentElement.style.overflow = ''; });
+    dlg.querySelector('.close')!.addEventListener('click', close);
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) close(); });
+    document.addEventListener('click', (e) => {
+      const a = (e.target as Element).closest('[data-reel]');
+      if (!a || typeof dlg.showModal !== 'function') return;
+      e.preventDefault();
+      iframe.src = dlg.dataset.src!;
+      document.documentElement.style.overflow = 'hidden';
+      dlg.showModal();
+    });
+  }
+</script>
+
+<style>
+  .reel-dialog {
+    width: min(92vw, calc(84vh * 16 / 9)); max-width: none; padding: 0; border: 0;
+    background: transparent; overflow: visible;
+  }
+  .reel-dialog::backdrop {
+    background: rgba(12, 12, 13, .82) url(/brand/glass_03_seam.webp) center / cover;
+    background-blend-mode: multiply;
+  }
+  .frame { position: relative; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; background: #000; }
+  .frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+  .close {
+    position: absolute; top: -56px; right: 0;
+    width: 44px; height: 44px; border-radius: 50%; border: 0; cursor: pointer;
+    background: var(--light); color: var(--dark); display: grid; place-items: center;
+  }
+  .close:hover { background: var(--red); color: var(--light); }
+</style>

@@ -1,51 +1,50 @@
 ---
-// Work cover: clean frame at rest; on hover the left 68% slides under fluted glass
-// with REC dot + "YEAR · CLIENT", title and role (brand cover template, 02.10.2026).
-import { projectUrl, metaLine, type Project } from '../lib/projects';
+// Work cover: clean frame at rest; on hover the left 68% goes under fluted glass
+// with REC dot + "YEAR · CLIENT", title and role (brand cover template).
+import { projectUrl, type Project } from '../lib/projects';
 interface Props { project: Project; href?: string; eager?: boolean }
 const { project, href, eager = false } = Astro.props;
 const d = project.data;
 const url = href ?? projectUrl(project);
+const meta = [d.year, d.client].filter(Boolean).join(' · ');
 ---
-<a class="card" href={url}>
-  <div class="frame">
-    {d.cover
-      ? <img src={d.cover} alt="" loading={eager ? 'eager' : 'lazy'} decoding="async" width="1920" height="1080" />
-      : <div class="blank"></div>}
-    <div class="pane glass" aria-hidden="true">
-      <p class="meta"><span class="rec"></span>{metaLine(project)}</p>
-      <div>
-        <p class="t display">{d.title}</p>
-        {d.role && <p class="r">{d.role}</p>}
-      </div>
-    </div>
-  </div>
-  <div class="cap">
-    <span class="ct">{d.title}</span>
-    <span class="meta cm">{metaLine(project)}</span>
-  </div>
+<a class="card" href={url} aria-label={`${d.title}${d.client ? ', ' + d.client : ''}, ${d.year}`}>
+  {d.cover
+    ? <img src={d.cover} alt="" loading={eager ? 'eager' : 'lazy'} decoding="async" />
+    : <span class="blank"></span>}
+  <span class="pane glass" aria-hidden="true">
+    <span class="m"><span class="dot"></span>{meta}</span>
+    <span class="tr">
+      <span class="t">{d.title}</span>
+      {d.role && <span class="r">{d.role}</span>}
+    </span>
+  </span>
 </a>
 
 <style>
-  .card { display: block; text-decoration: none; color: var(--light); }
-  .frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: #161617; }
-  .frame img, .blank { width: 100%; height: 100%; object-fit: cover; }
+  .card {
+    position: relative; display: block; overflow: hidden;
+    aspect-ratio: 1200 / 937; border-radius: 12px;
+    background: #19191B; color: var(--light); text-decoration: none;
+  }
+  .card img, .blank { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+  .card:hover img { transform: scale(1.03); }
   .pane {
     position: absolute; inset: 0 32% 0 0;
     display: flex; flex-direction: column; justify-content: space-between;
-    padding: 20px 22px;
-    opacity: 0; transform: translateX(-12px);
-    transition: opacity .35s ease, transform .45s cubic-bezier(.2,.7,.2,1);
+    padding: 16px 18px 18px;
+    opacity: 0; transform: translateX(-10px);
+    transition: opacity .3s ease, transform .45s cubic-bezier(.2,.7,.2,1);
   }
-  .pane .meta { margin: 0; }
-  .t { font-size: clamp(22px, 2.3vw, 30px); max-width: 13ch; }
-  .r { margin: 8px 0 0; font-size: 12px; color: rgba(244,242,239,.8); }
   .card:hover .pane, .card:focus-visible .pane { opacity: 1; transform: none; }
-
-  .cap { display: flex; justify-content: space-between; gap: 16px; padding-top: 12px; align-items: baseline; }
-  .ct { font-weight: 500; }
-  .cm { color: var(--dim); white-space: nowrap; }
-
-  /* touch screens never hover: keep the caption, skip the glass */
-  @media (hover: none) { .pane { display: none; } }
+  .card:hover { box-shadow: 0 0 0 1px #3A3836; }
+  .m { display: flex; align-items: center; gap: 7px; font: 400 11px/1.3 var(--mono); letter-spacing: .04em; text-transform: uppercase; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--red); flex: none; }
+  .tr { display: flex; flex-direction: column; gap: 6px; }
+  .t { font-weight: 900; font-size: clamp(18px, 1.6vw, 24px); line-height: .98; letter-spacing: -.02em; }
+  .r { font-size: 12px; color: #D9D5CF; }
+  @media (hover: none) {
+    .pane { opacity: 1; transform: none; inset: auto 0 0 0; background: linear-gradient(transparent, rgba(12,12,13,.85)); -webkit-backdrop-filter: none; backdrop-filter: none; padding-top: 40px; }
+    .pane::after, .m { display: none; }
+  }
 </style>

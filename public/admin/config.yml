@@ -120,7 +120,20 @@ collections:
           - { name: heroLine, label: Home headline, widget: string }
           - { name: heroSub, label: Home subline, widget: text }
           - { name: reelVimeo, label: Showreel Vimeo ID (home background), widget: string, required: false }
-          - { name: clients, label: Client names strip, widget: list }
+          - { name: clients, label: Brands I've worked on, widget: list }
+          - name: services
+            label: Services (About)
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text }
+          - name: awards
+            label: Awards (About)
+            widget: list
+            fields:
+              - { name: year, label: Year, widget: string }
+              - { name: title, label: Award, widget: string }
+              - { name: work, label: For which work, widget: string, required: false }
           - { name: footerLead, label: Footer line, widget: string }
           - { name: email, label: Email, widget: string }
           - { name: linkedin, label: LinkedIn URL, widget: string, required: false }
