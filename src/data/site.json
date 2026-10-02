@@ -2,7 +2,6 @@
   "email": "igor.sanin@gmail.com",
   "linkedin": "https://www.linkedin.com/in/igor-sanin/",
   "vimeo": "",
-  "aiSite": "https://iigor.pro/en",
   "location": "Valencia, Spain. Working worldwide in English and Russian.",
   "reelVimeo": "1128158066",
   "heroLine": "Films that make complex things clear.",
@@ -22,22 +21,25 @@
   "services": [
     {
       "title": "Creative direction",
-      "text": "Concepts, scripts and direction for brand, corporate and exhibition films."
+      "text": "Concepts, scripts and direction for brand, corporate and exhibition films.",
+      "link": ""
     },
     {
       "title": "Hybrid production",
-      "text": "Turnkey with my team: live action, CG and AI, from pavilion screens to launch films."
+      "text": "Turnkey with my team: live action, CG and AI, from pavilion screens to launch films.",
+      "link": ""
     },
     {
       "title": "AI pipelines & training",
-      "text": "Controllable AI workflows and hands-on training for in-house teams."
+      "text": "Controllable AI workflows and hands-on training for in-house teams.",
+      "link": "https://iigor.pro/en"
     }
   ],
   "awards": [
     {
       "year": "2019",
       "title": "Cannes Corporate — Silver Dolphin ×2",
-      "work": ""
+      "work": "New Retail Forum"
     },
     {
       "year": "2018",
@@ -47,15 +49,14 @@
     {
       "year": "2020",
       "title": "Metal Vision — Best Graphics",
-      "work": "Severstal"
+      "work": "Severstal IR video"
     },
     {
       "year": "2023",
       "title": "AKMR — Best HR Video",
-      "work": ""
+      "work": "RTC HR Business Partner"
     }
   ],
-  "aiLabel": "AI production & training · iigor.pro",
   "telegram": "igorsnn",
   "whatsapp": "+34657972427"
 }

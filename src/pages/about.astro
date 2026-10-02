@@ -18,13 +18,19 @@ const { Content } = await render(page);
         <p class="eyebrow">About</p>
         <h1 class="display">{nbsp(page.data.headline)}</h1>
         <div class="body"><Content /></div>
+        {site.linkedin && <a class="li" href={site.linkedin} rel="me noopener" target="_blank">LinkedIn profile<svg class="ext" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="2" /></svg></a>}
       </div>
     </section>
 
     {site.services?.length > 0 && (
       <section class="services">
         {site.services.map((s) => (
-          <div><h2>{nbsp(s.title)}</h2><p>{nbsp(s.text)}</p></div>
+          <div>
+            <h2>{s.link
+              ? <a href={s.link} rel="noopener" target="_blank">{nbsp(s.title)}<svg class="ext" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" fill="none" stroke="currentColor" stroke-width="2" /></svg></a>
+              : nbsp(s.title)}</h2>
+            <p>{nbsp(s.text)}</p>
+          </div>
         ))}
       </section>
     )}
@@ -69,6 +75,12 @@ const { Content } = await render(page);
   .services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
   .services div { border-top: 2px solid var(--red); padding-top: 20px; }
   .services h2 { margin: 0 0 10px; font-weight: 900; font-size: 24px; letter-spacing: -.01em; }
+  .services h2 a { color: var(--light); text-decoration: none; display: inline-flex; align-items: baseline; gap: 8px; }
+  .services h2 a:hover { color: var(--red); }
+  .ext { width: .6em; height: .6em; flex: none; color: var(--red); }
+  .li { align-self: flex-start; font: 500 16px/1 var(--sans); color: var(--light); text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 7px; display: inline-flex; gap: 8px; align-items: baseline; }
+  .li:hover { color: var(--red); }
+  .li .ext { width: 11px; height: 11px; }
   .services p { margin: 0; color: #CFCBC5; line-height: 1.5; }
 
   .row { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 24px 72px; }

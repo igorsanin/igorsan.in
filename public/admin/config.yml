@@ -127,6 +127,7 @@ collections:
             fields:
               - { name: title, label: Title, widget: string }
               - { name: text, label: Text, widget: text }
+              - { name: link, label: Link (optional; title becomes a link), widget: string, required: false }
           - name: awards
             label: Awards (About)
             widget: list
@@ -140,6 +141,4 @@ collections:
           - { name: telegram, label: 'Telegram username (without @)', widget: string, required: false }
           - { name: linkedin, label: LinkedIn URL, widget: string, required: false }
           - { name: vimeo, label: Vimeo profile URL, widget: string, required: false }
-          - { name: aiSite, label: AI site URL, widget: string, required: false }
-          - { name: aiLabel, label: AI site link text (footer), widget: string, required: false }
           - { name: location, label: Location line, widget: string }
