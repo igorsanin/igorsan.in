@@ -12,7 +12,7 @@ featured: true
 order: 4
 sectors: ["Cybersecurity"]
 formats: ["Product film"]
-cover: "/media/digital-risk-protection/cover.jpg"
+cover: "/media/digital-risk-protection/cover.webp"
 video:
   vimeo: ""
   youtube: ""

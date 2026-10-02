@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Industry", "Safety"]
 formats: ["Safety film"]
-cover: "/media/are-rules-just-for-the-weak/cover.jpg"
+cover: "/media/are-rules-just-for-the-weak/cover.webp"
 video:
   vimeo: "340545444"
   youtube: ""

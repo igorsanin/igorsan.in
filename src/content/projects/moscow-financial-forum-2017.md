@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Government", "Economy"]
 formats: ["Forum opener"]
-cover: "/media/moscow-financial-forum-2017/cover.jpg"
+cover: "/media/moscow-financial-forum-2017/cover.webp"
 video:
   vimeo: ""
   youtube: ""

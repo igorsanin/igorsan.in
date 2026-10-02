@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Internet", "Events"]
 formats: ["Ceremony identity"]
-cover: "/media/runet-2019/cover.jpg"
+cover: "/media/runet-2019/cover.webp"
 video:
   vimeo: "389481783"
   youtube: ""

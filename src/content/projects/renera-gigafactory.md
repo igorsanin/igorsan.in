@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Energy", "Batteries"]
 formats: ["Corporate film"]
-cover: "/media/renera-gigafactory/cover.jpg"
+cover: "/media/renera-gigafactory/cover.webp"
 video:
   vimeo: ""
   youtube: ""

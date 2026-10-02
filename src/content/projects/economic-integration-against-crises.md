@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Finance", "Economy"]
 formats: ["Forum opener"]
-cover: "/media/economic-integration-against-crises/cover.jpg"
+cover: "/media/economic-integration-against-crises/cover.webp"
 video:
   vimeo: ""
   youtube: ""

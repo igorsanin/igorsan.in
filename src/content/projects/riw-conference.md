@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Internet", "Events"]
 formats: ["Conference identity"]
-cover: "/media/riw-conference/cover.jpg"
+cover: "/media/riw-conference/cover.webp"
 video:
   vimeo: "789819295"
   youtube: ""

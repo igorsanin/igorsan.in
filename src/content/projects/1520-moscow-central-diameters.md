@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Infrastructure", "Transport"]
 formats: ["Image film"]
-cover: "/media/1520-moscow-central-diameters/cover.jpg"
+cover: "/media/1520-moscow-central-diameters/cover.webp"
 video:
   vimeo: "896453216"
   youtube: ""

@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Metallurgy", "Mining"]
 formats: ["Corporate film"]
-cover: "/media/imh-company/cover.jpg"
+cover: "/media/imh-company/cover.webp"
 video:
   vimeo: ""
   youtube: ""

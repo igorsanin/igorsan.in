@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["IT"]
 formats: ["Image film"]
-cover: "/media/t1-digital-future/cover.jpg"
+cover: "/media/t1-digital-future/cover.webp"
 video:
   vimeo: "847038839"
   youtube: ""

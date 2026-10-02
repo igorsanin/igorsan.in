@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Internet", "Events"]
 formats: ["Ceremony identity"]
-cover: "/media/the-runet-awards-2020/cover.jpg"
+cover: "/media/the-runet-awards-2020/cover.webp"
 video:
   vimeo: "502979320"
   youtube: ""

@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Finance"]
 formats: ["Office screens"]
-cover: "/media/sber-screen-savers/cover.jpg"
+cover: "/media/sber-screen-savers/cover.webp"
 video:
   vimeo: ""
   youtube: "NyYtn7H4kms"

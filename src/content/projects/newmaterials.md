@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Industry", "Materials", "Medicine"]
 formats: ["Exhibition stand"]
-cover: "/media/newmaterials/cover.jpg"
+cover: "/media/newmaterials/cover.webp"
 video:
   vimeo: ""
   youtube: ""

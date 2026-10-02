@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Technology"]
 formats: ["Image film"]
-cover: "/media/quantum-technologies/cover.jpg"
+cover: "/media/quantum-technologies/cover.webp"
 video:
   vimeo: ""
   youtube: "GazdL5bKAzc"

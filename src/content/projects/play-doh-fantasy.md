@@ -12,7 +12,7 @@ featured: true
 order: 8
 sectors: ["Toys", "Kids"]
 formats: ["TV opener"]
-cover: "/media/play-doh-fantasy/cover.jpg"
+cover: "/media/play-doh-fantasy/cover.webp"
 video:
   vimeo: ""
   youtube: ""

@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Finance", "HR"]
 formats: ["Onboarding series"]
-cover: "/media/welcome-to-sber/cover.jpg"
+cover: "/media/welcome-to-sber/cover.webp"
 video:
   vimeo: ""
   youtube: ""

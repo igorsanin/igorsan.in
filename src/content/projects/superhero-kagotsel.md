@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Pharma"]
 formats: ["TV commercial"]
-cover: "/media/superhero-kagotsel/cover.jpg"
+cover: "/media/superhero-kagotsel/cover.webp"
 video:
   vimeo: ""
   youtube: ""

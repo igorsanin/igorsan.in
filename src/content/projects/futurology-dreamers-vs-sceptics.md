@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Finance", "Technology"]
 formats: ["Image film"]
-cover: "/media/futurology-dreamers-vs-sceptics/cover.jpg"
+cover: "/media/futurology-dreamers-vs-sceptics/cover.webp"
 video:
   vimeo: ""
   youtube: "lnUAebHQzGQ"

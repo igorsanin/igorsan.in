@@ -12,7 +12,7 @@ featured: true
 order: 1
 sectors: ["Cybersecurity"]
 formats: ["Facade projection", "Non-standard screen"]
-cover: "/media/kaspersky-burj-khalifa/cover.jpg"
+cover: "/media/kaspersky-burj-khalifa/cover.webp"
 video:
   vimeo: ""
   youtube: ""

@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Transport", "Smart city"]
 formats: ["Image film"]
-cover: "/media/urban-transport/cover.jpg"
+cover: "/media/urban-transport/cover.webp"
 video:
   vimeo: ""
   youtube: ""

@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Urban development", "Smart city"]
 formats: ["Exhibition attraction", "Immersive LED"]
-cover: "/media/elevator-to-the-future/cover.jpg"
+cover: "/media/elevator-to-the-future/cover.webp"
 video:
   vimeo: ""
   youtube: ""

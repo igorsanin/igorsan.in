@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Energy", "Industry"]
 formats: ["Investor presentation"]
-cover: "/media/rosatom-magnets/cover.jpg"
+cover: "/media/rosatom-magnets/cover.webp"
 video:
   vimeo: ""
   youtube: ""

@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Transport", "Energy"]
 formats: ["Exhibition installation", "Non-standard screen"]
-cover: "/media/moscows-electric-transport/cover.jpg"
+cover: "/media/moscows-electric-transport/cover.webp"
 video:
   vimeo: ""
   youtube: ""

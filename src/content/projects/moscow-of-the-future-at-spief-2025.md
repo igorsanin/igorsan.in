@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Urban development", "Sport"]
 formats: ["Exhibition", "Interactive", "Non-standard screen"]
-cover: "/media/moscow-of-the-future-at-spief-2025/cover.jpg"
+cover: "/media/moscow-of-the-future-at-spief-2025/cover.webp"
 video:
   vimeo: ""
   youtube: ""

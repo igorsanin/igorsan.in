@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Finance", "Education"]
 formats: ["Educational series"]
-cover: "/media/sber-vacation/cover.jpg"
+cover: "/media/sber-vacation/cover.webp"
 video:
   vimeo: ""
   youtube: "zROk_2kGKbM"

@@ -12,7 +12,7 @@ featured: true
 order: 6
 sectors: ["Internet", "Events"]
 formats: ["Ceremony identity"]
-cover: "/media/the-runet-awards-2022/cover.jpg"
+cover: "/media/the-runet-awards-2022/cover.webp"
 video:
   vimeo: "787021477"
   youtube: ""

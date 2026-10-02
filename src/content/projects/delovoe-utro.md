@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Media"]
 formats: ["Broadcast package"]
-cover: "/media/delovoe-utro/cover.jpg"
+cover: "/media/delovoe-utro/cover.webp"
 video:
   vimeo: ""
   youtube: "M9J_3fUSeak"

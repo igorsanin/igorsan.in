@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Technology"]
 formats: ["Image film"]
-cover: "/media/big-data-changing-the-world-sberbank-175/cover.jpg"
+cover: "/media/big-data-changing-the-world-sberbank-175/cover.webp"
 video:
   vimeo: ""
   youtube: "r-7w7XAFnSg"

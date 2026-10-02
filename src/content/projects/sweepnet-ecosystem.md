@@ -12,7 +12,7 @@ featured: true
 order: 5
 sectors: ["IT", "Data"]
 formats: ["Product film", "Explainer"]
-cover: "/media/sweepnet-ecosystem/cover.jpg"
+cover: "/media/sweepnet-ecosystem/cover.webp"
 video:
   vimeo: "815236645"
   youtube: ""

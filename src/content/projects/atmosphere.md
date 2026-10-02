@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Cybersecurity"]
 formats: ["Product film"]
-cover: "/media/atmosphere/cover.jpg"
+cover: "/media/atmosphere/cover.webp"
 video:
   vimeo: ""
   youtube: ""

@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Finance", "Events"]
 formats: ["Exhibition stand"]
-cover: "/media/sber-spief/cover.jpg"
+cover: "/media/sber-spief/cover.webp"
 video:
   vimeo: ""
   youtube: ""

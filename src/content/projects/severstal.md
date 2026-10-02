@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Metallurgy"]
 formats: ["Corporate film"]
-cover: "/media/severstal/cover.jpg"
+cover: "/media/severstal/cover.webp"
 video:
   vimeo: "393878293"
   youtube: ""

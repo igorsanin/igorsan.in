@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Pharma"]
 formats: ["TV commercial"]
-cover: "/media/kagotsel-2020/cover.jpg"
+cover: "/media/kagotsel-2020/cover.webp"
 video:
   vimeo: ""
   youtube: ""

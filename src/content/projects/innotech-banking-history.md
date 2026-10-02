@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Finance", "IT"]
 formats: ["Image film"]
-cover: "/media/innotech-banking-history/cover.jpg"
+cover: "/media/innotech-banking-history/cover.webp"
 video:
   vimeo: "842826982"
   youtube: ""

@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Energy", "Automotive"]
 formats: ["Exhibition film"]
-cover: "/media/rosatom-atom/cover.jpg"
+cover: "/media/rosatom-atom/cover.webp"
 video:
   vimeo: "841975925"
   youtube: ""

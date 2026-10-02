@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Fintech"]
 formats: ["Product film"]
-cover: "/media/sberpay-sbertips/cover.jpg"
+cover: "/media/sberpay-sbertips/cover.webp"
 video:
   vimeo: "868664413"
   youtube: ""

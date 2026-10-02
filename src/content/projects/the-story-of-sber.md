@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Finance"]
 formats: ["Anniversary film"]
-cover: "/media/the-story-of-sber/cover.jpg"
+cover: "/media/the-story-of-sber/cover.webp"
 video:
   vimeo: ""
   youtube: ""

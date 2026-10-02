@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Oil & gas", "Industry"]
 formats: ["Investor film"]
-cover: "/media/tmk-for-investors/cover.jpg"
+cover: "/media/tmk-for-investors/cover.webp"
 video:
   vimeo: ""
   youtube: ""

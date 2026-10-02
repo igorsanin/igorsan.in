@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Transport", "Smart city"]
 formats: ["Exhibition stand", "Non-standard screen", "Naked-eye 3D"]
-cover: "/media/transport-innovations-donut/cover.jpg"
+cover: "/media/transport-innovations-donut/cover.webp"
 video:
   vimeo: ""
   youtube: ""

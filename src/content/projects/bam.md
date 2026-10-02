@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Infrastructure", "History"]
 formats: ["Film"]
-cover: "/media/bam/cover.jpg"
+cover: "/media/bam/cover.webp"
 video:
   vimeo: "976195912"
   youtube: ""

@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Finance", "Education"]
 formats: ["Brand film"]
-cover: "/media/sber-scholarship-program/cover.jpg"
+cover: "/media/sber-scholarship-program/cover.webp"
 video:
   vimeo: ""
   youtube: ""

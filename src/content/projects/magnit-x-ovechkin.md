@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Retail", "Sport"]
 formats: ["TV commercial", "Deepfake"]
-cover: "/media/magnit-x-ovechkin/cover.jpg"
+cover: "/media/magnit-x-ovechkin/cover.webp"
 video:
   vimeo: ""
   youtube: ""

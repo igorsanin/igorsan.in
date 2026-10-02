@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Finance", "HR"]
 formats: ["Educational series"]
-cover: "/media/sber-hr-university/cover.jpg"
+cover: "/media/sber-hr-university/cover.webp"
 video:
   vimeo: ""
   youtube: "tL-vW03Fogw"

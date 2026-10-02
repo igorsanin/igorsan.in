@@ -12,7 +12,7 @@ featured: true
 order: 10
 sectors: ["Cybersecurity", "Education", "Kids"]
 formats: ["Animated series"]
-cover: "/media/mole-and-raccoon-cybersecurity-for-kids/cover.jpg"
+cover: "/media/mole-and-raccoon-cybersecurity-for-kids/cover.webp"
 video:
   vimeo: ""
   youtube: "OHH82YhXnfQ"

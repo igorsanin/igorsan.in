@@ -12,7 +12,7 @@ featured: true
 order: 3
 sectors: ["Internet", "Events"]
 formats: ["Ceremony identity"]
-cover: "/media/runet-awards-24/cover.jpg"
+cover: "/media/runet-awards-24/cover.webp"
 video:
   vimeo: ""
   youtube: ""

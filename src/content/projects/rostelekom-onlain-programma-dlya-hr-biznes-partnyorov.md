@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Telecom", "HR"]
 formats: ["Learning series"]
-cover: "/media/rostelekom-onlain-programma-dlya-hr-biznes-partnyorov/cover.jpg"
+cover: "/media/rostelekom-onlain-programma-dlya-hr-biznes-partnyorov/cover.webp"
 video:
   vimeo: ""
   youtube: "D5pbAcFyHtI"

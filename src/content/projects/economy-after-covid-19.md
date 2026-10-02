@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Government", "Economy"]
 formats: ["Forum opener"]
-cover: "/media/economy-after-covid-19/cover.jpg"
+cover: "/media/economy-after-covid-19/cover.webp"
 video:
   vimeo: ""
   youtube: ""

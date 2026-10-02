@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Technology", "Robotics"]
 formats: ["Brand film"]
-cover: "/media/ai-robotics-center/cover.jpg"
+cover: "/media/ai-robotics-center/cover.webp"
 video:
   vimeo: ""
   youtube: ""

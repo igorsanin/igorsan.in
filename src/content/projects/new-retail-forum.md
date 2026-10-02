@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Retail", "Events"]
 formats: ["Forum opener"]
-cover: "/media/new-retail-forum/cover.jpg"
+cover: "/media/new-retail-forum/cover.webp"
 video:
   vimeo: ""
   youtube: "Qv0DQFEWCUA"

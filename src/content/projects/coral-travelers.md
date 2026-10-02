@@ -12,7 +12,7 @@ featured: true
 order: 7
 sectors: ["Travel"]
 formats: ["Animated series"]
-cover: "/media/coral-travelers/cover.jpg"
+cover: "/media/coral-travelers/cover.webp"
 video:
   vimeo: ""
   youtube: ""

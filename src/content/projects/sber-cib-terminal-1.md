@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Finance", "Fintech"]
 formats: ["Product film"]
-cover: "/media/sber-cib-terminal-1/cover.jpg"
+cover: "/media/sber-cib-terminal-1/cover.webp"
 video:
   vimeo: "1157189714"
   youtube: ""

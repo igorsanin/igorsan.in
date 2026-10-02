@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Engineering", "Industry"]
 formats: ["Corporate film"]
-cover: "/media/tr-engineering/cover.jpg"
+cover: "/media/tr-engineering/cover.webp"
 video:
   vimeo: "363746582"
   youtube: ""

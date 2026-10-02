@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Government", "HR"]
 formats: ["Corporate film"]
-cover: "/media/moscow-government-hr-services-for-executives/cover.jpg"
+cover: "/media/moscow-government-hr-services-for-executives/cover.webp"
 video:
   vimeo: "541707214"
   youtube: ""

@@ -12,7 +12,7 @@ featured: true
 order: 2
 sectors: ["Heavy machinery", "Industry"]
 formats: ["Corporate history film"]
-cover: "/media/komatsu-through-permafrost-desert-and-swamps/cover.jpg"
+cover: "/media/komatsu-through-permafrost-desert-and-swamps/cover.webp"
 video:
   vimeo: ""
   youtube: ""

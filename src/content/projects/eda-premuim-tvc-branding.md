@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Media", "Food"]
 formats: ["Broadcast branding"]
-cover: "/media/eda-premuim-tvc-branding/cover.jpg"
+cover: "/media/eda-premuim-tvc-branding/cover.webp"
 video:
   vimeo: ""
   youtube: ""

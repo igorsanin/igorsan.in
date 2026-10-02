@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Finance", "Urban development"]
 formats: ["Forum opener"]
-cover: "/media/vtb-smart-city/cover.jpg"
+cover: "/media/vtb-smart-city/cover.webp"
 video:
   vimeo: ""
   youtube: ""

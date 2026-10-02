@@ -12,7 +12,7 @@ featured: true
 order: 9
 sectors: ["Cybersecurity"]
 formats: ["Product film"]
-cover: "/media/threat-intelligence-attribution/cover.jpg"
+cover: "/media/threat-intelligence-attribution/cover.webp"
 video:
   vimeo: ""
   youtube: ""

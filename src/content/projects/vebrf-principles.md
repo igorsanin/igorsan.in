@@ -12,7 +12,7 @@ featured: false
 order: 100
 sectors: ["Finance", "Government"]
 formats: ["Explainer"]
-cover: "/media/vebrf-principles/cover.jpg"
+cover: "/media/vebrf-principles/cover.webp"
 video:
   vimeo: ""
   youtube: ""
