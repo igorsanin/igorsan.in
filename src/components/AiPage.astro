@@ -1,0 +1,201 @@
+---
+// AI production landing (/ai/ and /ru/ai/). Copy lives in src/data/ai.<lang>.json, editable in /admin.
+import Base from '../layouts/Base.astro';
+import { nbsp } from '../lib/typo';
+
+interface Item { title: string; for: string; does: string; bullets: string[]; gets: string; image: string }
+interface Case { title: string; text: string; image: string; links: { label: string; href: string }[] }
+interface Props { data: any; lang: 'en' | 'ru'; noindex?: boolean }
+const { data, lang, noindex = true } = Astro.props;
+const products: Item[] = data.products ?? [];
+const cases: Case[] = data.cases ?? [];
+const pad = (i: number) => String(i + 1).padStart(2, '0');
+---
+<Base
+  title={data.title}
+  description={data.description}
+  lang={lang}
+  noindex={noindex}
+  alternates={{ en: '/ai/', ru: '/ru/ai/' }}
+  contactTitle={data.contactTitle}
+  contactText={data.contactText}
+>
+  <section class="hero">
+    {data.heroImage && <img class="bg" src={data.heroImage} alt="" fetchpriority="high" />}
+    <div class="pane glass">
+      <div class="in">
+        <p class="eyebrow">{data.eyebrow}</p>
+        <h1 class="display">{nbsp(data.headline)}</h1>
+        <p class="sub">{nbsp(data.sub)}</p>
+        <div class="actions">
+          <a class="pill pill-red" href="#contact">{data.ctaPrimary}</a>
+          <a class="more" href="#cases">{data.ctaSecondary}</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap block" aria-labelledby="products">
+    <div class="head">
+      <h2 id="products" class="display">{data.productsTitle}</h2>
+      <p class="intro">{nbsp(data.productsIntro)}</p>
+    </div>
+    <div class="products">
+      {products.map((p, i) => (
+        <article class="product">
+          <div class="pic">
+            {p.image && <img src={p.image} alt="" loading="lazy" decoding="async" />}
+            <span class="strip" aria-hidden="true"><span class="num">{pad(i)}</span></span>
+          </div>
+          <div class="ptext">
+            <h3 class="display">{nbsp(p.title)}</h3>
+            <dl>
+              <dt>{data.labelFor}</dt>
+              <dd>{nbsp(p.for)}</dd>
+              <dt>{data.labelDo}</dt>
+              <dd>
+                {p.does && <p>{nbsp(p.does)}</p>}
+                {p.bullets?.length > 0 && <ul>{p.bullets.map((b) => <li>{nbsp(b)}</li>)}</ul>}
+              </dd>
+              <dt>{data.labelGet}</dt>
+              <dd class="gets">{nbsp(p.gets)}</dd>
+            </dl>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="wrap block" aria-labelledby="steps">
+    <div class="head">
+      <h2 id="steps" class="display">{data.stepsTitle}</h2>
+    </div>
+    <ol class="steps">
+      {data.steps.map((s: { title: string; text: string }, i: number) => (
+        <li>
+          <span class="n">{pad(i)}</span>
+          <h3>{nbsp(s.title)}</h3>
+          <p>{nbsp(s.text)}</p>
+        </li>
+      ))}
+    </ol>
+    {data.billing && <p class="billing"><span class="rec"></span>{nbsp(data.billing)}</p>}
+  </section>
+
+  <section id="cases" class="wrap block" aria-labelledby="cases-h">
+    <div class="head">
+      <h2 id="cases-h" class="display">{data.casesTitle}</h2>
+      <p class="intro">{nbsp(data.casesIntro)}</p>
+    </div>
+    <div class="cases">
+      {cases.map((c, i) => (
+        <article class:list={['case', { wide: i === 0 }]}>
+          <div class="pic">
+            {c.image && <img src={c.image} alt="" loading="lazy" decoding="async" />}
+            <span class="strip" aria-hidden="true"><span class="num">{pad(i)}</span></span>
+          </div>
+          <div class="ctext">
+            <h3 class="display">{nbsp(c.title)}</h3>
+            <p>{nbsp(c.text)}</p>
+            {c.links?.length > 0 && (
+              <p class="links">{c.links.map((l) => <a class="mono-link" href={l.href}>{l.label} →</a>)}</p>
+            )}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</Base>
+
+<style>
+  /* hero: image clear on the right, fluted glass over the left */
+  .hero { position: relative; height: min(86vh, 880px); min-height: 600px; margin-top: -108px; overflow: hidden; background: #19191B; }
+  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .hero::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 180px; z-index: 2; pointer-events: none; background: linear-gradient(rgba(12,12,13,.6), rgba(12,12,13,0)); }
+  .pane { position: absolute; inset: 0 34% 0 0; display: flex; align-items: center; }
+  .in {
+    display: flex; flex-direction: column; gap: 26px;
+    padding: 108px var(--gutter) 24px max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)));
+  }
+  h1 { font-size: clamp(40px, 5vw, 76px); line-height: .95; letter-spacing: -.035em; max-width: 15ch; }
+  .sub { margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.5; max-width: 50ch; color: #DAD6D0; }
+  .actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+  .more { font: 500 16px/1 var(--sans); color: var(--light); text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 7px; }
+  .more:hover { color: var(--red); }
+
+  .block { padding-top: clamp(80px, 10vw, 136px); }
+  .head { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 16px 72px; align-items: baseline; margin-bottom: clamp(32px, 4vw, 48px); }
+  h2 { font-size: clamp(32px, 3.4vw, 44px); letter-spacing: -.02em; }
+  .intro { margin: 0; font-size: clamp(18px, 1.6vw, 21px); line-height: 1.45; color: #CFCBC5; max-width: 52ch; }
+
+  /* image with the brand glass strip and a mono index on it */
+  .pic { position: relative; overflow: hidden; border-radius: 14px; background: #19191B; }
+  .pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .strip {
+    position: absolute; top: 0; left: 0; bottom: 0; width: 30%;
+    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+    background:
+      repeating-linear-gradient(90deg, rgba(255,255,255,.10) 0px, rgba(255,255,255,0) 5px, rgba(0,0,0,.10) 11px, rgba(255,255,255,.05) 14px),
+      rgba(12,12,13,.28);
+  }
+  .strip::after { content: ''; position: absolute; top: 0; bottom: 0; right: 0; width: 1px; background: rgba(244,242,239,.55); }
+  .num { position: absolute; top: 16px; left: 18px; display: flex; align-items: center; gap: 8px; font: 400 12px/1 var(--mono); letter-spacing: .06em; }
+  .num::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--red); }
+
+  /* products: alternating rows */
+  .products { display: flex; flex-direction: column; gap: clamp(56px, 7vw, 96px); }
+  .product { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px clamp(32px, 5vw, 72px); align-items: start; }
+  .product:nth-child(even) .pic { order: 2; }
+  .product .pic { aspect-ratio: 4 / 3; }
+  .ptext { display: flex; flex-direction: column; gap: 28px; }
+  h3.display { font-size: clamp(28px, 2.8vw, 40px); line-height: 1; letter-spacing: -.025em; }
+  dl { margin: 0; display: grid; grid-template-columns: 150px minmax(0, 1fr); border-top: 1px solid var(--line); }
+  dt, dd { padding: 18px 0; border-bottom: 1px solid var(--line); }
+  dt { font: 400 12px/1.6 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--dim); padding-top: 21px; }
+  dd { margin: 0; font-size: 17px; line-height: 1.55; color: #CFCBC5; }
+  dd p { margin: 0 0 .6em; }
+  dd p:last-child { margin: 0; }
+  dd ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  dd li { position: relative; padding-left: 20px; }
+  dd li::before { content: ''; position: absolute; left: 0; top: .72em; width: 8px; height: 2px; background: var(--red); }
+  dd.gets { color: var(--light); font-weight: 500; }
+
+  /* steps */
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+  .steps li { border-top: 2px solid var(--red); padding-top: 18px; display: flex; flex-direction: column; gap: 10px; }
+  .n { font: 400 12px var(--mono); letter-spacing: .06em; color: var(--dim); }
+  .steps h3 { margin: 0; font-weight: 900; font-size: 22px; line-height: 1.1; letter-spacing: -.01em; }
+  .steps p { margin: 0; color: #CFCBC5; line-height: 1.5; }
+  .billing { margin: 40px 0 0; padding: 22px 26px; border-radius: 12px; background: #161618; box-shadow: inset 0 0 0 1px var(--line); font-size: 18px; line-height: 1.5; }
+
+  /* cases */
+  .cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(40px, 5vw, 64px) 24px; }
+  .case { display: flex; flex-direction: column; gap: 22px; }
+  .case .pic { aspect-ratio: 16 / 10; }
+  .case.wide { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 24px clamp(32px, 5vw, 72px); align-items: center; }
+  .ctext { display: flex; flex-direction: column; gap: 14px; }
+  .case h3.display { font-size: clamp(24px, 2.2vw, 30px); }
+  .ctext p { margin: 0; color: #CFCBC5; line-height: 1.55; max-width: 60ch; }
+  .links { display: flex; gap: 22px; flex-wrap: wrap; padding-top: 4px; }
+
+  @media (max-width: 1100px) {
+    .pane { inset: 0; }
+    .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 36px; }
+  }
+  @media (max-width: 900px) {
+    .head { grid-template-columns: 1fr; }
+    .product, .case.wide { grid-template-columns: 1fr; }
+    .product:nth-child(even) .pic { order: 0; }
+    .product .pic { aspect-ratio: 16 / 10; }
+    .cases { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 640px) {
+    .hero { height: auto; min-height: 92vh; margin-top: -84px; }
+    .pane { align-items: flex-end; }
+    .in { padding-top: 120px; padding-bottom: 44px; }
+    dl { grid-template-columns: 1fr; }
+    dt { border-bottom: 0; padding: 16px 0 4px; }
+    dd { padding-top: 0; }
+    .steps { grid-template-columns: 1fr; }
+  }
+</style>

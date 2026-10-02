@@ -142,3 +142,113 @@ collections:
           - { name: linkedin, label: LinkedIn URL, widget: string, required: false }
           - { name: vimeo, label: Vimeo profile URL, widget: string, required: false }
           - { name: location, label: Location line, widget: string }
+      - name: ai_ru
+        label: 'AI page — Russian'
+        file: src/data/ai.ru.json
+        media_folder: /public/media/ai
+        public_folder: /media/ai
+        fields:
+          - { name: title, label: Browser tab title, widget: string }
+          - { name: description, label: Search / share description, widget: text }
+          - { name: eyebrow, label: Small line above headline, widget: string }
+          - { name: headline, label: Headline, widget: string }
+          - { name: sub, label: Subline, widget: text }
+          - { name: heroImage, label: Hero image, widget: image }
+          - { name: ctaPrimary, label: Main button, widget: string }
+          - { name: ctaSecondary, label: Second link (to cases), widget: string }
+          - { name: productsTitle, label: Products — section title, widget: string }
+          - { name: productsIntro, label: Products — intro, widget: text }
+          - { name: labelFor, label: Label “For”, widget: string }
+          - { name: labelDo, label: Label “What I do”, widget: string }
+          - { name: labelGet, label: Label “What you get”, widget: string }
+          - name: products
+            label: Products
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: for, label: For whom, widget: text }
+              - { name: does, label: What I do (text), widget: text, required: false }
+              - { name: bullets, label: What I do (bullets), widget: list, required: false }
+              - { name: gets, label: What you get, widget: text }
+              - { name: image, label: Image, widget: image }
+          - { name: stepsTitle, label: Steps — section title, widget: string }
+          - name: steps
+            label: Steps
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text }
+          - { name: billing, label: Billing line, widget: text }
+          - { name: casesTitle, label: Cases — section title, widget: string }
+          - { name: casesIntro, label: Cases — intro, widget: text }
+          - name: cases
+            label: Cases (first one is shown wide)
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text }
+              - { name: image, label: Image, widget: image }
+              - name: links
+                label: Links
+                widget: list
+                required: false
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: href, label: 'Link (e.g. /work/slug/)', widget: string }
+          - { name: contactTitle, label: Contact block — heading, widget: string }
+          - { name: contactText, label: Contact block — text, widget: text }
+      - name: ai_en
+        label: 'AI page — English'
+        file: src/data/ai.en.json
+        media_folder: /public/media/ai
+        public_folder: /media/ai
+        fields:
+          - { name: title, label: Browser tab title, widget: string }
+          - { name: description, label: Search / share description, widget: text }
+          - { name: eyebrow, label: Small line above headline, widget: string }
+          - { name: headline, label: Headline, widget: string }
+          - { name: sub, label: Subline, widget: text }
+          - { name: heroImage, label: Hero image, widget: image }
+          - { name: ctaPrimary, label: Main button, widget: string }
+          - { name: ctaSecondary, label: Second link (to cases), widget: string }
+          - { name: productsTitle, label: Products — section title, widget: string }
+          - { name: productsIntro, label: Products — intro, widget: text }
+          - { name: labelFor, label: Label “For”, widget: string }
+          - { name: labelDo, label: Label “What I do”, widget: string }
+          - { name: labelGet, label: Label “What you get”, widget: string }
+          - name: products
+            label: Products
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: for, label: For whom, widget: text }
+              - { name: does, label: What I do (text), widget: text, required: false }
+              - { name: bullets, label: What I do (bullets), widget: list, required: false }
+              - { name: gets, label: What you get, widget: text }
+              - { name: image, label: Image, widget: image }
+          - { name: stepsTitle, label: Steps — section title, widget: string }
+          - name: steps
+            label: Steps
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text }
+          - { name: billing, label: Billing line, widget: text }
+          - { name: casesTitle, label: Cases — section title, widget: string }
+          - { name: casesIntro, label: Cases — intro, widget: text }
+          - name: cases
+            label: Cases (first one is shown wide)
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: text, label: Text, widget: text }
+              - { name: image, label: Image, widget: image }
+              - name: links
+                label: Links
+                widget: list
+                required: false
+                fields:
+                  - { name: label, label: Label, widget: string }
+                  - { name: href, label: 'Link (e.g. /work/slug/)', widget: string }
+          - { name: contactTitle, label: Contact block — heading, widget: string }
+          - { name: contactText, label: Contact block — text, widget: text }

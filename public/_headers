@@ -4,3 +4,7 @@
   X-Robots-Tag: noindex
 /media/*
   Cache-Control: public, max-age=31536000
+/ai/*
+  X-Robots-Tag: noindex, nofollow
+/ru/*
+  X-Robots-Tag: noindex, nofollow

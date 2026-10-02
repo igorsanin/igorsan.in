@@ -4,9 +4,9 @@ import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const SHORT = 'a|an|the|of|in|on|at|to|for|by|with|from|into|onto|as|and|or|but|nor|is|was|be|we|our|its|it|my|me|i|no|not|via|per|up|off|out|so|if|&amp;|×';
+const SHORT = 'a|an|the|of|in|on|at|to|for|by|with|from|into|onto|as|and|or|but|nor|is|was|be|we|our|its|it|my|me|i|no|not|via|per|up|off|out|so|if|в|во|и|с|со|к|ко|о|об|у|а|но|не|ни|на|по|за|из|от|до|для|без|при|про|что|как|я|мы|вы|их|это|&amp;|×';
 const RE_SHORT = new RegExp(`(^|[\\s(«“"])(${SHORT}) +(?=\\S)`, 'gi');
-const RE_NUM = /(\d) +(?=(?:sec|min|px|K|M|tonnes|tons|years?|days?|LED|%|×)\b)/g;
+const RE_NUM = /(\d) +(?=(?:sec|min|px|K|M|tonnes|tons|years?|days?|LED|%|×|лет|часов|минут|занятий|человек)(?![\wа-яё]))/g;
 const RE_DASH = / +(—|–)(?= )/g;
 const glue = (t) => t.replace(RE_DASH, '\u00A0$1').replace(RE_SHORT, '$1$2 ').replace(RE_SHORT, '$1$2 ').replace(RE_NUM, '$1 ');
 

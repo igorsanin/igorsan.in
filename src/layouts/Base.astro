@@ -15,19 +15,32 @@ interface Props {
   description?: string;
   image?: string;
   noindex?: boolean;
+  lang?: 'en' | 'ru';
+  /** language versions of this page, e.g. { en: '/ai/', ru: '/ru/ai/' } — shows the EN/RU switch */
+  alternates?: { en: string; ru: string };
+  /** replaces the footer contact heading on this page */
+  contactTitle?: string;
+  contactText?: string;
 }
 const {
   title,
   description = 'Igor Sanin — creative director and filmmaker. 17 years of films that make complex things clear: exhibitions and pavilions, forum openers, brand and corporate films. Live action, CG and AI, with my own production team.',
   image = '/og.jpg',
   noindex = false,
+  lang = 'en',
+  alternates,
+  contactTitle,
+  contactText,
 } = Astro.props;
+const t = lang === 'ru'
+  ? { work: 'Работы', reel: 'Шоурил', about: 'Обо мне', talk: 'Обсудить', location: 'Валенсия, Испания. Работаю по всему миру на русском и английском.', main: 'Основное меню' }
+  : { work: 'Work', reel: 'Reel', about: 'About', talk: "Let's talk", location: site.location, main: 'Main' };
 const fullTitle = title ? `${title} — Igor Sanin` : 'Igor Sanin — Creative Director & Filmmaker';
 const path = Astro.url.pathname;
 const isActive = (href: string) => path === href || path.startsWith(href + '/');
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -42,16 +55,24 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#0C0C0D" />
+  {alternates && <link rel="alternate" hreflang="en" href={new URL(alternates.en, Astro.site)} />}
+  {alternates && <link rel="alternate" hreflang="ru" href={new URL(alternates.ru, Astro.site)} />}
 </head>
 <body>
   <header class="site-head">
     <div class="wrap head-in">
       <Logo size={34} />
-      <nav aria-label="Main">
-        <a href="/work/" aria-current={isActive('/work') ? 'page' : undefined}>Work</a>
-        {site.reelVimeo && <a href="/reel/" data-reel aria-current={isActive('/reel') ? 'page' : undefined}>Reel</a>}
-        <a href="/about/" aria-current={isActive('/about') ? 'page' : undefined}>About</a>
-        <a class="pill pill-red talk" href="#contact">Let's talk</a>
+      <nav aria-label={t.main}>
+        <a href="/work/" aria-current={isActive('/work') ? 'page' : undefined}>{t.work}</a>
+        {site.reelVimeo && <a href="/reel/" data-reel aria-current={isActive('/reel') ? 'page' : undefined}>{t.reel}</a>}
+        <a href="/about/" aria-current={isActive('/about') ? 'page' : undefined}>{t.about}</a>
+        {alternates && (
+          <span class="lang" role="group" aria-label="Language">
+            <a href={alternates.ru} hreflang="ru" lang="ru" aria-current={lang === 'ru' ? 'true' : undefined}>RU</a>
+            <a href={alternates.en} hreflang="en" lang="en" aria-current={lang === 'en' ? 'true' : undefined}>EN</a>
+          </span>
+        )}
+        <a class="pill pill-red talk" href="#contact">{t.talk}</a>
       </nav>
     </div>
   </header>
@@ -60,7 +81,10 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
 
   <footer class="site-foot wrap">
     <section id="contact" class="contact bg-glass" style="background-image:url(/brand/glass_01_corner.webp)">
-      <h2 class="display">{nbsp(site.footerLead)}</h2>
+      <div class:list={["contact-lead", { custom: !!contactTitle }]}>
+        <h2 class="display">{nbsp(contactTitle ?? site.footerLead)}</h2>
+        {contactText && <p>{contactText}</p>}
+      </div>
       <div class="contact-links">
         <div class="cta">
           {site.whatsapp && <a class="pill pill-ghost" href={`https://wa.me/${site.whatsapp.replace(/\D/g, '')}`} rel="noopener"><Fragment set:html={icons.wa} />WhatsApp</a>}
@@ -69,7 +93,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
         </div>
       </div>
     </section>
-    <p class="foot-meta"><span>© {new Date().getFullYear()} Igor Sanin</span><span>{nbsp(site.location)}</span></p>
+    <p class="foot-meta"><span>© {new Date().getFullYear()} Igor Sanin</span><span>{nbsp(t.location)}</span></p>
   </footer>
 
   {site.reelVimeo && <ReelDialog vimeo={site.reelVimeo} />}
@@ -90,7 +114,14 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
       padding: clamp(32px, 5vw, 56px);
       display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; flex-wrap: wrap;
     }
+    .contact-lead { display: flex; flex-direction: column; gap: 18px; max-width: 640px; }
     .contact h2 { font-size: clamp(36px, 5vw, 64px); line-height: .95; letter-spacing: -.03em; max-width: 12ch; }
+    .contact-lead.custom h2 { max-width: 16ch; }
+    .contact-lead p { margin: 0; font-size: 18px; line-height: 1.5; color: #E4E0DA; max-width: 44ch; }
+    .lang { display: inline-flex; gap: 2px; padding: 3px; border-radius: 999px; box-shadow: inset 0 0 0 1px rgba(244,242,239,.35); }
+    nav .lang a { font: 400 12px/1 var(--mono); letter-spacing: .06em; padding: 8px 10px; border-radius: 999px; color: var(--light); }
+    nav .lang a[aria-current] { background: var(--light); color: var(--dark); }
+    nav .lang a:not([aria-current]):hover { color: var(--red); }
     .contact-links { display: flex; flex-direction: column; gap: 14px; align-items: flex-end; }
     .contact :global(.ic) { width: 18px; height: 18px; flex: none; margin-left: -4px; }
     .cta { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
@@ -106,7 +137,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
     @media (max-width: 760px) {
       .head-in { height: 84px; }
       main { padding-top: 84px; }
-      nav a:not(.talk) { display: none; }
+      nav > a:not(.talk) { display: none; }
       .contact-links { align-items: flex-start; }
       .cta { justify-content: flex-start; }
     }
