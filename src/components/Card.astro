@@ -2,6 +2,7 @@
 // Work cover: clean frame at rest; on hover the left 68% goes under fluted glass
 // with REC dot + "YEAR · CLIENT", title and role (brand cover template).
 import { projectUrl, type Project } from '../lib/projects';
+import { nbsp } from '../lib/typo';
 interface Props { project: Project; href?: string; eager?: boolean }
 const { project, href, eager = false } = Astro.props;
 const d = project.data;
@@ -15,7 +16,7 @@ const meta = [d.year, d.client].filter(Boolean).join(' · ');
   <span class="pane glass" aria-hidden="true">
     <span class="m"><span class="dot"></span>{meta}</span>
     <span class="tr">
-      <span class="t">{d.title}</span>
+      <span class="t">{nbsp(d.title)}</span>
       {d.role && <span class="r">{d.role}</span>}
     </span>
   </span>
@@ -24,7 +25,7 @@ const meta = [d.year, d.client].filter(Boolean).join(' · ');
 <style>
   .card {
     position: relative; display: block; overflow: hidden;
-    aspect-ratio: 1200 / 937; border-radius: 12px;
+    aspect-ratio: 16 / 9; border-radius: 12px;
     background: #19191B; color: var(--light); text-decoration: none;
   }
   .card img, .blank { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1); }

@@ -27,3 +27,24 @@ export const projectUrl = (p: Project) =>
 
 export const metaLine = (p: Project) =>
   [p.data.year, p.data.client].filter(Boolean).join(' · ');
+
+/** Three related projects: same client, shared sectors/formats, same role; ties go to newer work. */
+export function relatedProjects(p: Project, pool: Project[], n = 3): Project[] {
+  const d = p.data;
+  const score = (q: Project) => {
+    const e = q.data;
+    let s = 0;
+    if (d.client && e.client === d.client) s += 4;
+    s += 2 * e.sectors.filter((x) => d.sectors.includes(x)).length;
+    s += 1.5 * e.formats.filter((x) => d.formats.includes(x)).length;
+    if (d.role && e.role === d.role) s += 0.5;
+    if (d.agency && e.agency === d.agency) s += 0.5;
+    return s;
+  };
+  return pool
+    .filter((q) => q.id !== p.id)
+    .map((q) => ({ q, s: score(q) }))
+    .sort((a, b) => b.s - a.s || b.q.data.year - a.q.data.year)
+    .slice(0, n)
+    .map((x) => x.q);
+}

@@ -4,14 +4,15 @@
 import Base from '../../layouts/Base.astro';
 import ProjectView from '../../components/ProjectView.astro';
 import site from '../../data/site.json';
-import { builtProjects } from '../../lib/projects';
+import { builtProjects, relatedProjects } from '../../lib/projects';
 
 export async function getStaticPaths() {
-  const list = (await builtProjects()).filter((p) => p.data.visibility === 'private');
-  return list.map((project) => ({ params: { vault: site.vault, slug: project.id }, props: { project } }));
+  const all = await builtProjects();
+  const list = all.filter((p) => p.data.visibility === 'private');
+  return list.map((project) => ({ params: { vault: site.vault, slug: project.id }, props: { project, related: relatedProjects(project, all) } }));
 }
-const { project } = Astro.props;
+const { project, related } = Astro.props;
 ---
 <Base title={project.data.title} noindex>
-  <ProjectView project={project} back={false} />
+  <ProjectView project={project} related={related} back={false} />
 </Base>

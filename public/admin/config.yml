@@ -139,4 +139,5 @@ collections:
           - { name: linkedin, label: LinkedIn URL, widget: string, required: false }
           - { name: vimeo, label: Vimeo profile URL, widget: string, required: false }
           - { name: aiSite, label: AI site URL, widget: string, required: false }
+          - { name: aiLabel, label: AI site link text (footer), widget: string, required: false }
           - { name: location, label: Location line, widget: string }

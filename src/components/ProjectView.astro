@@ -1,9 +1,11 @@
 ---
 import { render } from 'astro:content';
 import Player from './Player.astro';
-import { projectUrl, type Project } from '../lib/projects';
-interface Props { project: Project; next?: Project; back?: boolean }
-const { project, next, back = true } = Astro.props;
+import Card from './Card.astro';
+import { type Project } from '../lib/projects';
+import { nbsp } from '../lib/typo';
+interface Props { project: Project; related?: Project[]; back?: boolean }
+const { project, related = [], back = true } = Astro.props;
 const d = project.data;
 const { Content } = await render(project);
 const facts = [
@@ -22,7 +24,7 @@ const hasMain = d.video.vimeo || d.video.youtube || d.video.legacy;
     <header class="head">
       {back && <a class="mono-link" href="/work">← All work</a>}
       <p class="eyebrow">{meta}</p>
-      <h1 class="display">{d.title}</h1>
+      <h1 class="display">{nbsp(d.title)}</h1>
     </header>
 
     <div class="media">
@@ -36,7 +38,7 @@ const hasMain = d.video.vimeo || d.video.youtube || d.video.legacy;
         {facts.map(([k, v]) => (<><dt>{k}</dt><dd>{v}</dd></>))}
       </dl>
       <div class="text">
-        {d.summary && <p class="lead">{d.summary}</p>}
+        {d.summary && <p class="lead">{nbsp(d.summary)}</p>}
         <Content />
         {d.credits && <p class="credits">{d.credits}</p>}
       </div>
@@ -61,14 +63,14 @@ const hasMain = d.video.vimeo || d.video.youtube || d.video.legacy;
     )}
   </div>
 
-  {next && (
-    <a class="next" href={projectUrl(next)}>
-      {next.data.cover && <img src={next.data.cover} alt="" loading="lazy" />}
-      <span class="next-in wrap">
-        <span class="mono-label">Next project →</span>
-        <span class="next-t display">{next.data.title}</span>
-      </span>
-    </a>
+  {related.length > 0 && (
+    <section class="wrap related" aria-labelledby="rel">
+      <div class="rel-head">
+        <h2 id="rel" class="display">Related projects</h2>
+        {back && <a class="mono-link" href="/work">All projects →</a>}
+      </div>
+      <div class="rel-grid">{related.map((p) => <Card project={p} />)}</div>
+    </section>
   )}
 </article>
 
@@ -94,15 +96,12 @@ const hasMain = d.video.vimeo || d.video.youtube || d.video.legacy;
   .gallery > * { width: 100%; height: auto; background: #19191B; }
   .gallery > :nth-child(3n+1) { grid-column: 1 / -1; }
 
-  .next { position: relative; display: block; height: clamp(260px, 26vw, 360px); margin-top: clamp(72px, 9vw, 120px); overflow: hidden; color: var(--light); text-decoration: none; }
-  .next img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
-  .next::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(12,12,13,.85), rgba(12,12,13,.35)); }
-  .next:hover img { transform: scale(1.03); }
-  .next-in { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column; justify-content: space-between; padding-top: 40px; padding-bottom: 40px; }
-  .mono-label { font: 400 13px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
-  .next:hover .mono-label { color: var(--red); }
-  .next-t { font-size: clamp(36px, 5.5vw, 72px); line-height: .95; letter-spacing: -.035em; max-width: 18ch; }
-
+  .related { margin-top: clamp(80px, 10vw, 128px); }
+  .rel-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 28px; }
+  .rel-head h2 { font-size: clamp(28px, 3vw, 40px); letter-spacing: -.02em; }
+  .rel-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  @media (max-width: 1000px) { .rel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 640px) { .rel-grid { grid-template-columns: 1fr; } }
   @media (max-width: 760px) {
     .body { grid-template-columns: 1fr; }
     .grid2 { grid-template-columns: 1fr; }

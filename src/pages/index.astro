@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import Card from '../components/Card.astro';
 import site from '../data/site.json';
 import { featuredProjects } from '../lib/projects';
+import { nbsp } from '../lib/typo';
 const selected = (await featuredProjects()).slice(0, 9);
 const poster = selected[0]?.data.cover ?? '';
 ---
@@ -14,9 +15,8 @@ const poster = selected[0]?.data.cover ?? '';
     </div>
     <div class="pane glass">
       <div class="wrap-in">
-        <p class="eyebrow">Creative director &amp; filmmaker · Valencia → worldwide</p>
-        <h1 class="display">{site.heroLine}</h1>
-        <p class="sub">{site.heroSub}</p>
+        <h1 class="display">{nbsp(site.heroLine)}</h1>
+        <p class="sub">{nbsp(site.heroSub)}</p>
         <div class="actions">
           {site.reelVimeo && (
             <a class="pill pill-light" href="/reel" data-reel>
@@ -24,7 +24,7 @@ const poster = selected[0]?.data.cover ?? '';
               Watch reel
             </a>
           )}
-          <span class="tags">Live action · CG · AI</span>
+          <a class="mono-link more" href="/about">More about me →</a>
         </div>
       </div>
     </div>
@@ -54,17 +54,16 @@ const poster = selected[0]?.data.cover ?? '';
   .reel iframe { width: 177.78vh; min-width: 100%; height: 56.25vw; min-height: 100%; left: 50%; top: 50%; right: auto; bottom: auto; transform: translate(-50%, -50%); opacity: 0; transition: opacity 1.2s ease; }
   .reel iframe.on { opacity: 1; }
   .hero::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 180px; z-index: 2; pointer-events: none; background: linear-gradient(rgba(12,12,13,.6), rgba(12,12,13,0)); }
-  .pane { position: absolute; inset: 0 32% 0 0; display: flex; align-items: flex-end; }
+  .pane { position: absolute; inset: 0 40% 0 0; display: flex; align-items: flex-end; }
   .wrap-in {
     display: flex; flex-direction: column; gap: 26px;
     padding: 0 var(--gutter) clamp(48px, 9vh, 96px) max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)));
-    max-width: calc(880px + max(0px, (100vw - var(--max)) / 2));
+    max-width: 100%;
   }
   h1 { font-size: clamp(48px, 7vw, 104px); line-height: .93; letter-spacing: -.035em; max-width: 11ch; }
   .sub { margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.5; max-width: 46ch; color: #CFCBC5; }
   .actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
-  .wrap-in .eyebrow { color: var(--light); }
-  .tags { font: 400 13px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: #BDB9B4; }
+  .more { color: var(--light); }
 
   .block { padding-top: clamp(72px, 9vw, 120px); }
   .block-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 28px; }

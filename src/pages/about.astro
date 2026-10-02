@@ -2,6 +2,7 @@
 import { getEntry, render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import site from '../data/site.json';
+import { nbsp } from '../lib/typo';
 const page = await getEntry('pages', 'about');
 if (!page) throw new Error('src/content/pages/about.md is missing');
 const { Content } = await render(page);
@@ -11,11 +12,11 @@ const { Content } = await render(page);
     <section class="intro">
       <div class="portrait">
         {page.data.portrait && <img src={page.data.portrait} alt="Igor Sanin" />}
-        <span class="strip bg-glass" style="background-image:url(/brand/glass_04_flood.webp)" aria-hidden="true"></span>
+        <span class="strip" aria-hidden="true"></span>
       </div>
       <div class="text">
         <p class="eyebrow">About</p>
-        <h1 class="display">{page.data.headline}</h1>
+        <h1 class="display">{nbsp(page.data.headline)}</h1>
         <div class="body"><Content /></div>
       </div>
     </section>
@@ -23,7 +24,7 @@ const { Content } = await render(page);
     {site.services?.length > 0 && (
       <section class="services">
         {site.services.map((s) => (
-          <div><h2>{s.title}</h2><p>{s.text}</p></div>
+          <div><h2>{nbsp(s.title)}</h2><p>{nbsp(s.text)}</p></div>
         ))}
       </section>
     )}
@@ -52,7 +53,12 @@ const { Content } = await render(page);
   .intro { display: grid; grid-template-columns: minmax(0, 480px) minmax(0, 1fr); gap: 40px clamp(40px, 6vw, 72px); align-items: start; }
   .portrait { position: relative; aspect-ratio: 4 / 5; border-radius: 16px; overflow: hidden; background: #19191B; }
   .portrait img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .strip { position: absolute; top: 0; right: 0; bottom: 0; width: 32%; opacity: .9; mix-blend-mode: screen; }
+  .strip {
+    position: absolute; top: 0; left: 0; bottom: 0; width: 34%;
+    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+    background: repeating-linear-gradient(90deg, rgba(255,255,255,.10) 0px, rgba(255,255,255,0) 5px, rgba(0,0,0,.08) 11px, rgba(255,255,255,.05) 14px);
+  }
+  .strip::after { content: ''; position: absolute; top: 0; bottom: 0; right: 0; width: 1px; background: rgba(244,242,239,.55); }
   .text { display: flex; flex-direction: column; gap: 28px; max-width: 760px; }
   h1 { font-size: clamp(44px, 5vw, 64px); line-height: .95; letter-spacing: -.03em; }
   .body { font-size: 18px; line-height: 1.6; color: #CFCBC5; }

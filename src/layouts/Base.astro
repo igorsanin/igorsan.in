@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Logo from '../components/Logo.astro';
 import ReelDialog from '../components/ReelDialog.astro';
 import site from '../data/site.json';
+import { nbsp } from '../lib/typo';
 
 interface Props {
   title?: string;
@@ -54,17 +55,17 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
 
   <footer class="site-foot wrap">
     <section id="contact" class="contact bg-glass" style="background-image:url(/brand/glass_01_corner.webp)">
-      <h2 class="display">{site.footerLead}</h2>
+      <h2 class="display">{nbsp(site.footerLead)}</h2>
       <div class="contact-links">
         <a class="pill pill-light" href={`mailto:${site.email}`}>{site.email}</a>
         <p class="links">
           {site.linkedin && <a href={site.linkedin} rel="me">LinkedIn</a>}
           {site.vimeo && <a href={site.vimeo} rel="me">Vimeo</a>}
-          {site.aiSite && <a href={site.aiSite}>iigor.pro</a>}
+          {site.aiSite && <a href={site.aiSite}>{site.aiLabel || 'iigor.pro'}</a>}
         </p>
       </div>
     </section>
-    <p class="foot-meta"><span>© {new Date().getFullYear()} Igor Sanin</span><span>{site.location}</span></p>
+    <p class="foot-meta"><span>© {new Date().getFullYear()} Igor Sanin</span><span>{nbsp(site.location)}</span></p>
   </footer>
 
   {site.reelVimeo && <ReelDialog vimeo={site.reelVimeo} />}
