@@ -48,9 +48,9 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
     <div class="wrap head-in">
       <Logo size={34} />
       <nav aria-label="Main">
-        <a href="/work" aria-current={isActive('/work') ? 'page' : undefined}>Work</a>
-        {site.reelVimeo && <a href="/reel" data-reel aria-current={isActive('/reel') ? 'page' : undefined}>Reel</a>}
-        <a href="/about" aria-current={isActive('/about') ? 'page' : undefined}>About</a>
+        <a href="/work/" aria-current={isActive('/work') ? 'page' : undefined}>Work</a>
+        {site.reelVimeo && <a href="/reel/" data-reel aria-current={isActive('/reel') ? 'page' : undefined}>Reel</a>}
+        <a href="/about/" aria-current={isActive('/about') ? 'page' : undefined}>About</a>
         <a class="pill pill-red talk" href="#contact">Let's talk</a>
       </nav>
     </div>

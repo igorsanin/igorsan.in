@@ -23,7 +23,7 @@ export async function featuredProjects() {
 
 /** Public projects live at /work/<slug>, private ones at /<vault>/<slug> (noindex). */
 export const projectUrl = (p: Project) =>
-  p.data.visibility === 'public' ? `/work/${p.id}` : `/${site.vault}/${p.id}`;
+  p.data.visibility === 'public' ? `/work/${p.id}/` : `/${site.vault}/${p.id}/`;
 
 export const metaLine = (p: Project) =>
   [p.data.year, p.data.client].filter(Boolean).join(' · ');

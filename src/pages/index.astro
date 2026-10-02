@@ -19,12 +19,12 @@ const poster = selected[0]?.data.cover ?? '';
         <p class="sub">{nbsp(site.heroSub)}</p>
         <div class="actions">
           {site.reelVimeo && (
-            <a class="pill pill-light" href="/reel" data-reel>
+            <a class="pill pill-light" href="/reel/" data-reel>
               <svg width="12" height="14" viewBox="0 0 12 14" aria-hidden="true"><path d="M1 1 L11 7 L1 13 Z" fill="currentColor"></path></svg>
               Watch reel
             </a>
           )}
-          <a class="more" href="/about">More about me</a>
+          <a class="more" href="/about/">More about me</a>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@ const poster = selected[0]?.data.cover ?? '';
   <section class="wrap block" aria-labelledby="sel">
     <div class="block-head">
       <h2 id="sel" class="display">Selected work</h2>
-      <a class="mono-link" href="/work">All projects →</a>
+      <a class="mono-link" href="/work/">All projects →</a>
     </div>
     <div class="grid">
       {selected.map((p, i) => <Card project={p} eager={i < 3} />)}

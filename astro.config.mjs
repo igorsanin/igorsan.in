@@ -3,7 +3,7 @@ import nbsp from './src/lib/nbsp-integration.mjs';
 
 export default defineConfig({
   site: 'https://igorsan.in',
-  trailingSlash: 'never',
+  trailingSlash: 'always',
   build: { format: 'directory' },
   integrations: [nbsp()],
 });

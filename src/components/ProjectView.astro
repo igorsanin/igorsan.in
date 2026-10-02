@@ -24,7 +24,7 @@ const hasMain = d.video.vimeo || d.video.youtube || d.video.legacy;
     <header class="head">
       <div class="toprow">
         <p class="eyebrow">{meta}</p>
-        {back && <a class="back" href="/work">← All work</a>}
+        {back && <a class="back" href="/work/">← All work</a>}
       </div>
       <h1 class="display">{nbsp(d.title)}</h1>
     </header>
@@ -69,7 +69,7 @@ const hasMain = d.video.vimeo || d.video.youtube || d.video.legacy;
     <section class="wrap related" aria-labelledby="rel">
       <div class="rel-head">
         <h2 id="rel" class="display">Related projects</h2>
-        {back && <a class="mono-link" href="/work">All projects →</a>}
+        {back && <a class="mono-link" href="/work/">All projects →</a>}
       </div>
       <div class="rel-grid">{related.map((p) => <Card project={p} />)}</div>
     </section>
