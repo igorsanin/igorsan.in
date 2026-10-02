@@ -24,7 +24,7 @@ const poster = selected[0]?.data.cover ?? '';
               Watch reel
             </a>
           )}
-          <a class="mono-link more" href="/about">More about me →</a>
+          <a class="more" href="/about">More about me</a>
         </div>
       </div>
     </div>
@@ -54,16 +54,17 @@ const poster = selected[0]?.data.cover ?? '';
   .reel iframe { width: 177.78vh; min-width: 100%; height: 56.25vw; min-height: 100%; left: 50%; top: 50%; right: auto; bottom: auto; transform: translate(-50%, -50%); opacity: 0; transition: opacity 1.2s ease; }
   .reel iframe.on { opacity: 1; }
   .hero::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 180px; z-index: 2; pointer-events: none; background: linear-gradient(rgba(12,12,13,.6), rgba(12,12,13,0)); }
-  .pane { position: absolute; inset: 0 40% 0 0; display: flex; align-items: flex-end; }
+  .pane { position: absolute; inset: 0 37% 0 0; display: flex; align-items: center; }
   .wrap-in {
     display: flex; flex-direction: column; gap: 26px;
-    padding: 0 var(--gutter) clamp(48px, 9vh, 96px) max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)));
+    padding: 108px var(--gutter) 24px max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)));
     max-width: 100%;
   }
   h1 { font-size: clamp(48px, 7vw, 104px); line-height: .93; letter-spacing: -.035em; max-width: 11ch; }
   .sub { margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.5; max-width: 46ch; color: #CFCBC5; }
   .actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
-  .more { color: var(--light); }
+  .more { font: 500 16px/1 var(--sans); color: var(--light); text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 7px; }
+  .more:hover { color: var(--red); }
 
   .block { padding-top: clamp(72px, 9vw, 120px); }
   .block-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 28px; }
@@ -78,13 +79,18 @@ const poster = selected[0]?.data.cover ?? '';
   }
   .brands li { background: var(--dark); padding: 28px 20px; font: 400 13px var(--mono); letter-spacing: .08em; text-transform: uppercase; }
 
+  @media (max-width: 1100px) {
+    .pane { inset: 0; }
+    .pane::after { display: none; }
+  }
   @media (max-width: 1000px) {
     .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .brands { grid-template-columns: 1fr; }
   }
   @media (max-width: 640px) {
     .hero { height: 84vh; margin-top: -84px; }
-    .pane { inset: 0; }
+    .pane { inset: 0; align-items: flex-end; }
+    .wrap-in { padding-bottom: 48px; }
     .pane::after { display: none; }
     .grid { grid-template-columns: 1fr; }
     .brands ul { grid-template-columns: repeat(2, minmax(0, 1fr)); }

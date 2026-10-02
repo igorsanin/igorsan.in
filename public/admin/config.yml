@@ -136,6 +136,8 @@ collections:
               - { name: work, label: For which work, widget: string, required: false }
           - { name: footerLead, label: Footer line, widget: string }
           - { name: email, label: Email, widget: string }
+          - { name: whatsapp, label: 'WhatsApp number (with country code, e.g. +34600000000)', widget: string, required: false }
+          - { name: telegram, label: 'Telegram username (without @)', widget: string, required: false }
           - { name: linkedin, label: LinkedIn URL, widget: string, required: false }
           - { name: vimeo, label: Vimeo profile URL, widget: string, required: false }
           - { name: aiSite, label: AI site URL, widget: string, required: false }

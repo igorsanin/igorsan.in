@@ -57,7 +57,11 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
     <section id="contact" class="contact bg-glass" style="background-image:url(/brand/glass_01_corner.webp)">
       <h2 class="display">{nbsp(site.footerLead)}</h2>
       <div class="contact-links">
-        <a class="pill pill-light" href={`mailto:${site.email}`}>{site.email}</a>
+        <div class="cta">
+          {site.whatsapp && <a class="pill pill-ghost" href={`https://wa.me/${site.whatsapp.replace(/\D/g, '')}`} rel="noopener">WhatsApp</a>}
+          {site.telegram && <a class="pill pill-ghost" href={`https://t.me/${site.telegram.replace(/^@/, '')}`} rel="noopener">Telegram</a>}
+          <a class="pill pill-light" href={`mailto:${site.email}`}>{site.email}</a>
+        </div>
         <p class="links">
           {site.linkedin && <a href={site.linkedin} rel="me">LinkedIn</a>}
           {site.vimeo && <a href={site.vimeo} rel="me">Vimeo</a>}
@@ -88,6 +92,9 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
     }
     .contact h2 { font-size: clamp(36px, 5vw, 64px); line-height: .95; letter-spacing: -.03em; max-width: 12ch; }
     .contact-links { display: flex; flex-direction: column; gap: 14px; align-items: flex-end; }
+    .cta { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    .pill-ghost { background: rgba(12,12,13,.35); color: var(--light); box-shadow: inset 0 0 0 1px rgba(244,242,239,.6); }
+    .pill-ghost:hover { background: var(--light); color: var(--dark); }
     .links { margin: 0; display: flex; gap: 20px; font: 400 13px var(--mono); text-transform: uppercase; letter-spacing: .06em; }
     .links a { text-decoration: none; color: var(--light); }
     .links a:hover { color: var(--dark); }
@@ -100,6 +107,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
       main { padding-top: 84px; }
       nav a:not(.talk) { display: none; }
       .contact-links { align-items: flex-start; }
+      .cta { justify-content: flex-start; }
     }
   </style>
 </body>
