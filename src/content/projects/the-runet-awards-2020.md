@@ -15,8 +15,7 @@ video:
   vimeo: '502979320'
   youtube: ''
   legacy: ''
-  more:
-    - vimeo:502977202
+  more: []
 gallery:
   - file: /media/the-runet-awards-2020/01.webp
     top: false
