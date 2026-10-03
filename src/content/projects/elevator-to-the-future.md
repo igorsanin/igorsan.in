@@ -18,7 +18,35 @@ video:
   youtube: ""
   legacy: "ArJ9uhxTAIL"
   more: []
-gallery: ["/media/elevator-to-the-future/01.webp", "/media/elevator-to-the-future/02.webp", "/media/elevator-to-the-future/03.webp", "/media/elevator-to-the-future/04.webp", "/media/elevator-to-the-future/05.webp", "/media/elevator-to-the-future/06.webp", "/media/elevator-to-the-future/07.webp", "/media/elevator-to-the-future/08.webp", "/media/elevator-to-the-future/09.webp", "/media/elevator-to-the-future/10.webp", "/media/elevator-to-the-future/11.webp", "/media/elevator-to-the-future/12.webp", "/media/elevator-to-the-future/13.webp", "/media/elevator-to-the-future/14.webp"]
+gallery:
+  - file: /media/elevator-to-the-future/01.webp
+    size: auto
+  - file: /media/elevator-to-the-future/02.webp
+    size: auto
+  - file: /media/elevator-to-the-future/03.webp
+    size: auto
+  - file: /media/elevator-to-the-future/04.webp
+    size: auto
+  - file: /media/elevator-to-the-future/05.webp
+    size: auto
+  - file: /media/elevator-to-the-future/06.webp
+    size: auto
+  - file: /media/elevator-to-the-future/07.webp
+    size: auto
+  - file: /media/elevator-to-the-future/08.webp
+    size: auto
+  - file: /media/elevator-to-the-future/09.webp
+    size: auto
+  - file: /media/elevator-to-the-future/10.webp
+    size: auto
+  - file: /media/elevator-to-the-future/11.webp
+    size: auto
+  - file: /media/elevator-to-the-future/12.webp
+    size: auto
+  - file: /media/elevator-to-the-future/13.webp
+    size: auto
+  - file: /media/elevator-to-the-future/14.webp
+    size: auto
 credits: ""
 award: ""
 ---

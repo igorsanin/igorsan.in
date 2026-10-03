@@ -18,7 +18,27 @@ video:
   youtube: ""
   legacy: ""
   more: []
-gallery: ["/media/atmosphere/01.webp", "/media/atmosphere/02.webp", "/media/atmosphere/03.webp", "/media/atmosphere/04.mp4", "/media/atmosphere/05.mp4", "/media/atmosphere/06.mp4", "/media/atmosphere/07.mp4", "/media/atmosphere/08.mp4", "/media/atmosphere/09.mp4", "/media/atmosphere/10.webp"]
+gallery:
+  - file: /media/atmosphere/01.webp
+    size: auto
+  - file: /media/atmosphere/02.webp
+    size: auto
+  - file: /media/atmosphere/03.webp
+    size: auto
+  - file: /media/atmosphere/04.mp4
+    size: auto
+  - file: /media/atmosphere/05.mp4
+    size: auto
+  - file: /media/atmosphere/06.mp4
+    size: auto
+  - file: /media/atmosphere/07.mp4
+    size: auto
+  - file: /media/atmosphere/08.mp4
+    size: auto
+  - file: /media/atmosphere/09.mp4
+    size: auto
+  - file: /media/atmosphere/10.webp
+    size: auto
 credits: ""
 award: ""
 ---

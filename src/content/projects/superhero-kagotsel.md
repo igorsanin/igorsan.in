@@ -18,7 +18,19 @@ video:
   youtube: ""
   legacy: "G58XRR_AeEh"
   more: []
-gallery: ["/media/superhero-kagotsel/01.webp", "/media/superhero-kagotsel/02.webp", "/media/superhero-kagotsel/03.webp", "/media/superhero-kagotsel/04.webp", "/media/superhero-kagotsel/05.webp", "/media/superhero-kagotsel/06.webp"]
+gallery:
+  - file: /media/superhero-kagotsel/01.webp
+    size: auto
+  - file: /media/superhero-kagotsel/02.webp
+    size: auto
+  - file: /media/superhero-kagotsel/03.webp
+    size: auto
+  - file: /media/superhero-kagotsel/04.webp
+    size: auto
+  - file: /media/superhero-kagotsel/05.webp
+    size: auto
+  - file: /media/superhero-kagotsel/06.webp
+    size: auto
 credits: ""
 award: ""
 ---

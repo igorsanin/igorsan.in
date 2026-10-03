@@ -18,7 +18,29 @@ video:
   youtube: ""
   legacy: "RehBRcFZ56H"
   more: []
-gallery: ["/media/urban-transport/01.webp", "/media/urban-transport/02.webp", "/media/urban-transport/03.webp", "/media/urban-transport/04.webp", "/media/urban-transport/05.webp", "/media/urban-transport/06.webp", "/media/urban-transport/07.webp", "/media/urban-transport/08.webp", "/media/urban-transport/09.webp", "/media/urban-transport/10.webp", "/media/urban-transport/11.webp"]
+gallery:
+  - file: /media/urban-transport/01.webp
+    size: auto
+  - file: /media/urban-transport/02.webp
+    size: auto
+  - file: /media/urban-transport/03.webp
+    size: auto
+  - file: /media/urban-transport/04.webp
+    size: auto
+  - file: /media/urban-transport/05.webp
+    size: auto
+  - file: /media/urban-transport/06.webp
+    size: auto
+  - file: /media/urban-transport/07.webp
+    size: auto
+  - file: /media/urban-transport/08.webp
+    size: auto
+  - file: /media/urban-transport/09.webp
+    size: auto
+  - file: /media/urban-transport/10.webp
+    size: auto
+  - file: /media/urban-transport/11.webp
+    size: auto
 credits: "Creative Producer: Igor Zuev\nArt Director, Script: Igor Sanin\nContent Producer: Tina Pashina\nCG Producer: Kirill Makukha\nCG Supervisors: Sam Panfilov, Viktor Sorokin"
 award: ""
 ---

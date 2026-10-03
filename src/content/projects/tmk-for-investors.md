@@ -18,7 +18,25 @@ video:
   youtube: ""
   legacy: "TQpKXGmWZpD"
   more: []
-gallery: ["/media/tmk-for-investors/01.webp", "/media/tmk-for-investors/02.webp", "/media/tmk-for-investors/03.webp", "/media/tmk-for-investors/04.webp", "/media/tmk-for-investors/05.webp", "/media/tmk-for-investors/06.webp", "/media/tmk-for-investors/07.webp", "/media/tmk-for-investors/08.webp", "/media/tmk-for-investors/09.webp"]
+gallery:
+  - file: /media/tmk-for-investors/01.webp
+    size: auto
+  - file: /media/tmk-for-investors/02.webp
+    size: auto
+  - file: /media/tmk-for-investors/03.webp
+    size: auto
+  - file: /media/tmk-for-investors/04.webp
+    size: auto
+  - file: /media/tmk-for-investors/05.webp
+    size: auto
+  - file: /media/tmk-for-investors/06.webp
+    size: auto
+  - file: /media/tmk-for-investors/07.webp
+    size: auto
+  - file: /media/tmk-for-investors/08.webp
+    size: auto
+  - file: /media/tmk-for-investors/09.webp
+    size: auto
 credits: ""
 award: ""
 ---

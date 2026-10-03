@@ -18,7 +18,31 @@ video:
   youtube: ""
   legacy: ""
   more: ["vimeo:842827193", "vimeo:842899508", "vimeo:842827230", "vimeo:842827257", "vimeo:842827275"]
-gallery: ["/media/innotech-banking-history/01.webp", "/media/innotech-banking-history/02.mp4", "/media/innotech-banking-history/03.mp4", "/media/innotech-banking-history/04.webp", "/media/innotech-banking-history/05.webp", "/media/innotech-banking-history/06.mp4", "/media/innotech-banking-history/07.mp4", "/media/innotech-banking-history/08.webp", "/media/innotech-banking-history/09.webp", "/media/innotech-banking-history/10.mp4", "/media/innotech-banking-history/11.mp4", "/media/innotech-banking-history/12.webp"]
+gallery:
+  - file: /media/innotech-banking-history/01.webp
+    size: auto
+  - file: /media/innotech-banking-history/02.mp4
+    size: auto
+  - file: /media/innotech-banking-history/03.mp4
+    size: auto
+  - file: /media/innotech-banking-history/04.webp
+    size: auto
+  - file: /media/innotech-banking-history/05.webp
+    size: auto
+  - file: /media/innotech-banking-history/06.mp4
+    size: auto
+  - file: /media/innotech-banking-history/07.mp4
+    size: auto
+  - file: /media/innotech-banking-history/08.webp
+    size: auto
+  - file: /media/innotech-banking-history/09.webp
+    size: auto
+  - file: /media/innotech-banking-history/10.mp4
+    size: auto
+  - file: /media/innotech-banking-history/11.mp4
+    size: auto
+  - file: /media/innotech-banking-history/12.webp
+    size: auto
 credits: ""
 award: ""
 ---

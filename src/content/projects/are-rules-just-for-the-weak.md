@@ -18,7 +18,31 @@ video:
   youtube: ""
   legacy: ""
   more: []
-gallery: ["/media/are-rules-just-for-the-weak/01.webp", "/media/are-rules-just-for-the-weak/02.webp", "/media/are-rules-just-for-the-weak/03.webp", "/media/are-rules-just-for-the-weak/04.webp", "/media/are-rules-just-for-the-weak/05.webp", "/media/are-rules-just-for-the-weak/06.webp", "/media/are-rules-just-for-the-weak/07.webp", "/media/are-rules-just-for-the-weak/08.webp", "/media/are-rules-just-for-the-weak/09.webp", "/media/are-rules-just-for-the-weak/10.webp", "/media/are-rules-just-for-the-weak/11.webp", "/media/are-rules-just-for-the-weak/12.webp"]
+gallery:
+  - file: /media/are-rules-just-for-the-weak/01.webp
+    size: auto
+  - file: /media/are-rules-just-for-the-weak/02.webp
+    size: auto
+  - file: /media/are-rules-just-for-the-weak/03.webp
+    size: auto
+  - file: /media/are-rules-just-for-the-weak/04.webp
+    size: auto
+  - file: /media/are-rules-just-for-the-weak/05.webp
+    size: auto
+  - file: /media/are-rules-just-for-the-weak/06.webp
+    size: auto
+  - file: /media/are-rules-just-for-the-weak/07.webp
+    size: auto
+  - file: /media/are-rules-just-for-the-weak/08.webp
+    size: auto
+  - file: /media/are-rules-just-for-the-weak/09.webp
+    size: auto
+  - file: /media/are-rules-just-for-the-weak/10.webp
+    size: auto
+  - file: /media/are-rules-just-for-the-weak/11.webp
+    size: auto
+  - file: /media/are-rules-just-for-the-weak/12.webp
+    size: auto
 credits: ""
 award: ""
 ---

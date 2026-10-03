@@ -18,7 +18,21 @@ video:
   youtube: ""
   legacy: "RwZ74JG7kbj"
   more: []
-gallery: ["/media/newmaterials/01.webp", "/media/newmaterials/02.webp", "/media/newmaterials/03.webp", "/media/newmaterials/04.webp", "/media/newmaterials/05.webp", "/media/newmaterials/06.webp", "/media/newmaterials/07.webp"]
+gallery:
+  - file: /media/newmaterials/01.webp
+    size: auto
+  - file: /media/newmaterials/02.webp
+    size: auto
+  - file: /media/newmaterials/03.webp
+    size: auto
+  - file: /media/newmaterials/04.webp
+    size: auto
+  - file: /media/newmaterials/05.webp
+    size: auto
+  - file: /media/newmaterials/06.webp
+    size: auto
+  - file: /media/newmaterials/07.webp
+    size: auto
 credits: ""
 award: ""
 ---

@@ -18,7 +18,25 @@ video:
   youtube: ""
   legacy: "RxIInLPLMRu"
   more: []
-gallery: ["/media/imh-company/01.webp", "/media/imh-company/02.webp", "/media/imh-company/03.webp", "/media/imh-company/04.webp", "/media/imh-company/05.webp", "/media/imh-company/06.webp", "/media/imh-company/07.webp", "/media/imh-company/08.webp", "/media/imh-company/09.webp"]
+gallery:
+  - file: /media/imh-company/01.webp
+    size: auto
+  - file: /media/imh-company/02.webp
+    size: auto
+  - file: /media/imh-company/03.webp
+    size: auto
+  - file: /media/imh-company/04.webp
+    size: auto
+  - file: /media/imh-company/05.webp
+    size: auto
+  - file: /media/imh-company/06.webp
+    size: auto
+  - file: /media/imh-company/07.webp
+    size: auto
+  - file: /media/imh-company/08.webp
+    size: auto
+  - file: /media/imh-company/09.webp
+    size: auto
 credits: ""
 award: ""
 ---

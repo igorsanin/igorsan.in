@@ -18,7 +18,27 @@ video:
   youtube: "r-7w7XAFnSg"
   legacy: ""
   more: []
-gallery: ["/media/big-data-changing-the-world-sberbank-175/01.webp", "/media/big-data-changing-the-world-sberbank-175/02.webp", "/media/big-data-changing-the-world-sberbank-175/03.webp", "/media/big-data-changing-the-world-sberbank-175/04.webp", "/media/big-data-changing-the-world-sberbank-175/05.webp", "/media/big-data-changing-the-world-sberbank-175/06.webp", "/media/big-data-changing-the-world-sberbank-175/07.webp", "/media/big-data-changing-the-world-sberbank-175/08.webp", "/media/big-data-changing-the-world-sberbank-175/09.webp", "/media/big-data-changing-the-world-sberbank-175/10.webp"]
+gallery:
+  - file: /media/big-data-changing-the-world-sberbank-175/01.webp
+    size: auto
+  - file: /media/big-data-changing-the-world-sberbank-175/02.webp
+    size: auto
+  - file: /media/big-data-changing-the-world-sberbank-175/03.webp
+    size: auto
+  - file: /media/big-data-changing-the-world-sberbank-175/04.webp
+    size: auto
+  - file: /media/big-data-changing-the-world-sberbank-175/05.webp
+    size: auto
+  - file: /media/big-data-changing-the-world-sberbank-175/06.webp
+    size: auto
+  - file: /media/big-data-changing-the-world-sberbank-175/07.webp
+    size: auto
+  - file: /media/big-data-changing-the-world-sberbank-175/08.webp
+    size: auto
+  - file: /media/big-data-changing-the-world-sberbank-175/09.webp
+    size: auto
+  - file: /media/big-data-changing-the-world-sberbank-175/10.webp
+    size: auto
 credits: ""
 award: ""
 ---

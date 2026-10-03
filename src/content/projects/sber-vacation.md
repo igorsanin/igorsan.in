@@ -18,7 +18,25 @@ video:
   youtube: "zROk_2kGKbM"
   legacy: ""
   more: ["yt:Lj2ZE4isc3g", "yt:IJGEwWiXllk", "yt:kYpwiLesz6Q"]
-gallery: ["/media/sber-vacation/01.webp", "/media/sber-vacation/02.webp", "/media/sber-vacation/03.webp", "/media/sber-vacation/04.webp", "/media/sber-vacation/05.webp", "/media/sber-vacation/06.webp", "/media/sber-vacation/07.webp", "/media/sber-vacation/08.webp", "/media/sber-vacation/09.webp"]
+gallery:
+  - file: /media/sber-vacation/01.webp
+    size: auto
+  - file: /media/sber-vacation/02.webp
+    size: auto
+  - file: /media/sber-vacation/03.webp
+    size: auto
+  - file: /media/sber-vacation/04.webp
+    size: auto
+  - file: /media/sber-vacation/05.webp
+    size: auto
+  - file: /media/sber-vacation/06.webp
+    size: auto
+  - file: /media/sber-vacation/07.webp
+    size: auto
+  - file: /media/sber-vacation/08.webp
+    size: auto
+  - file: /media/sber-vacation/09.webp
+    size: auto
 credits: ""
 award: ""
 ---

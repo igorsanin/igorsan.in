@@ -18,7 +18,19 @@ video:
   youtube: ""
   legacy: "CocPSSLDTKU"
   more: []
-gallery: ["/media/vtb-smart-city/01.webp", "/media/vtb-smart-city/02.webp", "/media/vtb-smart-city/03.webp", "/media/vtb-smart-city/04.webp", "/media/vtb-smart-city/05.webp", "/media/vtb-smart-city/06.webp"]
+gallery:
+  - file: /media/vtb-smart-city/01.webp
+    size: auto
+  - file: /media/vtb-smart-city/02.webp
+    size: auto
+  - file: /media/vtb-smart-city/03.webp
+    size: auto
+  - file: /media/vtb-smart-city/04.webp
+    size: auto
+  - file: /media/vtb-smart-city/05.webp
+    size: auto
+  - file: /media/vtb-smart-city/06.webp
+    size: auto
 credits: ""
 award: ""
 ---

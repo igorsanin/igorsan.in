@@ -18,7 +18,29 @@ video:
   youtube: ""
   legacy: ""
   more: []
-gallery: ["/media/digital-risk-protection/01.webp", "/media/digital-risk-protection/02.webp", "/media/digital-risk-protection/03.webp", "/media/digital-risk-protection/04.webp", "/media/digital-risk-protection/05.webp", "/media/digital-risk-protection/06.mp4", "/media/digital-risk-protection/07.mp4", "/media/digital-risk-protection/08.mp4", "/media/digital-risk-protection/09.mp4", "/media/digital-risk-protection/10.mp4", "/media/digital-risk-protection/11.mp4"]
+gallery:
+  - file: /media/digital-risk-protection/01.webp
+    size: auto
+  - file: /media/digital-risk-protection/02.webp
+    size: auto
+  - file: /media/digital-risk-protection/03.webp
+    size: auto
+  - file: /media/digital-risk-protection/04.webp
+    size: auto
+  - file: /media/digital-risk-protection/05.webp
+    size: auto
+  - file: /media/digital-risk-protection/06.mp4
+    size: auto
+  - file: /media/digital-risk-protection/07.mp4
+    size: auto
+  - file: /media/digital-risk-protection/08.mp4
+    size: auto
+  - file: /media/digital-risk-protection/09.mp4
+    size: auto
+  - file: /media/digital-risk-protection/10.mp4
+    size: auto
+  - file: /media/digital-risk-protection/11.mp4
+    size: auto
 credits: ""
 award: ""
 ---

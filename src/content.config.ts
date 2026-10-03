@@ -30,7 +30,11 @@ const projects = defineCollection({
       legacy: z.string().default(''),        // old Adobe Portfolio player id, until re-uploaded to Vimeo
       more: z.array(z.string()).default([]), // extra videos: "vimeo:123456" or "yt:abcDEF"
     }).default({ vimeo: '', youtube: '', legacy: '', more: [] }),
-    gallery: z.array(z.string()).default([]),// /media/<slug>/NN.webp or .mp4
+    // /media/<slug>/NN.webp or .mp4; size: auto | full | half | third (old plain strings still accepted)
+    gallery: z.array(z.union([
+      z.string(),
+      z.object({ file: z.string(), size: z.enum(['auto', 'full', 'half', 'third']).default('auto') }),
+    ])).default([]),
     credits: z.string().default(''),
     award: z.string().default(''),
   }),

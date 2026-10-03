@@ -18,7 +18,45 @@ video:
   youtube: ""
   legacy: ""
   more: []
-gallery: ["/media/rosatom-atom/01.webp", "/media/rosatom-atom/02.webp", "/media/rosatom-atom/03.webp", "/media/rosatom-atom/04.webp", "/media/rosatom-atom/05.webp", "/media/rosatom-atom/06.webp", "/media/rosatom-atom/07.webp", "/media/rosatom-atom/08.webp", "/media/rosatom-atom/09.webp", "/media/rosatom-atom/10.webp", "/media/rosatom-atom/11.webp", "/media/rosatom-atom/12.webp", "/media/rosatom-atom/13.webp", "/media/rosatom-atom/14.webp", "/media/rosatom-atom/15.webp", "/media/rosatom-atom/16.webp", "/media/rosatom-atom/17.webp", "/media/rosatom-atom/18.webp", "/media/rosatom-atom/19.webp"]
+gallery:
+  - file: /media/rosatom-atom/01.webp
+    size: auto
+  - file: /media/rosatom-atom/02.webp
+    size: auto
+  - file: /media/rosatom-atom/03.webp
+    size: auto
+  - file: /media/rosatom-atom/04.webp
+    size: auto
+  - file: /media/rosatom-atom/05.webp
+    size: auto
+  - file: /media/rosatom-atom/06.webp
+    size: auto
+  - file: /media/rosatom-atom/07.webp
+    size: auto
+  - file: /media/rosatom-atom/08.webp
+    size: auto
+  - file: /media/rosatom-atom/09.webp
+    size: auto
+  - file: /media/rosatom-atom/10.webp
+    size: auto
+  - file: /media/rosatom-atom/11.webp
+    size: auto
+  - file: /media/rosatom-atom/12.webp
+    size: auto
+  - file: /media/rosatom-atom/13.webp
+    size: auto
+  - file: /media/rosatom-atom/14.webp
+    size: auto
+  - file: /media/rosatom-atom/15.webp
+    size: auto
+  - file: /media/rosatom-atom/16.webp
+    size: auto
+  - file: /media/rosatom-atom/17.webp
+    size: auto
+  - file: /media/rosatom-atom/18.webp
+    size: auto
+  - file: /media/rosatom-atom/19.webp
+    size: auto
 credits: ""
 award: ""
 ---

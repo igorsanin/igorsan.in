@@ -18,7 +18,15 @@ video:
   youtube: ""
   legacy: "GiWo3SQ7gad"
   more: []
-gallery: ["/media/kaspersky-burj-khalifa/01.mp4", "/media/kaspersky-burj-khalifa/02.webp", "/media/kaspersky-burj-khalifa/03.webp", "/media/kaspersky-burj-khalifa/04.webp"]
+gallery:
+  - file: /media/kaspersky-burj-khalifa/01.mp4
+    size: auto
+  - file: /media/kaspersky-burj-khalifa/02.webp
+    size: auto
+  - file: /media/kaspersky-burj-khalifa/03.webp
+    size: auto
+  - file: /media/kaspersky-burj-khalifa/04.webp
+    size: auto
 credits: ""
 award: ""
 ---

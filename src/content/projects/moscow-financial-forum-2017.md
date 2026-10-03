@@ -18,7 +18,33 @@ video:
   youtube: ""
   legacy: "PZBC8qb6GZE"
   more: []
-gallery: ["/media/moscow-financial-forum-2017/01.webp", "/media/moscow-financial-forum-2017/02.webp", "/media/moscow-financial-forum-2017/03.webp", "/media/moscow-financial-forum-2017/04.webp", "/media/moscow-financial-forum-2017/05.webp", "/media/moscow-financial-forum-2017/06.webp", "/media/moscow-financial-forum-2017/07.webp", "/media/moscow-financial-forum-2017/08.webp", "/media/moscow-financial-forum-2017/09.webp", "/media/moscow-financial-forum-2017/10.webp", "/media/moscow-financial-forum-2017/11.webp", "/media/moscow-financial-forum-2017/12.webp", "/media/moscow-financial-forum-2017/13.mp4"]
+gallery:
+  - file: /media/moscow-financial-forum-2017/01.webp
+    size: auto
+  - file: /media/moscow-financial-forum-2017/02.webp
+    size: auto
+  - file: /media/moscow-financial-forum-2017/03.webp
+    size: auto
+  - file: /media/moscow-financial-forum-2017/04.webp
+    size: auto
+  - file: /media/moscow-financial-forum-2017/05.webp
+    size: auto
+  - file: /media/moscow-financial-forum-2017/06.webp
+    size: auto
+  - file: /media/moscow-financial-forum-2017/07.webp
+    size: auto
+  - file: /media/moscow-financial-forum-2017/08.webp
+    size: auto
+  - file: /media/moscow-financial-forum-2017/09.webp
+    size: auto
+  - file: /media/moscow-financial-forum-2017/10.webp
+    size: auto
+  - file: /media/moscow-financial-forum-2017/11.webp
+    size: auto
+  - file: /media/moscow-financial-forum-2017/12.webp
+    size: auto
+  - file: /media/moscow-financial-forum-2017/13.mp4
+    size: auto
 credits: ""
 award: ""
 ---

@@ -17,29 +17,52 @@ video:
   legacy: ''
   more: []
 gallery:
-  - /media/kagotsel-2020/01.webp
-  - /media/kagotsel-2020/02.webp
-  - /media/kagotsel-2020/03.webp
-  - /media/kagotsel-2020/04.webp
-  - /media/kagotsel-2020/05.webp
-  - /media/kagotsel-2020/06.webp
-  - /media/kagotsel-2020/07.webp
-  - /media/kagotsel-2020/08.webp
-  - /media/kagotsel-2020/09.webp
-  - /media/kagotsel-2020/10.webp
-  - /media/kagotsel-2020/11.webp
-  - /media/kagotsel-2020/12.webp
-  - /media/kagotsel-2020/13.webp
-  - /media/kagotsel-2020/14.webp
-  - /media/kagotsel-2020/15.webp
-  - /media/kagotsel-2020/16.webp
-  - /media/kagotsel-2020/17.webp
-  - /media/kagotsel-2020/18.webp
-  - /media/kagotsel-2020/19.webp
-  - /media/kagotsel-2020/20.webp
-  - /media/kagotsel-2020/21.webp
-  - /media/kagotsel-2020/22.webp
-  - /media/kagotsel-2020/23.webp
+  - file: /media/kagotsel-2020/01.webp
+    size: auto
+  - file: /media/kagotsel-2020/02.webp
+    size: auto
+  - file: /media/kagotsel-2020/03.webp
+    size: auto
+  - file: /media/kagotsel-2020/04.webp
+    size: auto
+  - file: /media/kagotsel-2020/05.webp
+    size: auto
+  - file: /media/kagotsel-2020/06.webp
+    size: auto
+  - file: /media/kagotsel-2020/07.webp
+    size: auto
+  - file: /media/kagotsel-2020/08.webp
+    size: auto
+  - file: /media/kagotsel-2020/09.webp
+    size: auto
+  - file: /media/kagotsel-2020/10.webp
+    size: auto
+  - file: /media/kagotsel-2020/11.webp
+    size: auto
+  - file: /media/kagotsel-2020/12.webp
+    size: auto
+  - file: /media/kagotsel-2020/13.webp
+    size: auto
+  - file: /media/kagotsel-2020/14.webp
+    size: auto
+  - file: /media/kagotsel-2020/15.webp
+    size: auto
+  - file: /media/kagotsel-2020/16.webp
+    size: auto
+  - file: /media/kagotsel-2020/17.webp
+    size: auto
+  - file: /media/kagotsel-2020/18.webp
+    size: auto
+  - file: /media/kagotsel-2020/19.webp
+    size: auto
+  - file: /media/kagotsel-2020/20.webp
+    size: auto
+  - file: /media/kagotsel-2020/21.webp
+    size: auto
+  - file: /media/kagotsel-2020/22.webp
+    size: auto
+  - file: /media/kagotsel-2020/23.webp
+    size: auto
 credits: ''
 award: ''
 sectors:

@@ -18,7 +18,31 @@ video:
   youtube: ""
   legacy: "BZC3cVFv9aS"
   more: []
-gallery: ["/media/coral-travelers/01.webp", "/media/coral-travelers/02.webp", "/media/coral-travelers/03.webp", "/media/coral-travelers/04.webp", "/media/coral-travelers/05.webp", "/media/coral-travelers/06.webp", "/media/coral-travelers/07.webp", "/media/coral-travelers/08.webp", "/media/coral-travelers/09.webp", "/media/coral-travelers/10.webp", "/media/coral-travelers/11.webp", "/media/coral-travelers/12.webp"]
+gallery:
+  - file: /media/coral-travelers/01.webp
+    size: auto
+  - file: /media/coral-travelers/02.webp
+    size: auto
+  - file: /media/coral-travelers/03.webp
+    size: auto
+  - file: /media/coral-travelers/04.webp
+    size: auto
+  - file: /media/coral-travelers/05.webp
+    size: auto
+  - file: /media/coral-travelers/06.webp
+    size: auto
+  - file: /media/coral-travelers/07.webp
+    size: auto
+  - file: /media/coral-travelers/08.webp
+    size: auto
+  - file: /media/coral-travelers/09.webp
+    size: auto
+  - file: /media/coral-travelers/10.webp
+    size: auto
+  - file: /media/coral-travelers/11.webp
+    size: auto
+  - file: /media/coral-travelers/12.webp
+    size: auto
 credits: ""
 award: ""
 ---

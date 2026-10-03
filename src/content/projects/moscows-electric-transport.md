@@ -18,7 +18,35 @@ video:
   youtube: ""
   legacy: "Lp-ij3JnZi4"
   more: []
-gallery: ["/media/moscows-electric-transport/01.webp", "/media/moscows-electric-transport/02.mp4", "/media/moscows-electric-transport/03.mp4", "/media/moscows-electric-transport/04.mp4", "/media/moscows-electric-transport/05.mp4", "/media/moscows-electric-transport/06.webp", "/media/moscows-electric-transport/07.webp", "/media/moscows-electric-transport/08.webp", "/media/moscows-electric-transport/09.webp", "/media/moscows-electric-transport/10.webp", "/media/moscows-electric-transport/11.webp", "/media/moscows-electric-transport/12.webp", "/media/moscows-electric-transport/13.webp", "/media/moscows-electric-transport/14.mp4"]
+gallery:
+  - file: /media/moscows-electric-transport/01.webp
+    size: auto
+  - file: /media/moscows-electric-transport/02.mp4
+    size: auto
+  - file: /media/moscows-electric-transport/03.mp4
+    size: auto
+  - file: /media/moscows-electric-transport/04.mp4
+    size: auto
+  - file: /media/moscows-electric-transport/05.mp4
+    size: auto
+  - file: /media/moscows-electric-transport/06.webp
+    size: auto
+  - file: /media/moscows-electric-transport/07.webp
+    size: auto
+  - file: /media/moscows-electric-transport/08.webp
+    size: auto
+  - file: /media/moscows-electric-transport/09.webp
+    size: auto
+  - file: /media/moscows-electric-transport/10.webp
+    size: auto
+  - file: /media/moscows-electric-transport/11.webp
+    size: auto
+  - file: /media/moscows-electric-transport/12.webp
+    size: auto
+  - file: /media/moscows-electric-transport/13.webp
+    size: auto
+  - file: /media/moscows-electric-transport/14.mp4
+    size: auto
 credits: ""
 award: ""
 ---

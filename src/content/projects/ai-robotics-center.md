@@ -18,7 +18,33 @@ video:
   youtube: ""
   legacy: "5iQeQ3g6V3y"
   more: []
-gallery: ["/media/ai-robotics-center/01.mp4", "/media/ai-robotics-center/02.mp4", "/media/ai-robotics-center/03.mp4", "/media/ai-robotics-center/04.mp4", "/media/ai-robotics-center/05.mp4", "/media/ai-robotics-center/06.mp4", "/media/ai-robotics-center/07.webp", "/media/ai-robotics-center/08.webp", "/media/ai-robotics-center/09.webp", "/media/ai-robotics-center/10.webp", "/media/ai-robotics-center/11.webp", "/media/ai-robotics-center/12.webp", "/media/ai-robotics-center/13.webp"]
+gallery:
+  - file: /media/ai-robotics-center/01.mp4
+    size: auto
+  - file: /media/ai-robotics-center/02.mp4
+    size: auto
+  - file: /media/ai-robotics-center/03.mp4
+    size: auto
+  - file: /media/ai-robotics-center/04.mp4
+    size: auto
+  - file: /media/ai-robotics-center/05.mp4
+    size: auto
+  - file: /media/ai-robotics-center/06.mp4
+    size: auto
+  - file: /media/ai-robotics-center/07.webp
+    size: auto
+  - file: /media/ai-robotics-center/08.webp
+    size: auto
+  - file: /media/ai-robotics-center/09.webp
+    size: auto
+  - file: /media/ai-robotics-center/10.webp
+    size: auto
+  - file: /media/ai-robotics-center/11.webp
+    size: auto
+  - file: /media/ai-robotics-center/12.webp
+    size: auto
+  - file: /media/ai-robotics-center/13.webp
+    size: auto
 credits: ""
 award: ""
 ---

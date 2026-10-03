@@ -18,7 +18,55 @@ video:
   youtube: ""
   legacy: ""
   more: []
-gallery: ["/media/runet-awards-24/01.mp4", "/media/runet-awards-24/02.webp", "/media/runet-awards-24/03.webp", "/media/runet-awards-24/04.webp", "/media/runet-awards-24/05.webp", "/media/runet-awards-24/06.webp", "/media/runet-awards-24/07.webp", "/media/runet-awards-24/08.webp", "/media/runet-awards-24/09.webp", "/media/runet-awards-24/10.webp", "/media/runet-awards-24/11.webp", "/media/runet-awards-24/12.webp", "/media/runet-awards-24/13.webp", "/media/runet-awards-24/14.webp", "/media/runet-awards-24/15.webp", "/media/runet-awards-24/16.webp", "/media/runet-awards-24/17.webp", "/media/runet-awards-24/18.webp", "/media/runet-awards-24/19.webp", "/media/runet-awards-24/20.webp", "/media/runet-awards-24/21.webp", "/media/runet-awards-24/22.webp", "/media/runet-awards-24/23.webp", "/media/runet-awards-24/24.webp"]
+gallery:
+  - file: /media/runet-awards-24/01.mp4
+    size: auto
+  - file: /media/runet-awards-24/02.webp
+    size: auto
+  - file: /media/runet-awards-24/03.webp
+    size: auto
+  - file: /media/runet-awards-24/04.webp
+    size: auto
+  - file: /media/runet-awards-24/05.webp
+    size: auto
+  - file: /media/runet-awards-24/06.webp
+    size: auto
+  - file: /media/runet-awards-24/07.webp
+    size: auto
+  - file: /media/runet-awards-24/08.webp
+    size: auto
+  - file: /media/runet-awards-24/09.webp
+    size: auto
+  - file: /media/runet-awards-24/10.webp
+    size: auto
+  - file: /media/runet-awards-24/11.webp
+    size: auto
+  - file: /media/runet-awards-24/12.webp
+    size: auto
+  - file: /media/runet-awards-24/13.webp
+    size: auto
+  - file: /media/runet-awards-24/14.webp
+    size: auto
+  - file: /media/runet-awards-24/15.webp
+    size: auto
+  - file: /media/runet-awards-24/16.webp
+    size: auto
+  - file: /media/runet-awards-24/17.webp
+    size: auto
+  - file: /media/runet-awards-24/18.webp
+    size: auto
+  - file: /media/runet-awards-24/19.webp
+    size: auto
+  - file: /media/runet-awards-24/20.webp
+    size: auto
+  - file: /media/runet-awards-24/21.webp
+    size: auto
+  - file: /media/runet-awards-24/22.webp
+    size: auto
+  - file: /media/runet-awards-24/23.webp
+    size: auto
+  - file: /media/runet-awards-24/24.webp
+    size: auto
 credits: ""
 award: ""
 ---

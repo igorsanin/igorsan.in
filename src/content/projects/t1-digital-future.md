@@ -18,7 +18,15 @@ video:
   youtube: ""
   legacy: ""
   more: ["vimeo:847038804", "vimeo:847038917", "vimeo:847038672", "vimeo:847038873", "vimeo:847331418"]
-gallery: ["/media/t1-digital-future/01.webp", "/media/t1-digital-future/02.webp", "/media/t1-digital-future/03.webp", "/media/t1-digital-future/04.webp"]
+gallery:
+  - file: /media/t1-digital-future/01.webp
+    size: auto
+  - file: /media/t1-digital-future/02.webp
+    size: auto
+  - file: /media/t1-digital-future/03.webp
+    size: auto
+  - file: /media/t1-digital-future/04.webp
+    size: auto
 credits: ""
 award: ""
 ---

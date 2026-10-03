@@ -18,7 +18,61 @@ video:
   youtube: ""
   legacy: "QuSvZUNzJVj"
   more: []
-gallery: ["/media/sber-scholarship-program/01.webp", "/media/sber-scholarship-program/02.webp", "/media/sber-scholarship-program/03.webp", "/media/sber-scholarship-program/04.webp", "/media/sber-scholarship-program/05.webp", "/media/sber-scholarship-program/06.webp", "/media/sber-scholarship-program/07.webp", "/media/sber-scholarship-program/08.webp", "/media/sber-scholarship-program/09.webp", "/media/sber-scholarship-program/10.webp", "/media/sber-scholarship-program/11.webp", "/media/sber-scholarship-program/12.webp", "/media/sber-scholarship-program/13.webp", "/media/sber-scholarship-program/14.webp", "/media/sber-scholarship-program/15.webp", "/media/sber-scholarship-program/16.webp", "/media/sber-scholarship-program/17.webp", "/media/sber-scholarship-program/18.webp", "/media/sber-scholarship-program/19.webp", "/media/sber-scholarship-program/20.webp", "/media/sber-scholarship-program/21.webp", "/media/sber-scholarship-program/22.webp", "/media/sber-scholarship-program/23.webp", "/media/sber-scholarship-program/24.webp", "/media/sber-scholarship-program/25.webp", "/media/sber-scholarship-program/26.webp", "/media/sber-scholarship-program/27.webp"]
+gallery:
+  - file: /media/sber-scholarship-program/01.webp
+    size: auto
+  - file: /media/sber-scholarship-program/02.webp
+    size: auto
+  - file: /media/sber-scholarship-program/03.webp
+    size: auto
+  - file: /media/sber-scholarship-program/04.webp
+    size: auto
+  - file: /media/sber-scholarship-program/05.webp
+    size: auto
+  - file: /media/sber-scholarship-program/06.webp
+    size: auto
+  - file: /media/sber-scholarship-program/07.webp
+    size: auto
+  - file: /media/sber-scholarship-program/08.webp
+    size: auto
+  - file: /media/sber-scholarship-program/09.webp
+    size: auto
+  - file: /media/sber-scholarship-program/10.webp
+    size: auto
+  - file: /media/sber-scholarship-program/11.webp
+    size: auto
+  - file: /media/sber-scholarship-program/12.webp
+    size: auto
+  - file: /media/sber-scholarship-program/13.webp
+    size: auto
+  - file: /media/sber-scholarship-program/14.webp
+    size: auto
+  - file: /media/sber-scholarship-program/15.webp
+    size: auto
+  - file: /media/sber-scholarship-program/16.webp
+    size: auto
+  - file: /media/sber-scholarship-program/17.webp
+    size: auto
+  - file: /media/sber-scholarship-program/18.webp
+    size: auto
+  - file: /media/sber-scholarship-program/19.webp
+    size: auto
+  - file: /media/sber-scholarship-program/20.webp
+    size: auto
+  - file: /media/sber-scholarship-program/21.webp
+    size: auto
+  - file: /media/sber-scholarship-program/22.webp
+    size: auto
+  - file: /media/sber-scholarship-program/23.webp
+    size: auto
+  - file: /media/sber-scholarship-program/24.webp
+    size: auto
+  - file: /media/sber-scholarship-program/25.webp
+    size: auto
+  - file: /media/sber-scholarship-program/26.webp
+    size: auto
+  - file: /media/sber-scholarship-program/27.webp
+    size: auto
 credits: ""
 award: ""
 ---

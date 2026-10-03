@@ -18,7 +18,13 @@ video:
   youtube: ""
   legacy: "A_LH2ntJjfY"
   more: []
-gallery: ["/media/transport-innovations-donut/01.mp4", "/media/transport-innovations-donut/20.webp", "/media/transport-innovations-donut/21.webp"]
+gallery:
+  - file: /media/transport-innovations-donut/01.mp4
+    size: auto
+  - file: /media/transport-innovations-donut/20.webp
+    size: auto
+  - file: /media/transport-innovations-donut/21.webp
+    size: auto
 credits: ""
 award: ""
 ---

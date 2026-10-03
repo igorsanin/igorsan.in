@@ -18,7 +18,59 @@ video:
   youtube: ""
   legacy: "St8teBjWCks"
   more: []
-gallery: ["/media/rosatom-magnets/01.webp", "/media/rosatom-magnets/02.webp", "/media/rosatom-magnets/03.webp", "/media/rosatom-magnets/04.webp", "/media/rosatom-magnets/05.webp", "/media/rosatom-magnets/06.webp", "/media/rosatom-magnets/07.webp", "/media/rosatom-magnets/08.webp", "/media/rosatom-magnets/09.webp", "/media/rosatom-magnets/10.webp", "/media/rosatom-magnets/11.webp", "/media/rosatom-magnets/12.webp", "/media/rosatom-magnets/13.webp", "/media/rosatom-magnets/14.webp", "/media/rosatom-magnets/15.webp", "/media/rosatom-magnets/16.webp", "/media/rosatom-magnets/17.webp", "/media/rosatom-magnets/18.webp", "/media/rosatom-magnets/19.webp", "/media/rosatom-magnets/20.webp", "/media/rosatom-magnets/21.mp4", "/media/rosatom-magnets/22.mp4", "/media/rosatom-magnets/23.mp4", "/media/rosatom-magnets/24.mp4", "/media/rosatom-magnets/25.mp4", "/media/rosatom-magnets/26.webp"]
+gallery:
+  - file: /media/rosatom-magnets/01.webp
+    size: auto
+  - file: /media/rosatom-magnets/02.webp
+    size: auto
+  - file: /media/rosatom-magnets/03.webp
+    size: auto
+  - file: /media/rosatom-magnets/04.webp
+    size: auto
+  - file: /media/rosatom-magnets/05.webp
+    size: auto
+  - file: /media/rosatom-magnets/06.webp
+    size: auto
+  - file: /media/rosatom-magnets/07.webp
+    size: auto
+  - file: /media/rosatom-magnets/08.webp
+    size: auto
+  - file: /media/rosatom-magnets/09.webp
+    size: auto
+  - file: /media/rosatom-magnets/10.webp
+    size: auto
+  - file: /media/rosatom-magnets/11.webp
+    size: auto
+  - file: /media/rosatom-magnets/12.webp
+    size: auto
+  - file: /media/rosatom-magnets/13.webp
+    size: auto
+  - file: /media/rosatom-magnets/14.webp
+    size: auto
+  - file: /media/rosatom-magnets/15.webp
+    size: auto
+  - file: /media/rosatom-magnets/16.webp
+    size: auto
+  - file: /media/rosatom-magnets/17.webp
+    size: auto
+  - file: /media/rosatom-magnets/18.webp
+    size: auto
+  - file: /media/rosatom-magnets/19.webp
+    size: auto
+  - file: /media/rosatom-magnets/20.webp
+    size: auto
+  - file: /media/rosatom-magnets/21.mp4
+    size: auto
+  - file: /media/rosatom-magnets/22.mp4
+    size: auto
+  - file: /media/rosatom-magnets/23.mp4
+    size: auto
+  - file: /media/rosatom-magnets/24.mp4
+    size: auto
+  - file: /media/rosatom-magnets/25.mp4
+    size: auto
+  - file: /media/rosatom-magnets/26.webp
+    size: auto
 credits: ""
 award: ""
 ---

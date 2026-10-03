@@ -18,7 +18,33 @@ video:
   youtube: ""
   legacy: ""
   more: []
-gallery: ["/media/renera-gigafactory/01.webp", "/media/renera-gigafactory/02.webp", "/media/renera-gigafactory/03.mp4", "/media/renera-gigafactory/04.mp4", "/media/renera-gigafactory/05.mp4", "/media/renera-gigafactory/06.mp4", "/media/renera-gigafactory/07.mp4", "/media/renera-gigafactory/08.mp4", "/media/renera-gigafactory/09.mp4", "/media/renera-gigafactory/10.webp", "/media/renera-gigafactory/11.webp", "/media/renera-gigafactory/12.webp", "/media/renera-gigafactory/13.webp"]
+gallery:
+  - file: /media/renera-gigafactory/01.webp
+    size: auto
+  - file: /media/renera-gigafactory/02.webp
+    size: auto
+  - file: /media/renera-gigafactory/03.mp4
+    size: auto
+  - file: /media/renera-gigafactory/04.mp4
+    size: auto
+  - file: /media/renera-gigafactory/05.mp4
+    size: auto
+  - file: /media/renera-gigafactory/06.mp4
+    size: auto
+  - file: /media/renera-gigafactory/07.mp4
+    size: auto
+  - file: /media/renera-gigafactory/08.mp4
+    size: auto
+  - file: /media/renera-gigafactory/09.mp4
+    size: auto
+  - file: /media/renera-gigafactory/10.webp
+    size: auto
+  - file: /media/renera-gigafactory/11.webp
+    size: auto
+  - file: /media/renera-gigafactory/12.webp
+    size: auto
+  - file: /media/renera-gigafactory/13.webp
+    size: auto
 credits: ""
 award: ""
 ---

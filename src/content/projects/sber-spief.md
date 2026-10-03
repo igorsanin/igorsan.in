@@ -18,7 +18,31 @@ video:
   youtube: ""
   legacy: "FrE3yHMbZGw"
   more: []
-gallery: ["/media/sber-spief/01.webp", "/media/sber-spief/02.webp", "/media/sber-spief/03.webp", "/media/sber-spief/04.webp", "/media/sber-spief/05.webp", "/media/sber-spief/06.webp", "/media/sber-spief/07.webp", "/media/sber-spief/08.webp", "/media/sber-spief/09.webp", "/media/sber-spief/10.webp", "/media/sber-spief/11.webp", "/media/sber-spief/12.webp"]
+gallery:
+  - file: /media/sber-spief/01.webp
+    size: auto
+  - file: /media/sber-spief/02.webp
+    size: auto
+  - file: /media/sber-spief/03.webp
+    size: auto
+  - file: /media/sber-spief/04.webp
+    size: auto
+  - file: /media/sber-spief/05.webp
+    size: auto
+  - file: /media/sber-spief/06.webp
+    size: auto
+  - file: /media/sber-spief/07.webp
+    size: auto
+  - file: /media/sber-spief/08.webp
+    size: auto
+  - file: /media/sber-spief/09.webp
+    size: auto
+  - file: /media/sber-spief/10.webp
+    size: auto
+  - file: /media/sber-spief/11.webp
+    size: auto
+  - file: /media/sber-spief/12.webp
+    size: auto
 credits: ""
 award: ""
 ---

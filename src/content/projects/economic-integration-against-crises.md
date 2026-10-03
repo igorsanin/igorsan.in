@@ -18,7 +18,19 @@ video:
   youtube: ""
   legacy: "8mvHuvxZGJk"
   more: []
-gallery: ["/media/economic-integration-against-crises/01.webp", "/media/economic-integration-against-crises/02.webp", "/media/economic-integration-against-crises/03.webp", "/media/economic-integration-against-crises/04.webp", "/media/economic-integration-against-crises/05.webp", "/media/economic-integration-against-crises/06.webp"]
+gallery:
+  - file: /media/economic-integration-against-crises/01.webp
+    size: auto
+  - file: /media/economic-integration-against-crises/02.webp
+    size: auto
+  - file: /media/economic-integration-against-crises/03.webp
+    size: auto
+  - file: /media/economic-integration-against-crises/04.webp
+    size: auto
+  - file: /media/economic-integration-against-crises/05.webp
+    size: auto
+  - file: /media/economic-integration-against-crises/06.webp
+    size: auto
 credits: ""
 award: ""
 ---

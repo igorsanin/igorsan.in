@@ -18,7 +18,31 @@ video:
   youtube: ""
   legacy: ""
   more: ["vimeo:868667606"]
-gallery: ["/media/sberpay-sbertips/01.webp", "/media/sberpay-sbertips/02.webp", "/media/sberpay-sbertips/03.webp", "/media/sberpay-sbertips/04.webp", "/media/sberpay-sbertips/05.webp", "/media/sberpay-sbertips/06.webp", "/media/sberpay-sbertips/07.webp", "/media/sberpay-sbertips/08.webp", "/media/sberpay-sbertips/09.webp", "/media/sberpay-sbertips/10.webp", "/media/sberpay-sbertips/11.webp", "/media/sberpay-sbertips/12.webp"]
+gallery:
+  - file: /media/sberpay-sbertips/01.webp
+    size: auto
+  - file: /media/sberpay-sbertips/02.webp
+    size: auto
+  - file: /media/sberpay-sbertips/03.webp
+    size: auto
+  - file: /media/sberpay-sbertips/04.webp
+    size: auto
+  - file: /media/sberpay-sbertips/05.webp
+    size: auto
+  - file: /media/sberpay-sbertips/06.webp
+    size: auto
+  - file: /media/sberpay-sbertips/07.webp
+    size: auto
+  - file: /media/sberpay-sbertips/08.webp
+    size: auto
+  - file: /media/sberpay-sbertips/09.webp
+    size: auto
+  - file: /media/sberpay-sbertips/10.webp
+    size: auto
+  - file: /media/sberpay-sbertips/11.webp
+    size: auto
+  - file: /media/sberpay-sbertips/12.webp
+    size: auto
 credits: ""
 award: ""
 ---

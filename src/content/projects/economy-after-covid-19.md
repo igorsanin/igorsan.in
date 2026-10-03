@@ -18,7 +18,31 @@ video:
   youtube: ""
   legacy: "MaNCQ54b5PI"
   more: []
-gallery: ["/media/economy-after-covid-19/01.webp", "/media/economy-after-covid-19/02.webp", "/media/economy-after-covid-19/03.webp", "/media/economy-after-covid-19/04.webp", "/media/economy-after-covid-19/05.webp", "/media/economy-after-covid-19/06.webp", "/media/economy-after-covid-19/07.webp", "/media/economy-after-covid-19/08.webp", "/media/economy-after-covid-19/09.webp", "/media/economy-after-covid-19/10.webp", "/media/economy-after-covid-19/11.webp", "/media/economy-after-covid-19/12.webp"]
+gallery:
+  - file: /media/economy-after-covid-19/01.webp
+    size: auto
+  - file: /media/economy-after-covid-19/02.webp
+    size: auto
+  - file: /media/economy-after-covid-19/03.webp
+    size: auto
+  - file: /media/economy-after-covid-19/04.webp
+    size: auto
+  - file: /media/economy-after-covid-19/05.webp
+    size: auto
+  - file: /media/economy-after-covid-19/06.webp
+    size: auto
+  - file: /media/economy-after-covid-19/07.webp
+    size: auto
+  - file: /media/economy-after-covid-19/08.webp
+    size: auto
+  - file: /media/economy-after-covid-19/09.webp
+    size: auto
+  - file: /media/economy-after-covid-19/10.webp
+    size: auto
+  - file: /media/economy-after-covid-19/11.webp
+    size: auto
+  - file: /media/economy-after-covid-19/12.webp
+    size: auto
 credits: ""
 award: ""
 ---

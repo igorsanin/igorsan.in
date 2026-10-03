@@ -18,7 +18,21 @@ video:
   youtube: ""
   legacy: "9TBauj2V3xi"
   more: []
-gallery: ["/media/welcome-to-sber/01.webp", "/media/welcome-to-sber/02.webp", "/media/welcome-to-sber/03.webp", "/media/welcome-to-sber/04.webp", "/media/welcome-to-sber/05.webp", "/media/welcome-to-sber/06.webp", "/media/welcome-to-sber/07.webp"]
+gallery:
+  - file: /media/welcome-to-sber/01.webp
+    size: auto
+  - file: /media/welcome-to-sber/02.webp
+    size: auto
+  - file: /media/welcome-to-sber/03.webp
+    size: auto
+  - file: /media/welcome-to-sber/04.webp
+    size: auto
+  - file: /media/welcome-to-sber/05.webp
+    size: auto
+  - file: /media/welcome-to-sber/06.webp
+    size: auto
+  - file: /media/welcome-to-sber/07.webp
+    size: auto
 credits: ""
 award: ""
 ---

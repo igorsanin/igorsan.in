@@ -18,7 +18,29 @@ video:
   youtube: "GazdL5bKAzc"
   legacy: ""
   more: []
-gallery: ["/media/quantum-technologies/01.webp", "/media/quantum-technologies/02.webp", "/media/quantum-technologies/03.webp", "/media/quantum-technologies/04.webp", "/media/quantum-technologies/05.webp", "/media/quantum-technologies/06.webp", "/media/quantum-technologies/07.webp", "/media/quantum-technologies/08.webp", "/media/quantum-technologies/09.webp", "/media/quantum-technologies/10.webp", "/media/quantum-technologies/11.webp"]
+gallery:
+  - file: /media/quantum-technologies/01.webp
+    size: auto
+  - file: /media/quantum-technologies/02.webp
+    size: auto
+  - file: /media/quantum-technologies/03.webp
+    size: auto
+  - file: /media/quantum-technologies/04.webp
+    size: auto
+  - file: /media/quantum-technologies/05.webp
+    size: auto
+  - file: /media/quantum-technologies/06.webp
+    size: auto
+  - file: /media/quantum-technologies/07.webp
+    size: auto
+  - file: /media/quantum-technologies/08.webp
+    size: auto
+  - file: /media/quantum-technologies/09.webp
+    size: auto
+  - file: /media/quantum-technologies/10.webp
+    size: auto
+  - file: /media/quantum-technologies/11.webp
+    size: auto
 credits: ""
 award: ""
 ---

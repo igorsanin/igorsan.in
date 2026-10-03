@@ -18,7 +18,21 @@ video:
   youtube: "lnUAebHQzGQ"
   legacy: ""
   more: []
-gallery: ["/media/futurology-dreamers-vs-sceptics/01.webp", "/media/futurology-dreamers-vs-sceptics/02.webp", "/media/futurology-dreamers-vs-sceptics/03.webp", "/media/futurology-dreamers-vs-sceptics/04.webp", "/media/futurology-dreamers-vs-sceptics/05.webp", "/media/futurology-dreamers-vs-sceptics/06.webp", "/media/futurology-dreamers-vs-sceptics/07.webp"]
+gallery:
+  - file: /media/futurology-dreamers-vs-sceptics/01.webp
+    size: auto
+  - file: /media/futurology-dreamers-vs-sceptics/02.webp
+    size: auto
+  - file: /media/futurology-dreamers-vs-sceptics/03.webp
+    size: auto
+  - file: /media/futurology-dreamers-vs-sceptics/04.webp
+    size: auto
+  - file: /media/futurology-dreamers-vs-sceptics/05.webp
+    size: auto
+  - file: /media/futurology-dreamers-vs-sceptics/06.webp
+    size: auto
+  - file: /media/futurology-dreamers-vs-sceptics/07.webp
+    size: auto
 credits: ""
 award: ""
 ---

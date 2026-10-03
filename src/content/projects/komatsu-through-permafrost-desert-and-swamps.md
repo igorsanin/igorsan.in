@@ -18,7 +18,35 @@ video:
   youtube: ""
   legacy: "I22yMmvxV4Q"
   more: []
-gallery: ["/media/komatsu-through-permafrost-desert-and-swamps/01.webp", "/media/komatsu-through-permafrost-desert-and-swamps/02.webp", "/media/komatsu-through-permafrost-desert-and-swamps/03.webp", "/media/komatsu-through-permafrost-desert-and-swamps/04.webp", "/media/komatsu-through-permafrost-desert-and-swamps/05.webp", "/media/komatsu-through-permafrost-desert-and-swamps/06.webp", "/media/komatsu-through-permafrost-desert-and-swamps/07.webp", "/media/komatsu-through-permafrost-desert-and-swamps/08.webp", "/media/komatsu-through-permafrost-desert-and-swamps/09.webp", "/media/komatsu-through-permafrost-desert-and-swamps/10.webp", "/media/komatsu-through-permafrost-desert-and-swamps/11.webp", "/media/komatsu-through-permafrost-desert-and-swamps/12.webp", "/media/komatsu-through-permafrost-desert-and-swamps/13.webp", "/media/komatsu-through-permafrost-desert-and-swamps/14.webp"]
+gallery:
+  - file: /media/komatsu-through-permafrost-desert-and-swamps/01.webp
+    size: auto
+  - file: /media/komatsu-through-permafrost-desert-and-swamps/02.webp
+    size: auto
+  - file: /media/komatsu-through-permafrost-desert-and-swamps/03.webp
+    size: auto
+  - file: /media/komatsu-through-permafrost-desert-and-swamps/04.webp
+    size: auto
+  - file: /media/komatsu-through-permafrost-desert-and-swamps/05.webp
+    size: auto
+  - file: /media/komatsu-through-permafrost-desert-and-swamps/06.webp
+    size: auto
+  - file: /media/komatsu-through-permafrost-desert-and-swamps/07.webp
+    size: auto
+  - file: /media/komatsu-through-permafrost-desert-and-swamps/08.webp
+    size: auto
+  - file: /media/komatsu-through-permafrost-desert-and-swamps/09.webp
+    size: auto
+  - file: /media/komatsu-through-permafrost-desert-and-swamps/10.webp
+    size: auto
+  - file: /media/komatsu-through-permafrost-desert-and-swamps/11.webp
+    size: auto
+  - file: /media/komatsu-through-permafrost-desert-and-swamps/12.webp
+    size: auto
+  - file: /media/komatsu-through-permafrost-desert-and-swamps/13.webp
+    size: auto
+  - file: /media/komatsu-through-permafrost-desert-and-swamps/14.webp
+    size: auto
 credits: ""
 award: ""
 ---

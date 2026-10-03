@@ -18,7 +18,49 @@ video:
   youtube: "NyYtn7H4kms"
   legacy: ""
   more: []
-gallery: ["/media/sber-screen-savers/01.webp", "/media/sber-screen-savers/02.webp", "/media/sber-screen-savers/03.webp", "/media/sber-screen-savers/04.webp", "/media/sber-screen-savers/05.webp", "/media/sber-screen-savers/06.webp", "/media/sber-screen-savers/07.webp", "/media/sber-screen-savers/08.webp", "/media/sber-screen-savers/09.webp", "/media/sber-screen-savers/10.webp", "/media/sber-screen-savers/11.webp", "/media/sber-screen-savers/12.webp", "/media/sber-screen-savers/13.webp", "/media/sber-screen-savers/14.webp", "/media/sber-screen-savers/15.webp", "/media/sber-screen-savers/16.webp", "/media/sber-screen-savers/17.webp", "/media/sber-screen-savers/18.webp", "/media/sber-screen-savers/19.webp", "/media/sber-screen-savers/20.mp4", "/media/sber-screen-savers/21.webp"]
+gallery:
+  - file: /media/sber-screen-savers/01.webp
+    size: auto
+  - file: /media/sber-screen-savers/02.webp
+    size: auto
+  - file: /media/sber-screen-savers/03.webp
+    size: auto
+  - file: /media/sber-screen-savers/04.webp
+    size: auto
+  - file: /media/sber-screen-savers/05.webp
+    size: auto
+  - file: /media/sber-screen-savers/06.webp
+    size: auto
+  - file: /media/sber-screen-savers/07.webp
+    size: auto
+  - file: /media/sber-screen-savers/08.webp
+    size: auto
+  - file: /media/sber-screen-savers/09.webp
+    size: auto
+  - file: /media/sber-screen-savers/10.webp
+    size: auto
+  - file: /media/sber-screen-savers/11.webp
+    size: auto
+  - file: /media/sber-screen-savers/12.webp
+    size: auto
+  - file: /media/sber-screen-savers/13.webp
+    size: auto
+  - file: /media/sber-screen-savers/14.webp
+    size: auto
+  - file: /media/sber-screen-savers/15.webp
+    size: auto
+  - file: /media/sber-screen-savers/16.webp
+    size: auto
+  - file: /media/sber-screen-savers/17.webp
+    size: auto
+  - file: /media/sber-screen-savers/18.webp
+    size: auto
+  - file: /media/sber-screen-savers/19.webp
+    size: auto
+  - file: /media/sber-screen-savers/20.mp4
+    size: auto
+  - file: /media/sber-screen-savers/21.webp
+    size: auto
 credits: ""
 award: ""
 ---

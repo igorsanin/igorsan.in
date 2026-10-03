@@ -18,7 +18,61 @@ video:
   youtube: ""
   legacy: ""
   more: []
-gallery: ["/media/sweepnet-ecosystem/01.webp", "/media/sweepnet-ecosystem/02.webp", "/media/sweepnet-ecosystem/03.webp", "/media/sweepnet-ecosystem/04.webp", "/media/sweepnet-ecosystem/05.webp", "/media/sweepnet-ecosystem/06.webp", "/media/sweepnet-ecosystem/07.mp4", "/media/sweepnet-ecosystem/08.webp", "/media/sweepnet-ecosystem/09.webp", "/media/sweepnet-ecosystem/10.mp4", "/media/sweepnet-ecosystem/11.mp4", "/media/sweepnet-ecosystem/12.webp", "/media/sweepnet-ecosystem/13.mp4", "/media/sweepnet-ecosystem/14.mp4", "/media/sweepnet-ecosystem/15.mp4", "/media/sweepnet-ecosystem/16.mp4", "/media/sweepnet-ecosystem/17.mp4", "/media/sweepnet-ecosystem/18.webp", "/media/sweepnet-ecosystem/19.webp", "/media/sweepnet-ecosystem/20.webp", "/media/sweepnet-ecosystem/21.webp", "/media/sweepnet-ecosystem/22.webp", "/media/sweepnet-ecosystem/23.webp", "/media/sweepnet-ecosystem/24.webp", "/media/sweepnet-ecosystem/25.mp4", "/media/sweepnet-ecosystem/26.mp4", "/media/sweepnet-ecosystem/27.webp"]
+gallery:
+  - file: /media/sweepnet-ecosystem/01.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/02.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/03.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/04.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/05.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/06.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/07.mp4
+    size: auto
+  - file: /media/sweepnet-ecosystem/08.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/09.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/10.mp4
+    size: auto
+  - file: /media/sweepnet-ecosystem/11.mp4
+    size: auto
+  - file: /media/sweepnet-ecosystem/12.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/13.mp4
+    size: auto
+  - file: /media/sweepnet-ecosystem/14.mp4
+    size: auto
+  - file: /media/sweepnet-ecosystem/15.mp4
+    size: auto
+  - file: /media/sweepnet-ecosystem/16.mp4
+    size: auto
+  - file: /media/sweepnet-ecosystem/17.mp4
+    size: auto
+  - file: /media/sweepnet-ecosystem/18.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/19.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/20.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/21.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/22.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/23.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/24.webp
+    size: auto
+  - file: /media/sweepnet-ecosystem/25.mp4
+    size: auto
+  - file: /media/sweepnet-ecosystem/26.mp4
+    size: auto
+  - file: /media/sweepnet-ecosystem/27.webp
+    size: auto
 credits: "Producer: Kirill Dmitriev\nCreative Director: Anna Abotina\nDirector, Script: Igor Sanin\nArt Director: Alexandr Lukashkin"
 award: ""
 ---

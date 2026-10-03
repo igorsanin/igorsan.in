@@ -18,7 +18,41 @@ video:
   youtube: ""
   legacy: "6ivagpgSBF-"
   more: []
-gallery: ["/media/sber-cib-terminal/01.webp", "/media/sber-cib-terminal/02.webp", "/media/sber-cib-terminal/03.webp", "/media/sber-cib-terminal/04.webp", "/media/sber-cib-terminal/05.webp", "/media/sber-cib-terminal/06.webp", "/media/sber-cib-terminal/07.webp", "/media/sber-cib-terminal/08.webp", "/media/sber-cib-terminal/09.webp", "/media/sber-cib-terminal/10.webp", "/media/sber-cib-terminal/11.webp", "/media/sber-cib-terminal/12.webp", "/media/sber-cib-terminal/13.webp", "/media/sber-cib-terminal/14.webp", "/media/sber-cib-terminal/15.webp", "/media/sber-cib-terminal/16.webp", "/media/sber-cib-terminal/17.webp"]
+gallery:
+  - file: /media/sber-cib-terminal/01.webp
+    size: auto
+  - file: /media/sber-cib-terminal/02.webp
+    size: auto
+  - file: /media/sber-cib-terminal/03.webp
+    size: auto
+  - file: /media/sber-cib-terminal/04.webp
+    size: auto
+  - file: /media/sber-cib-terminal/05.webp
+    size: auto
+  - file: /media/sber-cib-terminal/06.webp
+    size: auto
+  - file: /media/sber-cib-terminal/07.webp
+    size: auto
+  - file: /media/sber-cib-terminal/08.webp
+    size: auto
+  - file: /media/sber-cib-terminal/09.webp
+    size: auto
+  - file: /media/sber-cib-terminal/10.webp
+    size: auto
+  - file: /media/sber-cib-terminal/11.webp
+    size: auto
+  - file: /media/sber-cib-terminal/12.webp
+    size: auto
+  - file: /media/sber-cib-terminal/13.webp
+    size: auto
+  - file: /media/sber-cib-terminal/14.webp
+    size: auto
+  - file: /media/sber-cib-terminal/15.webp
+    size: auto
+  - file: /media/sber-cib-terminal/16.webp
+    size: auto
+  - file: /media/sber-cib-terminal/17.webp
+    size: auto
 credits: ""
 award: ""
 ---

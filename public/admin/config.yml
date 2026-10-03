@@ -76,7 +76,23 @@ collections:
           - { name: legacy, label: Old Adobe player ID (temporary), widget: string, required: false }
           - { name: more, label: 'More videos (vimeo:123456 or yt:abcDEF)', widget: list, required: false }
       - { name: body, label: Description, widget: markdown }
-      - { name: gallery, label: Gallery (images or mp4), widget: list, required: false, field: { name: item, label: File, widget: file } }
+      - name: gallery
+        label: Gallery (images or mp4)
+        widget: list
+        required: false
+        hint: 'Auto keeps the rhythm one wide, two halves — but small pictures get a smaller slot and portrait ones a third. A picture is never shown bigger than its real size.'
+        summary: '{{fields.size}} · {{fields.file}}'
+        fields:
+          - { name: file, label: File, widget: file }
+          - name: size
+            label: Size
+            widget: select
+            default: auto
+            options:
+              - { label: 'Auto — by picture size', value: auto }
+              - { label: 'Full width', value: full }
+              - { label: 'Half', value: half }
+              - { label: 'Third', value: third }
       - { name: credits, label: Credits, widget: text, required: false }
       - { name: award, label: Award, widget: string, required: false }
       - { name: sectors, label: Sectors, widget: list, required: false }

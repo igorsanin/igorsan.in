@@ -18,7 +18,63 @@ video:
   youtube: "Qv0DQFEWCUA"
   legacy: ""
   more: []
-gallery: ["/media/new-retail-forum/01.webp", "/media/new-retail-forum/02.webp", "/media/new-retail-forum/03.webp", "/media/new-retail-forum/04.webp", "/media/new-retail-forum/05.webp", "/media/new-retail-forum/06.webp", "/media/new-retail-forum/07.webp", "/media/new-retail-forum/08.webp", "/media/new-retail-forum/09.webp", "/media/new-retail-forum/10.webp", "/media/new-retail-forum/11.webp", "/media/new-retail-forum/12.webp", "/media/new-retail-forum/13.webp", "/media/new-retail-forum/14.webp", "/media/new-retail-forum/15.webp", "/media/new-retail-forum/16.webp", "/media/new-retail-forum/17.webp", "/media/new-retail-forum/18.webp", "/media/new-retail-forum/19.webp", "/media/new-retail-forum/20.webp", "/media/new-retail-forum/21.webp", "/media/new-retail-forum/22.webp", "/media/new-retail-forum/23.webp", "/media/new-retail-forum/24.webp", "/media/new-retail-forum/25.webp", "/media/new-retail-forum/26.webp", "/media/new-retail-forum/27.webp", "/media/new-retail-forum/28.webp"]
+gallery:
+  - file: /media/new-retail-forum/01.webp
+    size: auto
+  - file: /media/new-retail-forum/02.webp
+    size: auto
+  - file: /media/new-retail-forum/03.webp
+    size: auto
+  - file: /media/new-retail-forum/04.webp
+    size: auto
+  - file: /media/new-retail-forum/05.webp
+    size: auto
+  - file: /media/new-retail-forum/06.webp
+    size: auto
+  - file: /media/new-retail-forum/07.webp
+    size: auto
+  - file: /media/new-retail-forum/08.webp
+    size: auto
+  - file: /media/new-retail-forum/09.webp
+    size: auto
+  - file: /media/new-retail-forum/10.webp
+    size: auto
+  - file: /media/new-retail-forum/11.webp
+    size: auto
+  - file: /media/new-retail-forum/12.webp
+    size: auto
+  - file: /media/new-retail-forum/13.webp
+    size: auto
+  - file: /media/new-retail-forum/14.webp
+    size: auto
+  - file: /media/new-retail-forum/15.webp
+    size: auto
+  - file: /media/new-retail-forum/16.webp
+    size: auto
+  - file: /media/new-retail-forum/17.webp
+    size: auto
+  - file: /media/new-retail-forum/18.webp
+    size: auto
+  - file: /media/new-retail-forum/19.webp
+    size: auto
+  - file: /media/new-retail-forum/20.webp
+    size: auto
+  - file: /media/new-retail-forum/21.webp
+    size: auto
+  - file: /media/new-retail-forum/22.webp
+    size: auto
+  - file: /media/new-retail-forum/23.webp
+    size: auto
+  - file: /media/new-retail-forum/24.webp
+    size: auto
+  - file: /media/new-retail-forum/25.webp
+    size: auto
+  - file: /media/new-retail-forum/26.webp
+    size: auto
+  - file: /media/new-retail-forum/27.webp
+    size: auto
+  - file: /media/new-retail-forum/28.webp
+    size: auto
 credits: ""
 award: "Cannes Corporate 2019, Silver Dolphin"
 ---

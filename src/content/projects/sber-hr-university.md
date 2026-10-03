@@ -18,7 +18,39 @@ video:
   youtube: "tL-vW03Fogw"
   legacy: ""
   more: []
-gallery: ["/media/sber-hr-university/01.webp", "/media/sber-hr-university/02.webp", "/media/sber-hr-university/03.webp", "/media/sber-hr-university/04.webp", "/media/sber-hr-university/05.webp", "/media/sber-hr-university/06.webp", "/media/sber-hr-university/07.webp", "/media/sber-hr-university/08.webp", "/media/sber-hr-university/09.webp", "/media/sber-hr-university/10.webp", "/media/sber-hr-university/11.webp", "/media/sber-hr-university/12.webp", "/media/sber-hr-university/13.webp", "/media/sber-hr-university/14.webp", "/media/sber-hr-university/15.webp", "/media/sber-hr-university/16.webp"]
+gallery:
+  - file: /media/sber-hr-university/01.webp
+    size: auto
+  - file: /media/sber-hr-university/02.webp
+    size: auto
+  - file: /media/sber-hr-university/03.webp
+    size: auto
+  - file: /media/sber-hr-university/04.webp
+    size: auto
+  - file: /media/sber-hr-university/05.webp
+    size: auto
+  - file: /media/sber-hr-university/06.webp
+    size: auto
+  - file: /media/sber-hr-university/07.webp
+    size: auto
+  - file: /media/sber-hr-university/08.webp
+    size: auto
+  - file: /media/sber-hr-university/09.webp
+    size: auto
+  - file: /media/sber-hr-university/10.webp
+    size: auto
+  - file: /media/sber-hr-university/11.webp
+    size: auto
+  - file: /media/sber-hr-university/12.webp
+    size: auto
+  - file: /media/sber-hr-university/13.webp
+    size: auto
+  - file: /media/sber-hr-university/14.webp
+    size: auto
+  - file: /media/sber-hr-university/15.webp
+    size: auto
+  - file: /media/sber-hr-university/16.webp
+    size: auto
 credits: ""
 award: ""
 ---

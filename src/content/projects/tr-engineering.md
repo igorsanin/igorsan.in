@@ -18,7 +18,51 @@ video:
   youtube: ""
   legacy: ""
   more: []
-gallery: ["/media/tr-engineering/01.webp", "/media/tr-engineering/02.webp", "/media/tr-engineering/03.webp", "/media/tr-engineering/04.webp", "/media/tr-engineering/05.webp", "/media/tr-engineering/06.webp", "/media/tr-engineering/07.webp", "/media/tr-engineering/08.webp", "/media/tr-engineering/09.webp", "/media/tr-engineering/10.webp", "/media/tr-engineering/11.webp", "/media/tr-engineering/12.webp", "/media/tr-engineering/13.webp", "/media/tr-engineering/14.webp", "/media/tr-engineering/15.webp", "/media/tr-engineering/16.webp", "/media/tr-engineering/17.webp", "/media/tr-engineering/18.webp", "/media/tr-engineering/19.webp", "/media/tr-engineering/20.webp", "/media/tr-engineering/21.webp", "/media/tr-engineering/22.webp"]
+gallery:
+  - file: /media/tr-engineering/01.webp
+    size: auto
+  - file: /media/tr-engineering/02.webp
+    size: auto
+  - file: /media/tr-engineering/03.webp
+    size: auto
+  - file: /media/tr-engineering/04.webp
+    size: auto
+  - file: /media/tr-engineering/05.webp
+    size: auto
+  - file: /media/tr-engineering/06.webp
+    size: auto
+  - file: /media/tr-engineering/07.webp
+    size: auto
+  - file: /media/tr-engineering/08.webp
+    size: auto
+  - file: /media/tr-engineering/09.webp
+    size: auto
+  - file: /media/tr-engineering/10.webp
+    size: auto
+  - file: /media/tr-engineering/11.webp
+    size: auto
+  - file: /media/tr-engineering/12.webp
+    size: auto
+  - file: /media/tr-engineering/13.webp
+    size: auto
+  - file: /media/tr-engineering/14.webp
+    size: auto
+  - file: /media/tr-engineering/15.webp
+    size: auto
+  - file: /media/tr-engineering/16.webp
+    size: auto
+  - file: /media/tr-engineering/17.webp
+    size: auto
+  - file: /media/tr-engineering/18.webp
+    size: auto
+  - file: /media/tr-engineering/19.webp
+    size: auto
+  - file: /media/tr-engineering/20.webp
+    size: auto
+  - file: /media/tr-engineering/21.webp
+    size: auto
+  - file: /media/tr-engineering/22.webp
+    size: auto
 credits: ""
 award: ""
 ---

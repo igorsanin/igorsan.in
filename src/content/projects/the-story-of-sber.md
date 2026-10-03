@@ -18,7 +18,25 @@ video:
   youtube: ""
   legacy: "KvBvtuGFKa-"
   more: []
-gallery: ["/media/the-story-of-sber/01.webp", "/media/the-story-of-sber/02.webp", "/media/the-story-of-sber/03.webp", "/media/the-story-of-sber/04.webp", "/media/the-story-of-sber/05.webp", "/media/the-story-of-sber/06.webp", "/media/the-story-of-sber/07.webp", "/media/the-story-of-sber/08.webp", "/media/the-story-of-sber/09.webp"]
+gallery:
+  - file: /media/the-story-of-sber/01.webp
+    size: auto
+  - file: /media/the-story-of-sber/02.webp
+    size: auto
+  - file: /media/the-story-of-sber/03.webp
+    size: auto
+  - file: /media/the-story-of-sber/04.webp
+    size: auto
+  - file: /media/the-story-of-sber/05.webp
+    size: auto
+  - file: /media/the-story-of-sber/06.webp
+    size: auto
+  - file: /media/the-story-of-sber/07.webp
+    size: auto
+  - file: /media/the-story-of-sber/08.webp
+    size: auto
+  - file: /media/the-story-of-sber/09.webp
+    size: auto
 credits: ""
 award: ""
 ---

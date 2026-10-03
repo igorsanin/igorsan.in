@@ -18,7 +18,19 @@ video:
   youtube: ""
   legacy: ""
   more: ["vimeo:389448527", "vimeo:389448288", "vimeo:389448736", "vimeo:389448767"]
-gallery: ["/media/runet-2019/01.webp", "/media/runet-2019/02.webp", "/media/runet-2019/03.webp", "/media/runet-2019/04.webp", "/media/runet-2019/05.webp", "/media/runet-2019/06.webp"]
+gallery:
+  - file: /media/runet-2019/01.webp
+    size: auto
+  - file: /media/runet-2019/02.webp
+    size: auto
+  - file: /media/runet-2019/03.webp
+    size: auto
+  - file: /media/runet-2019/04.webp
+    size: auto
+  - file: /media/runet-2019/05.webp
+    size: auto
+  - file: /media/runet-2019/06.webp
+    size: auto
 credits: ""
 award: ""
 ---

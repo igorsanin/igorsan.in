@@ -18,7 +18,41 @@ video:
   youtube: ""
   legacy: "T73-RC48nII"
   more: []
-gallery: ["/media/eda-premuim-tvc-branding/01.webp", "/media/eda-premuim-tvc-branding/02.webp", "/media/eda-premuim-tvc-branding/03.webp", "/media/eda-premuim-tvc-branding/04.webp", "/media/eda-premuim-tvc-branding/05.webp", "/media/eda-premuim-tvc-branding/06.webp", "/media/eda-premuim-tvc-branding/07.webp", "/media/eda-premuim-tvc-branding/08.webp", "/media/eda-premuim-tvc-branding/09.webp", "/media/eda-premuim-tvc-branding/10.webp", "/media/eda-premuim-tvc-branding/11.webp", "/media/eda-premuim-tvc-branding/12.webp", "/media/eda-premuim-tvc-branding/13.webp", "/media/eda-premuim-tvc-branding/14.webp", "/media/eda-premuim-tvc-branding/15.webp", "/media/eda-premuim-tvc-branding/16.webp", "/media/eda-premuim-tvc-branding/17.webp"]
+gallery:
+  - file: /media/eda-premuim-tvc-branding/01.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/02.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/03.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/04.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/05.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/06.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/07.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/08.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/09.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/10.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/11.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/12.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/13.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/14.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/15.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/16.webp
+    size: auto
+  - file: /media/eda-premuim-tvc-branding/17.webp
+    size: auto
 credits: ""
 award: "New York Festivals 2018, Silver (Best Station/Image Promotion)"
 ---

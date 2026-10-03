@@ -18,7 +18,13 @@ video:
   youtube: ""
   legacy: ""
   more: ["vimeo:789821113"]
-gallery: ["/media/riw-conference/01.webp", "/media/riw-conference/02.webp", "/media/riw-conference/03.webp"]
+gallery:
+  - file: /media/riw-conference/01.webp
+    size: auto
+  - file: /media/riw-conference/02.webp
+    size: auto
+  - file: /media/riw-conference/03.webp
+    size: auto
 credits: ""
 award: ""
 ---

@@ -18,7 +18,45 @@ video:
   youtube: ""
   legacy: "D2BsZGj5-Ie"
   more: []
-gallery: ["/media/moscow-of-the-future-at-spief-2025/01.webp", "/media/moscow-of-the-future-at-spief-2025/02.mp4", "/media/moscow-of-the-future-at-spief-2025/03.mp4", "/media/moscow-of-the-future-at-spief-2025/04.mp4", "/media/moscow-of-the-future-at-spief-2025/05.webp", "/media/moscow-of-the-future-at-spief-2025/06.webp", "/media/moscow-of-the-future-at-spief-2025/07.webp", "/media/moscow-of-the-future-at-spief-2025/08.webp", "/media/moscow-of-the-future-at-spief-2025/09.webp", "/media/moscow-of-the-future-at-spief-2025/10.webp", "/media/moscow-of-the-future-at-spief-2025/11.mp4", "/media/moscow-of-the-future-at-spief-2025/12.mp4", "/media/moscow-of-the-future-at-spief-2025/13.mp4", "/media/moscow-of-the-future-at-spief-2025/14.mp4", "/media/moscow-of-the-future-at-spief-2025/15.mp4", "/media/moscow-of-the-future-at-spief-2025/16.mp4", "/media/moscow-of-the-future-at-spief-2025/17.mp4", "/media/moscow-of-the-future-at-spief-2025/18.mp4", "/media/moscow-of-the-future-at-spief-2025/19.mp4"]
+gallery:
+  - file: /media/moscow-of-the-future-at-spief-2025/01.webp
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/02.mp4
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/03.mp4
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/04.mp4
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/05.webp
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/06.webp
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/07.webp
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/08.webp
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/09.webp
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/10.webp
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/11.mp4
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/12.mp4
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/13.mp4
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/14.mp4
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/15.mp4
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/16.mp4
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/17.mp4
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/18.mp4
+    size: auto
+  - file: /media/moscow-of-the-future-at-spief-2025/19.mp4
+    size: auto
 credits: ""
 award: ""
 ---

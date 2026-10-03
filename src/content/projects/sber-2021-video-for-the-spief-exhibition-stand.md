@@ -18,7 +18,29 @@ video:
   youtube: ""
   legacy: ""
   more: ["vimeo:572539438", "vimeo:572556347", "vimeo:572583251", "vimeo:572590643", "vimeo:572600154", "vimeo:572599265"]
-gallery: ["/media/sber-2021-video-for-the-spief-exhibition-stand/01.webp", "/media/sber-2021-video-for-the-spief-exhibition-stand/02.webp", "/media/sber-2021-video-for-the-spief-exhibition-stand/03.webp", "/media/sber-2021-video-for-the-spief-exhibition-stand/04.webp", "/media/sber-2021-video-for-the-spief-exhibition-stand/05.webp", "/media/sber-2021-video-for-the-spief-exhibition-stand/06.webp", "/media/sber-2021-video-for-the-spief-exhibition-stand/07.webp", "/media/sber-2021-video-for-the-spief-exhibition-stand/08.webp", "/media/sber-2021-video-for-the-spief-exhibition-stand/09.webp", "/media/sber-2021-video-for-the-spief-exhibition-stand/10.webp", "/media/sber-2021-video-for-the-spief-exhibition-stand/11.webp"]
+gallery:
+  - file: /media/sber-2021-video-for-the-spief-exhibition-stand/01.webp
+    size: auto
+  - file: /media/sber-2021-video-for-the-spief-exhibition-stand/02.webp
+    size: auto
+  - file: /media/sber-2021-video-for-the-spief-exhibition-stand/03.webp
+    size: auto
+  - file: /media/sber-2021-video-for-the-spief-exhibition-stand/04.webp
+    size: auto
+  - file: /media/sber-2021-video-for-the-spief-exhibition-stand/05.webp
+    size: auto
+  - file: /media/sber-2021-video-for-the-spief-exhibition-stand/06.webp
+    size: auto
+  - file: /media/sber-2021-video-for-the-spief-exhibition-stand/07.webp
+    size: auto
+  - file: /media/sber-2021-video-for-the-spief-exhibition-stand/08.webp
+    size: auto
+  - file: /media/sber-2021-video-for-the-spief-exhibition-stand/09.webp
+    size: auto
+  - file: /media/sber-2021-video-for-the-spief-exhibition-stand/10.webp
+    size: auto
+  - file: /media/sber-2021-video-for-the-spief-exhibition-stand/11.webp
+    size: auto
 credits: ""
 award: ""
 ---

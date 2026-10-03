@@ -18,7 +18,35 @@ video:
   youtube: "M9J_3fUSeak"
   legacy: ""
   more: []
-gallery: ["/media/delovoe-utro/01.webp", "/media/delovoe-utro/02.webp", "/media/delovoe-utro/03.webp", "/media/delovoe-utro/04.webp", "/media/delovoe-utro/05.webp", "/media/delovoe-utro/06.webp", "/media/delovoe-utro/07.webp", "/media/delovoe-utro/08.webp", "/media/delovoe-utro/09.webp", "/media/delovoe-utro/10.webp", "/media/delovoe-utro/11.webp", "/media/delovoe-utro/12.webp", "/media/delovoe-utro/13.webp", "/media/delovoe-utro/14.webp"]
+gallery:
+  - file: /media/delovoe-utro/01.webp
+    size: auto
+  - file: /media/delovoe-utro/02.webp
+    size: auto
+  - file: /media/delovoe-utro/03.webp
+    size: auto
+  - file: /media/delovoe-utro/04.webp
+    size: auto
+  - file: /media/delovoe-utro/05.webp
+    size: auto
+  - file: /media/delovoe-utro/06.webp
+    size: auto
+  - file: /media/delovoe-utro/07.webp
+    size: auto
+  - file: /media/delovoe-utro/08.webp
+    size: auto
+  - file: /media/delovoe-utro/09.webp
+    size: auto
+  - file: /media/delovoe-utro/10.webp
+    size: auto
+  - file: /media/delovoe-utro/11.webp
+    size: auto
+  - file: /media/delovoe-utro/12.webp
+    size: auto
+  - file: /media/delovoe-utro/13.webp
+    size: auto
+  - file: /media/delovoe-utro/14.webp
+    size: auto
 credits: ""
 award: ""
 ---

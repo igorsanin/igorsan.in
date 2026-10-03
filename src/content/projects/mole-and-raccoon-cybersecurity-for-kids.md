@@ -18,7 +18,31 @@ video:
   youtube: "OHH82YhXnfQ"
   legacy: ""
   more: ["yt:5Km8hGopuWQ", "yt:t2Wx34dMbn4", "yt:Vhwz3MNMPMw", "yt:bGmnK_ruQ-M", "yt:Ai-EOJKp7DQ", "yt:34_MUwctt9U", "yt:6e0cF0XS1q4", "yt:79lqw--lGEg", "yt:TrXv0VIAr84"]
-gallery: ["/media/mole-and-raccoon-cybersecurity-for-kids/01.webp", "/media/mole-and-raccoon-cybersecurity-for-kids/02.webp", "/media/mole-and-raccoon-cybersecurity-for-kids/03.webp", "/media/mole-and-raccoon-cybersecurity-for-kids/04.webp", "/media/mole-and-raccoon-cybersecurity-for-kids/05.webp", "/media/mole-and-raccoon-cybersecurity-for-kids/06.webp", "/media/mole-and-raccoon-cybersecurity-for-kids/07.webp", "/media/mole-and-raccoon-cybersecurity-for-kids/08.webp", "/media/mole-and-raccoon-cybersecurity-for-kids/09.webp", "/media/mole-and-raccoon-cybersecurity-for-kids/10.webp", "/media/mole-and-raccoon-cybersecurity-for-kids/11.webp", "/media/mole-and-raccoon-cybersecurity-for-kids/12.webp"]
+gallery:
+  - file: /media/mole-and-raccoon-cybersecurity-for-kids/01.webp
+    size: auto
+  - file: /media/mole-and-raccoon-cybersecurity-for-kids/02.webp
+    size: auto
+  - file: /media/mole-and-raccoon-cybersecurity-for-kids/03.webp
+    size: auto
+  - file: /media/mole-and-raccoon-cybersecurity-for-kids/04.webp
+    size: auto
+  - file: /media/mole-and-raccoon-cybersecurity-for-kids/05.webp
+    size: auto
+  - file: /media/mole-and-raccoon-cybersecurity-for-kids/06.webp
+    size: auto
+  - file: /media/mole-and-raccoon-cybersecurity-for-kids/07.webp
+    size: auto
+  - file: /media/mole-and-raccoon-cybersecurity-for-kids/08.webp
+    size: auto
+  - file: /media/mole-and-raccoon-cybersecurity-for-kids/09.webp
+    size: auto
+  - file: /media/mole-and-raccoon-cybersecurity-for-kids/10.webp
+    size: auto
+  - file: /media/mole-and-raccoon-cybersecurity-for-kids/11.webp
+    size: auto
+  - file: /media/mole-and-raccoon-cybersecurity-for-kids/12.webp
+    size: auto
 credits: ""
 award: ""
 ---

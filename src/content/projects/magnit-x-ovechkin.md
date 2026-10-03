@@ -18,7 +18,15 @@ video:
   youtube: ""
   legacy: "C58MffSaCv_"
   more: []
-gallery: ["/media/magnit-x-ovechkin/01.webp", "/media/magnit-x-ovechkin/02.mp4", "/media/magnit-x-ovechkin/03.mp4", "/media/magnit-x-ovechkin/04.mp4"]
+gallery:
+  - file: /media/magnit-x-ovechkin/01.webp
+    size: auto
+  - file: /media/magnit-x-ovechkin/02.mp4
+    size: auto
+  - file: /media/magnit-x-ovechkin/03.mp4
+    size: auto
+  - file: /media/magnit-x-ovechkin/04.mp4
+    size: auto
 credits: ""
 award: ""
 ---

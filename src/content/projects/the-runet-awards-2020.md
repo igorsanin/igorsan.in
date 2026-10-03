@@ -18,7 +18,71 @@ video:
   youtube: ""
   legacy: ""
   more: ["vimeo:502977202"]
-gallery: ["/media/the-runet-awards-2020/01.webp", "/media/the-runet-awards-2020/02.webp", "/media/the-runet-awards-2020/03.webp", "/media/the-runet-awards-2020/04.webp", "/media/the-runet-awards-2020/05.webp", "/media/the-runet-awards-2020/06.webp", "/media/the-runet-awards-2020/07.webp", "/media/the-runet-awards-2020/08.webp", "/media/the-runet-awards-2020/09.webp", "/media/the-runet-awards-2020/10.webp", "/media/the-runet-awards-2020/11.webp", "/media/the-runet-awards-2020/12.webp", "/media/the-runet-awards-2020/13.webp", "/media/the-runet-awards-2020/14.webp", "/media/the-runet-awards-2020/15.webp", "/media/the-runet-awards-2020/16.webp", "/media/the-runet-awards-2020/17.webp", "/media/the-runet-awards-2020/18.webp", "/media/the-runet-awards-2020/19.webp", "/media/the-runet-awards-2020/20.webp", "/media/the-runet-awards-2020/21.webp", "/media/the-runet-awards-2020/22.webp", "/media/the-runet-awards-2020/23.mp4", "/media/the-runet-awards-2020/24.mp4", "/media/the-runet-awards-2020/25.mp4", "/media/the-runet-awards-2020/26.mp4", "/media/the-runet-awards-2020/27.mp4", "/media/the-runet-awards-2020/28.mp4", "/media/the-runet-awards-2020/29.mp4", "/media/the-runet-awards-2020/30.mp4", "/media/the-runet-awards-2020/31.mp4", "/media/the-runet-awards-2020/32.webp"]
+gallery:
+  - file: /media/the-runet-awards-2020/01.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/02.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/03.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/04.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/05.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/06.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/07.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/08.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/09.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/10.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/11.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/12.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/13.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/14.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/15.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/16.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/17.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/18.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/19.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/20.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/21.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/22.webp
+    size: auto
+  - file: /media/the-runet-awards-2020/23.mp4
+    size: auto
+  - file: /media/the-runet-awards-2020/24.mp4
+    size: auto
+  - file: /media/the-runet-awards-2020/25.mp4
+    size: auto
+  - file: /media/the-runet-awards-2020/26.mp4
+    size: auto
+  - file: /media/the-runet-awards-2020/27.mp4
+    size: auto
+  - file: /media/the-runet-awards-2020/28.mp4
+    size: auto
+  - file: /media/the-runet-awards-2020/29.mp4
+    size: auto
+  - file: /media/the-runet-awards-2020/30.mp4
+    size: auto
+  - file: /media/the-runet-awards-2020/31.mp4
+    size: auto
+  - file: /media/the-runet-awards-2020/32.webp
+    size: auto
 credits: ""
 award: ""
 ---

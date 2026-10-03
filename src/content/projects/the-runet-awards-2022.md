@@ -18,7 +18,27 @@ video:
   youtube: ""
   legacy: ""
   more: ["vimeo:787017283"]
-gallery: ["/media/the-runet-awards-2022/01.webp", "/media/the-runet-awards-2022/02.webp", "/media/the-runet-awards-2022/03.webp", "/media/the-runet-awards-2022/04.webp", "/media/the-runet-awards-2022/05.webp", "/media/the-runet-awards-2022/06.webp", "/media/the-runet-awards-2022/07.webp", "/media/the-runet-awards-2022/08.webp", "/media/the-runet-awards-2022/09.webp", "/media/the-runet-awards-2022/10.webp"]
+gallery:
+  - file: /media/the-runet-awards-2022/01.webp
+    size: auto
+  - file: /media/the-runet-awards-2022/02.webp
+    size: auto
+  - file: /media/the-runet-awards-2022/03.webp
+    size: auto
+  - file: /media/the-runet-awards-2022/04.webp
+    size: auto
+  - file: /media/the-runet-awards-2022/05.webp
+    size: auto
+  - file: /media/the-runet-awards-2022/06.webp
+    size: auto
+  - file: /media/the-runet-awards-2022/07.webp
+    size: auto
+  - file: /media/the-runet-awards-2022/08.webp
+    size: auto
+  - file: /media/the-runet-awards-2022/09.webp
+    size: auto
+  - file: /media/the-runet-awards-2022/10.webp
+    size: auto
 credits: ""
 award: ""
 ---
