@@ -33,9 +33,6 @@ gallery:
   - file: /media/runet-2019/05.webp
     top: false
     size: full
-  - file: /media/runet-2019/04.webp
-    top: false
-    size: auto
   - file: /media/runet-2019/06.webp
     top: false
     size: auto
