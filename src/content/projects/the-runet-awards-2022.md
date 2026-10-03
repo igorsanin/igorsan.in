@@ -54,6 +54,7 @@ credits: |-
   Digital Artists — Ekaterina Pesterova, Svetlana Mikheeva, Veronika Sklyarova, Marina Zolina
   Animation — Mikhail Chuchkalov, Pavel Leonov, Sergey Kononenko
   Voiceover — Yulia Bocharova
+showCredits: false
 award: ''
 sectors:
   - Internet
