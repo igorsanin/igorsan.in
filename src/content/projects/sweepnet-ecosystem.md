@@ -19,7 +19,7 @@ video:
 gallery:
   - file: /media/sweepnet-ecosystem/01.webp
     top: false
-    size: auto
+    size: full
   - file: /media/sweepnet-ecosystem/02.webp
     top: false
     size: auto
@@ -37,37 +37,31 @@ gallery:
     size: auto
   - file: /media/sweepnet-ecosystem/07.mp4
     top: false
-    size: auto
+    size: third
   - file: /media/sweepnet-ecosystem/08.webp
     top: false
-    size: auto
-  - file: /media/sweepnet-ecosystem/09.webp
-    top: false
-    size: auto
+    size: third
   - file: /media/sweepnet-ecosystem/10.mp4
     top: false
-    size: auto
+    size: third
   - file: /media/sweepnet-ecosystem/11.mp4
     top: false
-    size: auto
-  - file: /media/sweepnet-ecosystem/12.webp
-    top: false
-    size: auto
+    size: third
   - file: /media/sweepnet-ecosystem/13.mp4
     top: false
-    size: auto
+    size: third
   - file: /media/sweepnet-ecosystem/14.mp4
     top: false
-    size: auto
+    size: third
   - file: /media/sweepnet-ecosystem/15.mp4
     top: false
-    size: auto
+    size: third
   - file: /media/sweepnet-ecosystem/16.mp4
     top: false
-    size: auto
+    size: third
   - file: /media/sweepnet-ecosystem/17.mp4
     top: false
-    size: auto
+    size: third
   - file: /media/sweepnet-ecosystem/18.webp
     top: false
     size: auto
@@ -81,9 +75,6 @@ gallery:
     top: false
     size: auto
   - file: /media/sweepnet-ecosystem/26.mp4
-    top: false
-    size: auto
-  - file: /media/sweepnet-ecosystem/27.webp
     top: false
     size: auto
 credits: |-
