@@ -19,10 +19,7 @@ video:
 gallery:
   - file: /media/runet-awards-24/01.mp4
     top: true
-    size: half
-  - file: /media/runet-awards-24/02.webp
-    top: false
-    size: half
+    size: full
   - file: /media/runet-awards-24/03.webp
     top: false
     size: half
