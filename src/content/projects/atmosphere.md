@@ -22,7 +22,7 @@ gallery:
   - file: /media/atmosphere/02.webp
     size: full
   - file: /media/atmosphere/04.mp4
-    size: full
+    size: auto
   - file: /media/atmosphere/05.mp4
     size: auto
   - file: /media/atmosphere/06.mp4
