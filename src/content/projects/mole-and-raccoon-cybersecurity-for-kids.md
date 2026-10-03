@@ -12,7 +12,7 @@ featured: true
 order: 10
 cover: /media/mole-and-raccoon-cybersecurity-for-kids/cover.webp
 video:
-  vimeo: ''
+  vimeo: '1232598930'
   youtube: ''
   legacy: ''
   more: []
