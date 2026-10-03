@@ -46,6 +46,43 @@ export async function measure(root) {
   return Object.keys(out).length;
 }
 
+// Real proportions of every Vimeo video used in the projects, from Vimeo's public oEmbed
+// endpoint ({ "123456": [w, h], ... } in src/data/video-sizes.json), so each player gets the
+// video's own aspect ratio instead of a fixed 16:9 with bars. Anything that can't be fetched
+// (no network, private video) is simply left out and falls back to 16:9.
+export async function measureVideos(root) {
+  const ids = new Set();
+  const dir = join(root, 'src/content/projects');
+  for (const f of await readdir(dir)) {
+    if (!f.endsWith('.md')) continue;
+    const text = await readFile(join(dir, f), 'utf8');
+    for (const m of text.matchAll(/vimeo(?::\s*["']?|\.com\/(?:[^\s"']*\/)?)(\d{5,})/gi)) ids.add(m[1]);
+  }
+  try {
+    const site = JSON.parse(await readFile(join(root, 'src/data/site.json'), 'utf8'));
+    if (site.reelVimeo) ids.add(String(site.reelVimeo));
+  } catch { /* no site.json */ }
+  // start from the last known sizes, so an offline build keeps them
+  let out = {};
+  try { out = JSON.parse(await readFile(join(root, 'src/data/video-sizes.json'), 'utf8')); } catch { /* first run */ }
+  let fetched = 0;
+  const queue = [...ids];
+  async function worker() {
+    while (queue.length) {
+      const id = queue.shift();
+      try {
+        const r = await fetch(`https://vimeo.com/api/oembed.json?url=${encodeURIComponent('https://vimeo.com/' + id)}`, { signal: AbortSignal.timeout(8000) });
+        if (!r.ok) continue;
+        const j = await r.json();
+        if (j.width > 0 && j.height > 0) { out[id] = [j.width, j.height]; fetched++; }
+      } catch { /* offline or private: stays 16:9 */ }
+    }
+  }
+  await Promise.all(Array.from({ length: 8 }, worker));
+  await writeFile(join(root, 'src/data/video-sizes.json'), JSON.stringify(out));
+  return [fetched, ids.size];
+}
+
 export default function mediaSizes() {
   return {
     name: 'media-sizes',
@@ -53,6 +90,8 @@ export default function mediaSizes() {
       'astro:config:setup': async ({ config, logger }) => {
         const n = await measure(new URL('.', config.root).pathname);
         logger.info(`measured ${n} media files`);
+        const [v, all] = await measureVideos(new URL('.', config.root).pathname);
+        logger.info(`video proportions fetched for ${v} of ${all} Vimeo videos (unknown ones stay 16:9)`);
       },
     },
   };

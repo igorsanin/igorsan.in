@@ -3,3 +3,4 @@ dist
 .astro
 .DS_Store
 src/data/media-sizes.json
+src/data/video-sizes.json
