@@ -19,7 +19,7 @@ const facts = [
 const meta = [d.year, d.client].filter(Boolean).join(' · ');
 const hasMain = d.video.vimeo || d.video.youtube || d.video.legacy;
 const rows = await layout(normalize(d.gallery));
-const coverSize = !hasMain && d.cover ? await dims(d.cover) : null;
+const coverSize = !hasMain && d.cover ? dims(d.cover) : null;
 // a picture is never shown wider than its real pixel width
 const cap = (w: number) => `max-width:${w}px`;
 ---

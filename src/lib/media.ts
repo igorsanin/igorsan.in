@@ -1,56 +1,22 @@
-// Build-time image sizes and gallery layout.
-// Reads real pixel sizes from /public (images via sharp, mp4 from its track header, else its .jpg poster),
-// so the page can (1) never stretch a picture past its real width and
-// (2) pick a sensible size for "auto" gallery items.
-import sharp from 'sharp';
-import { existsSync, readFileSync } from 'node:fs';
-import { join } from 'node:path';
+// Gallery layout from real pixel sizes.
+// Sizes come from src/data/media-sizes.json, written before every build by src/lib/media-sizes.mjs
+// (no filesystem access here, so this also runs in Cloudflare's prerender sandbox).
+import sizes from '../data/media-sizes.json';
 
 export type Size = 'auto' | 'full' | 'half' | 'third';
 export interface GalleryItem { file: string; size: Size }
 export interface Placed { file: string; video: boolean; w: number; h: number; span: 2 | 3 | 6 }
 
-const cache = new Map<string, { w: number; h: number } | null>();
 export const isVideo = (s: string) => /\.(mp4|webm)$/i.test(s);
 export const posterOf = (s: string) => s.replace(/\.(mp4|webm)$/i, '.jpg');
 
-// Video frame size from the mp4 track header ('tkhd': width/height as 16.16 fixed point at its end).
-function mp4Size(path: string): { w: number; h: number } | null {
-  try {
-    const b = readFileSync(path);
-    let best: { w: number; h: number } | null = null;
-    for (let i = b.indexOf('tkhd'); i !== -1; i = b.indexOf('tkhd', i + 4)) {
-      const size = b.readUInt32BE(i - 4);
-      const end = i - 4 + size;
-      if (size < 84 || end > b.length) continue;
-      const w = b.readUInt32BE(end - 8) >>> 16, h = b.readUInt32BE(end - 4) >>> 16;
-      if (w && h && (!best || w > best.w)) best = { w, h };
-    }
-    return best;
-  } catch { return null; }
-}
+const table = sizes as Record<string, [number, number]>;
 
-export async function dims(src: string) {
-  if (!src || !src.startsWith('/')) return null;
-  if (isVideo(src)) {
-    if (cache.has(src)) return cache.get(src)!;
-    const p = join(process.cwd(), 'public', decodeURI(src));
-    const v = existsSync(p) ? mp4Size(p) : null;
-    if (v) { cache.set(src, v); return v; }
-  }
-  const file = isVideo(src) ? posterOf(src) : src;
-  if (cache.has(file)) return cache.get(file)!;
-  const p = join(process.cwd(), 'public', decodeURI(file));
-  let out: { w: number; h: number } | null = null;
-  if (existsSync(p)) {
-    try {
-      const m = await sharp(p).metadata();
-      const w = m.autoOrient?.width ?? m.width, h = m.autoOrient?.height ?? m.height;
-      if (w && h) out = { w, h };
-    } catch { /* unreadable: leave unsized */ }
-  }
-  cache.set(file, out);
-  return out;
+/** Real size of a picture or video (falls back to the video's .jpg poster). */
+export function dims(src: string): { w: number; h: number } | null {
+  if (!src) return null;
+  const s = table[src] ?? (isVideo(src) ? table[posterOf(src)] : undefined);
+  return s ? { w: s[0], h: s[1] } : null;
 }
 
 // Columns out of 6: full = 6, half = 3, third = 2.
@@ -79,7 +45,7 @@ export async function layout(list: GalleryItem[]): Promise<Placed[][]> {
   let beat = 0;
   const placed: (Placed & { max: 2 | 3 | 6; auto: boolean })[] = [];
   for (const g of list) {
-    const d = (await dims(g.file)) ?? { w: 1920, h: 1080 };
+    const d = dims(g.file) ?? { w: 1920, h: 1080 };
     const max = maxSpan(d.w, d.h);
     let span: 2 | 3 | 6;
     if (g.size === 'auto') { span = Math.min(RHYTHM[beat % 3], max) as 2 | 3 | 6; beat++; }
