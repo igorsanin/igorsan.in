@@ -30,7 +30,7 @@ const videoRows = layoutVideos(d.video.more);
     <header class="head">
       <div class="toprow">
         <p class="eyebrow">{meta}</p>
-        {back && <a class="back" href="/work/">← All work</a>}
+        {back && <a class="mono-link" href="/work/">All projects →</a>}
       </div>
       <h1 class="display">{nbsp(d.title)}</h1>
     </header>
@@ -84,8 +84,6 @@ const videoRows = layoutVideos(d.video.more);
 <style>
   .head { display: flex; flex-direction: column; gap: 20px; padding-top: clamp(16px, 3vw, 40px); margin-bottom: clamp(32px, 4vw, 56px); }
   .toprow { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-  .back { font: 500 15px/1 var(--sans); color: var(--dim); text-decoration: none; }
-  .back:hover { color: var(--red); }
   h1 { font-size: clamp(44px, 6.5vw, 96px); line-height: .92; letter-spacing: -.04em; max-width: 16ch; }
   .media { display: flex; flex-direction: column; gap: 24px; }
   .media :global(.player) { border-radius: 16px; overflow: hidden; }
