@@ -74,9 +74,6 @@ gallery:
   - file: /media/runet-awards-24/21.webp
     top: false
     size: half
-  - file: /media/runet-awards-24/22.webp
-    top: false
-    size: half
   - file: /media/runet-awards-24/23.webp
     top: false
     size: full
