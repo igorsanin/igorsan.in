@@ -64,10 +64,10 @@ gallery:
     size: third
   - file: /media/sweepnet-ecosystem/25.mp4
     top: false
-    size: auto
+    size: half
   - file: /media/sweepnet-ecosystem/26.mp4
     top: false
-    size: full
+    size: half
 credits: |-
   Producer: Kirill Dmitriev
   Creative Director: Anna Abotina
