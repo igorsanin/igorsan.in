@@ -34,8 +34,8 @@ gallery:
     top: false
     size: full
   - file: /media/runet-2019/06.webp
-    top: false
-    size: auto
+    top: true
+    size: full
 credits: ''
 award: ''
 sectors:
