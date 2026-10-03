@@ -10,7 +10,7 @@ visibility: public
 tier: B
 featured: false
 order: 100
-cover: /media/runet-award-2021/cover.webp
+cover: /media/runet-award-2021/runet2011_cover_no-text.png
 video:
   vimeo: '1232641360'
   youtube: ''
