@@ -42,7 +42,7 @@ gallery:
   - file: /media/are-rules-just-for-the-weak/11.webp
     size: auto
   - file: /media/are-rules-just-for-the-weak/12.webp
-    size: auto
+    size: full
 credits: ""
 award: ""
 ---

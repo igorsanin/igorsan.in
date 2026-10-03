@@ -22,21 +22,21 @@ gallery:
   - file: /media/sber-scholarship-program/01.webp
     size: auto
   - file: /media/sber-scholarship-program/02.webp
-    size: auto
+    size: full
   - file: /media/sber-scholarship-program/03.webp
-    size: auto
+    size: full
   - file: /media/sber-scholarship-program/04.webp
-    size: auto
+    size: full
   - file: /media/sber-scholarship-program/05.webp
-    size: auto
+    size: full
   - file: /media/sber-scholarship-program/06.webp
-    size: auto
+    size: full
   - file: /media/sber-scholarship-program/07.webp
-    size: auto
+    size: full
   - file: /media/sber-scholarship-program/08.webp
-    size: auto
+    size: full
   - file: /media/sber-scholarship-program/09.webp
-    size: auto
+    size: full
   - file: /media/sber-scholarship-program/10.webp
     size: auto
   - file: /media/sber-scholarship-program/11.webp

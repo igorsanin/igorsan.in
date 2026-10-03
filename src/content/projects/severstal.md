@@ -34,7 +34,7 @@ gallery:
   - file: /media/severstal/07.webp
     size: auto
   - file: /media/severstal/08.webp
-    size: auto
+    size: full
   - file: /media/severstal/09.webp
     size: auto
   - file: /media/severstal/10.webp
@@ -46,7 +46,7 @@ gallery:
   - file: /media/severstal/13.webp
     size: auto
   - file: /media/severstal/14.webp
-    size: auto
+    size: full
   - file: /media/severstal/15.webp
     size: auto
   - file: /media/severstal/16.webp

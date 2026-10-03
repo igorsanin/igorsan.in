@@ -22,7 +22,7 @@ gallery:
   - file: /media/renera-gigafactory/01.webp
     size: auto
   - file: /media/renera-gigafactory/02.webp
-    size: auto
+    size: full
   - file: /media/renera-gigafactory/03.mp4
     size: auto
   - file: /media/renera-gigafactory/04.mp4

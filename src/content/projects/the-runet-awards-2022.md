@@ -24,7 +24,7 @@ gallery:
   - file: /media/the-runet-awards-2022/02.webp
     size: auto
   - file: /media/the-runet-awards-2022/03.webp
-    size: auto
+    size: full
   - file: /media/the-runet-awards-2022/04.webp
     size: auto
   - file: /media/the-runet-awards-2022/05.webp
@@ -36,7 +36,7 @@ gallery:
   - file: /media/the-runet-awards-2022/08.webp
     size: auto
   - file: /media/the-runet-awards-2022/09.webp
-    size: auto
+    size: full
   - file: /media/the-runet-awards-2022/10.webp
     size: auto
 credits: ""

@@ -62,7 +62,7 @@ gallery:
   - file: /media/the-runet-awards-2020/21.webp
     size: auto
   - file: /media/the-runet-awards-2020/22.webp
-    size: auto
+    size: full
   - file: /media/the-runet-awards-2020/23.mp4
     size: auto
   - file: /media/the-runet-awards-2020/24.mp4
@@ -82,7 +82,7 @@ gallery:
   - file: /media/the-runet-awards-2020/31.mp4
     size: auto
   - file: /media/the-runet-awards-2020/32.webp
-    size: auto
+    size: full
 credits: ""
 award: ""
 ---

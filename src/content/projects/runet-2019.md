@@ -24,11 +24,11 @@ gallery:
   - file: /media/runet-2019/02.webp
     size: auto
   - file: /media/runet-2019/03.webp
-    size: auto
+    size: full
   - file: /media/runet-2019/04.webp
     size: auto
   - file: /media/runet-2019/05.webp
-    size: auto
+    size: full
   - file: /media/runet-2019/06.webp
     size: auto
 credits: ""
