@@ -13,35 +13,43 @@ order: 10
 cover: /media/mole-and-raccoon-cybersecurity-for-kids/cover.webp
 video:
   vimeo: ''
-  youtube: OHH82YhXnfQ
+  youtube: ''
   legacy: ''
-  more:
-    - yt:5Km8hGopuWQ
+  more: []
 gallery:
   - file: /media/mole-and-raccoon-cybersecurity-for-kids/01.webp
+    top: false
     size: third
   - file: /media/mole-and-raccoon-cybersecurity-for-kids/03.webp
+    top: false
     size: third
   - file: /media/mole-and-raccoon-cybersecurity-for-kids/04.webp
+    top: false
     size: third
   - file: /media/mole-and-raccoon-cybersecurity-for-kids/05.webp
+    top: false
     size: third
   - file: /media/mole-and-raccoon-cybersecurity-for-kids/06.webp
+    top: false
     size: third
   - file: /media/mole-and-raccoon-cybersecurity-for-kids/07.webp
+    top: false
     size: third
   - file: /media/mole-and-raccoon-cybersecurity-for-kids/08.webp
+    top: false
     size: third
   - file: /media/mole-and-raccoon-cybersecurity-for-kids/09.webp
+    top: false
     size: third
   - file: /media/mole-and-raccoon-cybersecurity-for-kids/10.webp
+    top: false
     size: third
   - file: /media/mole-and-raccoon-cybersecurity-for-kids/11.webp
+    top: false
     size: third
   - file: /media/mole-and-raccoon-cybersecurity-for-kids/12.webp
+    top: false
     size: third
-  - file: /media/mole-and-raccoon-cybersecurity-for-kids/02.webp
-    size: full
 credits: ''
 award: ''
 sectors:
