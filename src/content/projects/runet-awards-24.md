@@ -18,12 +18,9 @@ video:
   more: []
 gallery:
   - file: /media/runet-awards-24/01.mp4
-    top: true
+    top: false
     size: full
   - file: /media/runet-awards-24/03.webp
-    top: false
-    size: half
-  - file: /media/runet-awards-24/04.webp
     top: false
     size: half
   - file: /media/runet-awards-24/05.webp
@@ -67,7 +64,7 @@ gallery:
     size: half
   - file: /media/runet-awards-24/18.webp
     top: false
-    size: auto
+    size: half
   - file: /media/runet-awards-24/19.webp
     top: false
     size: half
@@ -79,13 +76,13 @@ gallery:
     size: half
   - file: /media/runet-awards-24/22.webp
     top: false
-    size: full
+    size: half
   - file: /media/runet-awards-24/23.webp
     top: false
-    size: half
+    size: full
   - file: /media/runet-awards-24/24.webp
-    top: false
-    size: half
+    top: true
+    size: auto
 credits: ''
 award: ''
 sectors:
