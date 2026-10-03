@@ -10,7 +10,7 @@ visibility: public
 tier: A
 featured: true
 order: 7
-cover: /media/coral-travelers/cover.webp
+cover: /media/coral-travelers/10.webp
 video:
   vimeo: '1232606221'
   youtube: ''
@@ -54,6 +54,7 @@ gallery:
     top: false
     size: half
 credits: ''
+showCredits: true
 award: ''
 sectors:
   - Travel
