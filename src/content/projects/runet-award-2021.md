@@ -16,8 +16,8 @@ video:
   youtube: ''
   legacy: ''
   more:
-    - id: vimeo:660066398
-      size: auto
+    - id: vimeo:1232643545
+      size: full
     - id: vimeo:660361774
       size: auto
     - id: yt:KvwXNZUIi1w
