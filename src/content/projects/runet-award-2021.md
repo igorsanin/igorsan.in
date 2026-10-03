@@ -18,10 +18,6 @@ video:
   more:
     - id: vimeo:1232643545
       size: full
-    - id: vimeo:660361774
-      size: auto
-    - id: yt:KvwXNZUIi1w
-      size: auto
 gallery:
   - file: /media/runet-award-2021/04.mp4
     top: false
