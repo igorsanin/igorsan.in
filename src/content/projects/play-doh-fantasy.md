@@ -18,32 +18,43 @@ video:
   more: []
 gallery:
   - file: /media/play-doh-fantasy/01.webp
-    size: auto
-  - file: /media/play-doh-fantasy/02.webp
-    size: auto
+    top: false
+    size: half
   - file: /media/play-doh-fantasy/03.webp
-    size: auto
+    top: false
+    size: half
   - file: /media/play-doh-fantasy/04.webp
-    size: auto
+    top: false
+    size: half
   - file: /media/play-doh-fantasy/05.webp
-    size: auto
+    top: false
+    size: half
   - file: /media/play-doh-fantasy/06.webp
-    size: auto
+    top: false
+    size: third
   - file: /media/play-doh-fantasy/07.webp
-    size: auto
+    top: false
+    size: third
   - file: /media/play-doh-fantasy/08.webp
-    size: auto
+    top: false
+    size: third
   - file: /media/play-doh-fantasy/09.webp
-    size: auto
+    top: false
+    size: third
   - file: /media/play-doh-fantasy/10.webp
-    size: auto
+    top: false
+    size: third
   - file: /media/play-doh-fantasy/11.webp
-    size: auto
+    top: false
+    size: third
   - file: /media/play-doh-fantasy/12.webp
-    size: auto
+    top: false
+    size: third
   - file: /media/play-doh-fantasy/13.webp
-    size: auto
+    top: false
+    size: third
 credits: ''
+showCredits: false
 award: ''
 sectors:
   - Toys
