@@ -84,6 +84,7 @@ collections:
         summary: '{{fields.size}} · {{fields.file}}'
         fields:
           - { name: file, label: File, widget: file }
+          - { name: top, label: 'Show at the top (under the title, above the video)', widget: boolean, default: false, required: false }
           - name: size
             label: Size
             widget: select

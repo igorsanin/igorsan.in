@@ -1,0 +1,39 @@
+---
+// Rows of pictures / mp4 loops, up to 6 columns (full = 6, half = 3, third = 2), centred;
+// each item is capped at its real pixel width so nothing is blown up.
+import { posterOf, type Placed } from '../lib/media';
+interface Props { rows: Placed[][]; eager?: boolean }
+const { rows, eager = false } = Astro.props;
+const cap = (w: number) => `max-width:${w}px`;
+---
+{rows.length > 0 && (
+  <div class="gallery">
+    {rows.map((row) => (
+      <div class="g-row">
+        {row.map((g) => (
+          <div class={`g-item s${g.span}`} style={cap(g.w)}>
+            {g.video
+              ? <video src={g.file} poster={posterOf(g.file)} width={g.w} height={g.h} autoplay muted loop playsinline preload="metadata"></video>
+              : <img src={g.file} alt="" width={g.w} height={g.h} loading={eager ? 'eager' : 'lazy'} decoding="async" />}
+          </div>
+        ))}
+      </div>
+    ))}
+  </div>
+)}
+
+<style>
+  .gallery { --gap: 24px; display: flex; flex-direction: column; gap: var(--gap); }
+  .g-row { display: flex; justify-content: center; align-items: flex-start; gap: var(--gap); }
+  .g-item { flex: 0 1 auto; border-radius: 12px; overflow: hidden; background: #19191B; }
+  .g-item.s6 { width: 100%; }
+  .g-item.s3 { width: calc((100% - var(--gap)) / 2); }
+  .g-item.s2 { width: calc((100% - 2 * var(--gap)) / 3); }
+  .g-item img, .g-item video { display: block; width: 100%; height: auto; }
+  @media (max-width: 760px) {
+    .gallery { --gap: 16px; }
+    .g-row { flex-wrap: wrap; }
+    .g-item.s3, .g-item.s6 { width: 100%; }
+    .g-item.s2 { width: calc((100% - var(--gap)) / 2); }
+  }
+</style>

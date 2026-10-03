@@ -4,7 +4,7 @@
 import sizes from '../data/media-sizes.json';
 
 export type Size = 'auto' | 'full' | 'half' | 'third';
-export interface GalleryItem { file: string; size: Size }
+export interface GalleryItem { file: string; size: Size; top: boolean }
 export interface Placed { file: string; video: boolean; w: number; h: number; span: 2 | 3 | 6 }
 
 export const isVideo = (s: string) => /\.(mp4|webm)$/i.test(s);
@@ -32,8 +32,10 @@ function maxSpan(w: number, h: number): 2 | 3 | 6 {
   return 2;
 }
 /** Accepts old string entries and new {file, size} objects. */
-export function normalize(list: (string | { file: string; size?: Size })[]): GalleryItem[] {
-  return (list ?? []).map((g) => (typeof g === 'string' ? { file: g, size: 'auto' } : { file: g.file, size: g.size ?? 'auto' }))
+export function normalize(list: (string | { file: string; size?: Size; top?: boolean })[]): GalleryItem[] {
+  return (list ?? []).map((g) => (typeof g === 'string'
+      ? { file: g, size: 'auto' as Size, top: false }
+      : { file: g.file, size: g.size ?? 'auto', top: !!g.top }))
     .filter((g) => g.file);
 }
 

@@ -33,7 +33,7 @@ const projects = defineCollection({
     // /media/<slug>/NN.webp or .mp4; size: auto | full | half | third (old plain strings still accepted)
     gallery: z.array(z.union([
       z.string(),
-      z.object({ file: z.string(), size: z.enum(['auto', 'full', 'half', 'third']).default('auto') }),
+      z.object({ file: z.string(), size: z.enum(['auto', 'full', 'half', 'third']).default('auto'), top: z.boolean().default(false) }),
     ])).default([]),
     credits: z.string().default(''),
     award: z.string().default(''),
