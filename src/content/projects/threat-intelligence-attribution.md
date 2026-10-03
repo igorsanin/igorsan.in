@@ -18,22 +18,31 @@ video:
   more: []
 gallery:
   - file: /media/threat-intelligence-attribution/01.webp
+    top: true
     size: auto
   - file: /media/threat-intelligence-attribution/02.webp
+    top: false
     size: auto
   - file: /media/threat-intelligence-attribution/03.webp
+    top: false
     size: auto
   - file: /media/threat-intelligence-attribution/05.mp4
+    top: false
     size: auto
   - file: /media/threat-intelligence-attribution/06.mp4
+    top: false
     size: auto
   - file: /media/threat-intelligence-attribution/07.mp4
+    top: false
     size: auto
   - file: /media/threat-intelligence-attribution/08.mp4
+    top: false
     size: auto
   - file: /media/threat-intelligence-attribution/09.mp4
+    top: false
     size: auto
   - file: /media/threat-intelligence-attribution/10.mp4
+    top: false
     size: auto
 credits: ''
 award: ''
