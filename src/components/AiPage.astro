@@ -6,7 +6,7 @@ import { nbsp } from '../lib/typo';
 interface Item { title: string; for: string; does: string; bullets: string[]; gets: string; image: string }
 interface Case { title: string; tab?: string; text: string; image: string; links: { label: string; href: string }[] }
 interface Props { data: any; lang: 'en' | 'ru'; noindex?: boolean }
-const { data, lang, noindex = true } = Astro.props;
+const { data, lang, noindex = false } = Astro.props;
 const products: Item[] = data.products ?? [];
 const cases: Case[] = data.cases ?? [];
 ---

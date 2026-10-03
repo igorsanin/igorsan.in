@@ -161,7 +161,7 @@ collections:
             fields:
               - { name: title, label: Title, widget: string }
               - { name: text, label: Text, widget: text }
-              - { name: link, label: Link (optional; title becomes a link), widget: string, required: false }
+              - { name: link, label: 'Link (optional; title becomes a link). Site pages like /ai/ open in the same tab', widget: string, required: false }
           - name: awards
             label: Awards (About)
             widget: list
