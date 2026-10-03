@@ -83,12 +83,6 @@ gallery:
   - file: /media/runet-award-2021/31.webp
     top: false
     size: third
-  - file: /media/runet-award-2021/32.webp
-    top: false
-    size: third
-  - file: /media/runet-award-2021/33.webp
-    top: false
-    size: third
   - file: /media/runet-award-2021/35.webp
     top: false
     size: full
