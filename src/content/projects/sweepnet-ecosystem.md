@@ -22,19 +22,19 @@ gallery:
     size: full
   - file: /media/sweepnet-ecosystem/02.webp
     top: false
-    size: auto
+    size: full
   - file: /media/sweepnet-ecosystem/03.webp
     top: false
-    size: auto
+    size: half
   - file: /media/sweepnet-ecosystem/04.webp
     top: false
-    size: auto
+    size: half
   - file: /media/sweepnet-ecosystem/05.webp
     top: false
-    size: auto
+    size: half
   - file: /media/sweepnet-ecosystem/06.webp
     top: false
-    size: auto
+    size: half
   - file: /media/sweepnet-ecosystem/07.mp4
     top: false
     size: third
@@ -62,21 +62,12 @@ gallery:
   - file: /media/sweepnet-ecosystem/17.mp4
     top: false
     size: third
-  - file: /media/sweepnet-ecosystem/18.webp
-    top: false
-    size: auto
-  - file: /media/sweepnet-ecosystem/19.webp
-    top: false
-    size: auto
-  - file: /media/sweepnet-ecosystem/23.webp
-    top: false
-    size: auto
   - file: /media/sweepnet-ecosystem/25.mp4
     top: false
     size: auto
   - file: /media/sweepnet-ecosystem/26.mp4
     top: false
-    size: auto
+    size: full
 credits: |-
   Producer: Kirill Dmitriev
   Creative Director: Anna Abotina
