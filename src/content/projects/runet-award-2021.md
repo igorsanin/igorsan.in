@@ -31,7 +31,7 @@ gallery:
     size: half
   - file: /media/runet-award-2021/08.mp4
     top: false
-    size: half
+    size: full
   - file: /media/runet-award-2021/15.webp
     top: false
     size: third
