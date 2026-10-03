@@ -4,7 +4,7 @@ import Player from './Player.astro';
 import Card from './Card.astro';
 import { type Project } from '../lib/projects';
 import { nbsp } from '../lib/typo';
-import { dims, layout, normalize, posterOf } from '../lib/media';
+import { layout, normalize, posterOf } from '../lib/media';
 interface Props { project: Project; related?: Project[]; back?: boolean }
 const { project, related = [], back = true } = Astro.props;
 const d = project.data;
@@ -19,7 +19,6 @@ const facts = [
 const meta = [d.year, d.client].filter(Boolean).join(' · ');
 const hasMain = d.video.vimeo || d.video.youtube || d.video.legacy;
 const rows = await layout(normalize(d.gallery));
-const coverSize = !hasMain && d.cover ? dims(d.cover) : null;
 // a picture is never shown wider than its real pixel width
 const cap = (w: number) => `max-width:${w}px`;
 ---
@@ -33,11 +32,11 @@ const cap = (w: number) => `max-width:${w}px`;
       <h1 class="display">{nbsp(d.title)}</h1>
     </header>
 
-    <div class="media">
-      {hasMain
-        ? <Player vimeo={d.video.vimeo} youtube={d.video.youtube} legacy={d.video.legacy} title={d.title} />
-        : d.cover && <img class="hero-img" src={d.cover} alt="" style={coverSize ? cap(coverSize.w) : undefined} />}
-    </div>
+    {hasMain && (
+      <div class="media">
+        <Player vimeo={d.video.vimeo} youtube={d.video.youtube} legacy={d.video.legacy} title={d.title} />
+      </div>
+    )}
 
     <div class="body">
       <dl class="facts">
@@ -92,8 +91,7 @@ const cap = (w: number) => `max-width:${w}px`;
   .back { font: 500 15px/1 var(--sans); color: var(--dim); text-decoration: none; }
   .back:hover { color: var(--red); }
   h1 { font-size: clamp(44px, 6.5vw, 96px); line-height: .92; letter-spacing: -.04em; max-width: 16ch; }
-  .media :global(.player), .hero-img { border-radius: 16px; overflow: hidden; }
-  .hero-img { width: 100%; aspect-ratio: 16/9; object-fit: cover; margin: 0 auto; }
+  .media :global(.player) { border-radius: 16px; overflow: hidden; }
 
   .body { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 40px clamp(32px, 6vw, 80px); margin: clamp(48px, 6vw, 80px) 0; }
   .facts { margin: 0; display: grid; grid-template-columns: 120px minmax(0, 1fr); gap: 14px 16px; align-content: start; font-size: 15px; }
