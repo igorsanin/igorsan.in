@@ -18,24 +18,34 @@ video:
   more: []
 gallery:
   - file: /media/digital-risk-protection/01.webp
+    top: true
     size: auto
   - file: /media/digital-risk-protection/02.webp
+    top: false
     size: full
   - file: /media/digital-risk-protection/03.webp
+    top: false
     size: full
   - file: /media/digital-risk-protection/04.webp
+    top: false
     size: full
   - file: /media/digital-risk-protection/06.mp4
+    top: false
     size: auto
   - file: /media/digital-risk-protection/07.mp4
+    top: false
     size: auto
   - file: /media/digital-risk-protection/08.mp4
+    top: false
     size: auto
   - file: /media/digital-risk-protection/09.mp4
+    top: false
     size: auto
   - file: /media/digital-risk-protection/10.mp4
+    top: false
     size: auto
   - file: /media/digital-risk-protection/11.mp4
+    top: false
     size: auto
 credits: ''
 award: ''
