@@ -20,11 +20,11 @@ gallery:
   - file: /media/digital-risk-protection/01.webp
     size: auto
   - file: /media/digital-risk-protection/02.webp
-    size: auto
+    size: full
   - file: /media/digital-risk-protection/03.webp
-    size: auto
+    size: full
   - file: /media/digital-risk-protection/04.webp
-    size: auto
+    size: full
   - file: /media/digital-risk-protection/06.mp4
     size: auto
   - file: /media/digital-risk-protection/07.mp4
