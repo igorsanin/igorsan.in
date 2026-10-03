@@ -2,9 +2,9 @@
   "title": "AI production & pipelines",
   "description": "I build generative AI into agency and brand production: controllable pipelines, an e-commerce content factory, team training. Igor Sanin, 17 years in commercial video.",
   "eyebrow": "AI production · Pipelines · Training",
-  "headline": "I build generative AI into production — so it works predictably",
+  "headline": "I build AI into production — without chaos or slop",
   "sub": "I help agencies and brands make graphics and video with AI on time, on brand and without losing quality. 17 years in commercial video, my own production team, and an engineering approach instead of prompt guesswork.",
-  "heroImage": "https://onecdn.io/media/980394ed-3181-45a2-867c-ea50e58ead6c/lg",
+  "heroImage": "/media/ai/hero.webp",
   "ctaPrimary": "Discuss your project",
   "ctaSecondary": "See case studies",
   "productsTitle": "What I do",
@@ -24,7 +24,7 @@
         "support the team through its first live projects."
       ],
       "gets": "A team that produces tender visuals, animatics, storyboards and individual shots on its own — faster and with predictable quality.",
-      "image": "https://onecdn.io/media/71951597-2127-448b-a45e-6138fca1b56d/lg"
+      "image": "/media/ai/agency.webp"
     },
     {
       "title": "E‑commerce content factory",
@@ -32,7 +32,7 @@
       "does": "I build a pipeline around your catalogue: a virtual studio, digital models and environments, standards for light, angles and composition. From a single product photo the system produces everything a product card needs: images, short videos, descriptions, specs and marketplace tags.",
       "bullets": [],
       "gets": "Complete product cards, not just pictures. Visuals accurately convey shape, material, texture and colour, and copy and tags are adapted to each marketplace's requirements. New products reach the catalogue in minutes, not after a shoot day.",
-      "image": "https://onecdn.io/media/5ca9d197-d4ec-4d54-9334-8ce781bf96af/lg"
+      "image": "/media/ai/ecommerce.webp"
     },
     {
       "title": "Workshop or course for your team",
@@ -40,15 +40,27 @@
       "does": "I teach the craft, not just the buttons: scriptwriting, directing, editing — and how to build AI into all of it. From a one-day intensive to a multi-month course, online or in person.",
       "bullets": [],
       "gets": "A team that knows why every frame is there and can take AI generation to commercial quality.",
-      "image": "https://onecdn.io/media/0a00d63e-466a-4125-b971-fab0e5e6c34b/lg"
+      "image": "/media/ai/workshop.webp"
     }
   ],
   "stepsTitle": "How we work",
   "steps": [
-    { "title": "Intro call, 15 minutes", "text": "No brief, no commitment: you describe the task, I tell you what AI can realistically solve." },
-    { "title": "Review", "text": "A short written plan: what we automate, what stays with people, how many hours it will take." },
-    { "title": "Pilot", "text": "We test the approach on one real task before changing the whole process." },
-    { "title": "Rollout and support", "text": "Pipeline, guidelines, team training; after that I'm on hand when needed." }
+    {
+      "title": "Intro call, 15 minutes",
+      "text": "No brief, no commitment: you describe the task, I tell you what AI can realistically solve."
+    },
+    {
+      "title": "Review",
+      "text": "A short written plan: what we automate, what stays with people, how many hours it will take."
+    },
+    {
+      "title": "Pilot",
+      "text": "We test the approach on one real task before changing the whole process."
+    },
+    {
+      "title": "Rollout and support",
+      "text": "Pipeline, guidelines, team training; after that I'm on hand when needed."
+    }
   ],
   "billing": "I work on an hourly basis and give an estimate in hours before we start, so the budget is clear upfront.",
   "casesTitle": "Case studies",
@@ -57,37 +69,50 @@
     {
       "title": "Mockup factory for an apparel brand",
       "text": "For a brand with a catalogue of thousands of items, I automated marketplace product cards: a virtual studio, a pool of 15 digital models, and standards for light, angles and composition. From one product photo the system generates a full set of on-model images in a single click, accurately reproducing fit, fabric density and print type.",
-      "image": "https://onecdn.io/media/85f69ded-78f4-4981-b2c5-f0249ef53e64/lg",
-      "links": []
+      "image": "/media/ai/case-mockups.webp",
+      "links": [],
+      "tab": "Mockup factory"
     },
     {
       "title": "Brand animation framework",
       "text": "For a large company, I developed an animation style and a character base built on real employees. In the same style I created a virtual workspace. With these assets we produced two videos for the HR department in the company's brand identity.",
-      "image": "https://onecdn.io/media/08d8928a-8fc1-4555-b9b4-33a4c0586b48/lg",
-      "links": []
+      "image": "/media/ai/case-characters.webp",
+      "links": [],
+      "tab": "Brand animation"
     },
     {
       "title": "AI shots for commercial production",
       "text": "A large commercial project needed massive establishing shots of historical and sci-fi locations. Instead of weeks of CGI or a location shoot, I generated them in a few hours. Some shots were hybrid: actors filmed on green screen, integrated into AI environments.",
-      "image": "https://onecdn.io/media/06caaa87-db08-4c65-a234-797f29eee48b/lg",
-      "links": []
+      "image": "/media/ai/case-shots.webp",
+      "links": [],
+      "tab": "AI shots"
     },
     {
       "title": "Runet Prize: an identity made entirely with AI",
       "text": "In 2022 we created the full ceremony identity with neural networks — among the first in the industry, with a team of 14. In 2024 the ceremony was held at the Tretyakov Gallery, and for 15 nominations we created paintings in the style of classic Russian artists, finished with hand-animated brushwork.",
       "image": "/media/runet-awards-24/cover.webp",
       "links": [
-        { "label": "Runet Prize 2022", "href": "/work/the-runet-awards-2022/" },
-        { "label": "Runet Prize 2024", "href": "/work/runet-awards-24/" }
-      ]
+        {
+          "label": "Runet Prize 2022",
+          "href": "/work/the-runet-awards-2022/"
+        },
+        {
+          "label": "Runet Prize 2024",
+          "href": "/work/runet-awards-24/"
+        }
+      ],
+      "tab": "Runet Prize"
     },
     {
       "title": "Corporate course for an agency",
       "text": "For a major communications agency I ran a course on scriptwriting, dramaturgy, directing and editing: 3 months, 18 sessions, hybrid format. The team applied it to their own tasks during the course and now uses it in AI-integrated projects.",
-      "image": "https://onecdn.io/media/44a191b9-b1bd-438a-a2a3-8606458e711f/lg",
-      "links": []
+      "image": "/media/ai/case-course.webp",
+      "links": [],
+      "tab": "Agency course"
     }
   ],
   "contactTitle": "Got an AI challenge? Let's talk",
-  "contactText": "No brief, no commitment. Drop me a line and we'll have a 15-minute call: you tell me about the task, I'll sketch a few ways to solve it with AI."
+  "contactText": "No brief, no commitment. Drop me a line and we'll have a 15-minute call: you tell me about the task, I'll sketch a few ways to solve it with AI.",
+  "casesPrev": "Previous case",
+  "casesNext": "Next case"
 }

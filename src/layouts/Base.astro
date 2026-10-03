@@ -112,11 +112,11 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
     .contact {
       border-radius: 20px; overflow: hidden; min-height: 320px;
       padding: clamp(32px, 5vw, 56px);
-      display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; flex-wrap: wrap;
+      display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; gap: 32px 40px;
     }
     .contact-lead { display: flex; flex-direction: column; gap: 18px; max-width: 640px; }
     .contact h2 { font-size: clamp(36px, 5vw, 64px); line-height: .95; letter-spacing: -.03em; max-width: 12ch; }
-    .contact-lead.custom h2 { max-width: 16ch; }
+    .contact-lead.custom h2 { font-size: clamp(32px, 3.6vw, 52px); max-width: 17ch; text-wrap: balance; }
     .contact-lead p { margin: 0; font-size: 18px; line-height: 1.5; color: #E4E0DA; max-width: 44ch; }
     .lang { display: inline-flex; gap: 2px; padding: 3px; border-radius: 999px; box-shadow: inset 0 0 0 1px rgba(244,242,239,.35); }
     nav .lang a { font: 400 12px/1 var(--mono); letter-spacing: .06em; padding: 8px 10px; border-radius: 999px; color: var(--light); }
@@ -138,6 +138,7 @@ const isActive = (href: string) => path === href || path.startsWith(href + '/');
       .head-in { height: 84px; }
       main { padding-top: 84px; }
       nav > a:not(.talk) { display: none; }
+      .contact { grid-template-columns: 1fr; }
       .contact-links { align-items: flex-start; }
       .cta { justify-content: flex-start; }
     }

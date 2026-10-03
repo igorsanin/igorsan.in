@@ -4,12 +4,11 @@ import Base from '../layouts/Base.astro';
 import { nbsp } from '../lib/typo';
 
 interface Item { title: string; for: string; does: string; bullets: string[]; gets: string; image: string }
-interface Case { title: string; text: string; image: string; links: { label: string; href: string }[] }
+interface Case { title: string; tab?: string; text: string; image: string; links: { label: string; href: string }[] }
 interface Props { data: any; lang: 'en' | 'ru'; noindex?: boolean }
 const { data, lang, noindex = true } = Astro.props;
 const products: Item[] = data.products ?? [];
 const cases: Case[] = data.cases ?? [];
-const pad = (i: number) => String(i + 1).padStart(2, '0');
 ---
 <Base
   title={data.title}
@@ -20,10 +19,9 @@ const pad = (i: number) => String(i + 1).padStart(2, '0');
   contactTitle={data.contactTitle}
   contactText={data.contactText}
 >
-  <section class="hero">
-    {data.heroImage && <img class="bg" src={data.heroImage} alt="" fetchpriority="high" />}
-    <div class="pane glass">
-      <div class="in">
+  <section class="hero bg-glass" style="background-image:url(/brand/glass_03_seam.webp)">
+    <div class="wrap hero-in">
+      <div class="htext">
         <p class="eyebrow">{data.eyebrow}</p>
         <h1 class="display">{nbsp(data.headline)}</h1>
         <p class="sub">{nbsp(data.sub)}</p>
@@ -32,6 +30,7 @@ const pad = (i: number) => String(i + 1).padStart(2, '0');
           <a class="more" href="#cases">{data.ctaSecondary}</a>
         </div>
       </div>
+      {data.heroImage && <img class="himg" src={data.heroImage} alt="" width="1600" height="893" fetchpriority="high" />}
     </div>
   </section>
 
@@ -41,26 +40,21 @@ const pad = (i: number) => String(i + 1).padStart(2, '0');
       <p class="intro">{nbsp(data.productsIntro)}</p>
     </div>
     <div class="products">
-      {products.map((p, i) => (
+      {products.map((p) => (
         <article class="product">
-          <div class="pic">
-            {p.image && <img src={p.image} alt="" loading="lazy" decoding="async" />}
-            <span class="strip" aria-hidden="true"><span class="num">{pad(i)}</span></span>
-          </div>
-          <div class="ptext">
-            <h3 class="display">{nbsp(p.title)}</h3>
-            <dl>
-              <dt>{data.labelFor}</dt>
-              <dd>{nbsp(p.for)}</dd>
-              <dt>{data.labelDo}</dt>
-              <dd>
-                {p.does && <p>{nbsp(p.does)}</p>}
-                {p.bullets?.length > 0 && <ul>{p.bullets.map((b) => <li>{nbsp(b)}</li>)}</ul>}
-              </dd>
-              <dt>{data.labelGet}</dt>
-              <dd class="gets">{nbsp(p.gets)}</dd>
-            </dl>
-          </div>
+          {p.image && <img class="pic" src={p.image} alt="" width="1600" height="893" loading="lazy" decoding="async" />}
+          <h3 class="display">{nbsp(p.title)}</h3>
+          <dl>
+            <dt>{data.labelFor}</dt>
+            <dd>{nbsp(p.for)}</dd>
+            <dt>{data.labelDo}</dt>
+            <dd>
+              {p.does && <p>{nbsp(p.does)}</p>}
+              {p.bullets?.length > 0 && <ul>{p.bullets.map((b) => <li>{nbsp(b)}</li>)}</ul>}
+            </dd>
+            <dt>{data.labelGet}</dt>
+            <dd class="gets">{nbsp(p.gets)}</dd>
+          </dl>
         </article>
       ))}
     </div>
@@ -69,17 +63,16 @@ const pad = (i: number) => String(i + 1).padStart(2, '0');
   <section class="wrap block" aria-labelledby="steps">
     <div class="head">
       <h2 id="steps" class="display">{data.stepsTitle}</h2>
+      {data.billing && <p class="intro billing"><span class="rec"></span>{nbsp(data.billing)}</p>}
     </div>
     <ol class="steps">
-      {data.steps.map((s: { title: string; text: string }, i: number) => (
+      {data.steps.map((s: { title: string; text: string }) => (
         <li>
-          <span class="n">{pad(i)}</span>
           <h3>{nbsp(s.title)}</h3>
           <p>{nbsp(s.text)}</p>
         </li>
       ))}
     </ol>
-    {data.billing && <p class="billing"><span class="rec"></span>{nbsp(data.billing)}</p>}
   </section>
 
   <section id="cases" class="wrap block" aria-labelledby="cases-h">
@@ -87,115 +80,181 @@ const pad = (i: number) => String(i + 1).padStart(2, '0');
       <h2 id="cases-h" class="display">{data.casesTitle}</h2>
       <p class="intro">{nbsp(data.casesIntro)}</p>
     </div>
-    <div class="cases">
-      {cases.map((c, i) => (
-        <article class:list={['case', { wide: i === 0 }]}>
-          <div class="pic">
-            {c.image && <img src={c.image} alt="" loading="lazy" decoding="async" />}
-            <span class="strip" aria-hidden="true"><span class="num">{pad(i)}</span></span>
+    <div class="cases" data-cases>
+      <div class="tabs" role="tablist" aria-label={data.casesTitle}>
+        {cases.map((c, i) => (
+          <button class="tab" role="tab" id={`case-tab-${i}`} aria-controls={`case-${i}`} aria-selected={i === 0 ? 'true' : 'false'} tabindex={i === 0 ? 0 : -1}>
+            <span class="tab-t">{c.tab || c.title}</span>
+            <span class="bar" aria-hidden="true"><span></span></span>
+          </button>
+        ))}
+      </div>
+      <div class="stage">
+        {cases.map((c, i) => (
+          <div class="panel" role="tabpanel" id={`case-${i}`} aria-labelledby={`case-tab-${i}`} hidden={i !== 0}>
+            {c.image && <img class="pic" src={c.image} alt="" width="1600" height="893" loading={i === 0 ? 'eager' : 'lazy'} decoding="async" />}
+            <div class="ctext">
+              <h3 class="display">{nbsp(c.title)}</h3>
+              <p>{nbsp(c.text)}</p>
+              {c.links?.length > 0 && (
+                <p class="links">{c.links.map((l) => <a class="mono-link" href={l.href}>{l.label} →</a>)}</p>
+              )}
+            </div>
           </div>
-          <div class="ctext">
-            <h3 class="display">{nbsp(c.title)}</h3>
-            <p>{nbsp(c.text)}</p>
-            {c.links?.length > 0 && (
-              <p class="links">{c.links.map((l) => <a class="mono-link" href={l.href}>{l.label} →</a>)}</p>
-            )}
-          </div>
-        </article>
-      ))}
+        ))}
+        <div class="arrows">
+          <button class="arrow" data-prev aria-label={data.casesPrev}><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="2" /></svg></button>
+          <button class="arrow" data-next aria-label={data.casesNext}><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" /></svg></button>
+        </div>
+      </div>
     </div>
   </section>
 </Base>
 
-<style>
-  /* hero: image clear on the right, fluted glass over the left */
-  .hero { position: relative; height: min(86vh, 880px); min-height: 600px; margin-top: -108px; overflow: hidden; background: #19191B; }
-  .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .hero::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 180px; z-index: 2; pointer-events: none; background: linear-gradient(rgba(12,12,13,.6), rgba(12,12,13,0)); }
-  .pane { position: absolute; inset: 0 34% 0 0; display: flex; align-items: center; }
-  .in {
-    display: flex; flex-direction: column; gap: 26px;
-    padding: 108px var(--gutter) 24px max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)));
+<script>
+  // Case tabs: auto-advance every 8 s; stops for good once the visitor picks a case.
+  // Pauses on hover/focus and while the block is off screen; off with reduced motion.
+  const root = document.querySelector<HTMLElement>('[data-cases]');
+  if (root) {
+    const tabs = [...root.querySelectorAll<HTMLButtonElement>('.tab')];
+    const panels = [...root.querySelectorAll<HTMLElement>('.panel')];
+    const DUR = 8000;
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let cur = 0, auto = !reduce && tabs.length > 1, paused = false, visible = false, elapsed = 0, last = 0;
+
+    const show = (i: number, focus = false) => {
+      cur = (i + tabs.length) % tabs.length;
+      tabs.forEach((t, k) => {
+        const on = k === cur;
+        t.setAttribute('aria-selected', String(on));
+        t.tabIndex = on ? 0 : -1;
+        t.style.setProperty('--p', '0');
+      });
+      panels.forEach((p, k) => (p.hidden = k !== cur));
+      if (focus) tabs[cur].focus();
+      elapsed = 0;
+    };
+    const stop = () => { auto = false; tabs.forEach((t) => t.style.setProperty('--p', '0')); root.classList.add('manual'); };
+
+    tabs.forEach((t, i) => t.addEventListener('click', () => { stop(); show(i); }));
+    root.querySelector('.tabs')!.addEventListener('keydown', (e: Event) => {
+      const k = (e as KeyboardEvent).key;
+      if (k === 'ArrowRight' || k === 'ArrowDown') { e.preventDefault(); stop(); show(cur + 1, true); }
+      if (k === 'ArrowLeft' || k === 'ArrowUp') { e.preventDefault(); stop(); show(cur - 1, true); }
+    });
+    root.querySelector('[data-prev]')!.addEventListener('click', () => { stop(); show(cur - 1); });
+    root.querySelector('[data-next]')!.addEventListener('click', () => { stop(); show(cur + 1); });
+    root.addEventListener('mouseenter', () => (paused = true));
+    root.addEventListener('mouseleave', () => (paused = false));
+    root.addEventListener('focusin', () => (paused = true));
+    root.addEventListener('focusout', () => (paused = false));
+    new IntersectionObserver(([e]) => (visible = e.isIntersecting), { threshold: 0.4 }).observe(root);
+
+    const tick = (now: number) => {
+      const dt = last ? now - last : 0; last = now;
+      if (auto && visible && !paused && !document.hidden) {
+        elapsed += dt;
+        tabs[cur].style.setProperty('--p', String(Math.min(elapsed / DUR, 1)));
+        if (elapsed >= DUR) show(cur + 1);
+      }
+      if (auto) requestAnimationFrame(tick);
+    };
+    if (auto) requestAnimationFrame(tick); else root.classList.add('manual');
   }
-  h1 { font-size: clamp(40px, 5vw, 76px); line-height: .95; letter-spacing: -.035em; max-width: 15ch; }
-  .sub { margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.5; max-width: 50ch; color: #DAD6D0; }
-  .actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+</script>
+
+<style>
+  /* hero: red/black fluted brand background, text on the dark side, image clear beside it */
+  .hero { margin-top: -108px; padding: 108px 0 clamp(48px, 6vw, 80px); background-position: center; }
+  .hero-in { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); gap: 40px clamp(32px, 4vw, 56px); align-items: center; padding-top: clamp(24px, 4vw, 56px); }
+  .htext { display: flex; flex-direction: column; gap: 22px; }
+  h1 { font-size: clamp(36px, 3.7vw, 54px); line-height: .98; letter-spacing: -.035em; max-width: 19ch; text-wrap: balance; }
+  .sub { margin: 0; font-size: clamp(16px, 1.3vw, 18px); line-height: 1.5; max-width: 52ch; color: #DAD6D0; }
+  .actions { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; padding-top: 4px; }
   .more { font: 500 16px/1 var(--sans); color: var(--light); text-decoration: underline; text-decoration-color: var(--red); text-decoration-thickness: 2px; text-underline-offset: 7px; }
   .more:hover { color: var(--red); }
+  .himg { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 16px; box-shadow: 0 30px 80px rgba(0,0,0,.5), 0 0 0 1px rgba(244,242,239,.12); }
 
-  .block { padding-top: clamp(80px, 10vw, 136px); }
-  .head { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 16px 72px; align-items: baseline; margin-bottom: clamp(32px, 4vw, 48px); }
-  h2 { font-size: clamp(32px, 3.4vw, 44px); letter-spacing: -.02em; }
-  .intro { margin: 0; font-size: clamp(18px, 1.6vw, 21px); line-height: 1.45; color: #CFCBC5; max-width: 52ch; }
+  .block { padding-top: clamp(64px, 7vw, 96px); }
+  .head { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 12px 72px; align-items: baseline; margin-bottom: clamp(24px, 3vw, 36px); }
+  h2 { font-size: clamp(30px, 3vw, 40px); letter-spacing: -.02em; }
+  .intro { margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.45; color: #CFCBC5; max-width: 60ch; }
 
-  /* image with the brand glass strip and a mono index on it */
-  .pic { position: relative; overflow: hidden; border-radius: 14px; background: #19191B; }
-  .pic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-  .strip {
-    position: absolute; top: 0; left: 0; bottom: 0; width: 30%;
-    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
-    background:
-      repeating-linear-gradient(90deg, rgba(255,255,255,.10) 0px, rgba(255,255,255,0) 5px, rgba(0,0,0,.10) 11px, rgba(255,255,255,.05) 14px),
-      rgba(12,12,13,.28);
-  }
-  .strip::after { content: ''; position: absolute; top: 0; bottom: 0; right: 0; width: 1px; background: rgba(244,242,239,.55); }
-  .num { position: absolute; top: 16px; left: 18px; display: flex; align-items: center; gap: 8px; font: 400 12px/1 var(--mono); letter-spacing: .06em; }
-  .num::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--red); }
+  .pic { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 12px; background: #19191B; }
 
-  /* products: alternating rows */
-  .products { display: flex; flex-direction: column; gap: clamp(56px, 7vw, 96px); }
-  .product { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px clamp(32px, 5vw, 72px); align-items: start; }
-  .product:nth-child(even) .pic { order: 2; }
-  .product .pic { aspect-ratio: 4 / 3; }
-  .ptext { display: flex; flex-direction: column; gap: 28px; }
-  h3.display { font-size: clamp(28px, 2.8vw, 40px); line-height: 1; letter-spacing: -.025em; }
-  dl { margin: 0; display: grid; grid-template-columns: 150px minmax(0, 1fr); border-top: 1px solid var(--line); }
-  dt, dd { padding: 18px 0; border-bottom: 1px solid var(--line); }
-  dt { font: 400 12px/1.6 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--dim); padding-top: 21px; }
-  dd { margin: 0; font-size: 17px; line-height: 1.55; color: #CFCBC5; }
-  dd p { margin: 0 0 .6em; }
-  dd p:last-child { margin: 0; }
-  dd ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
-  dd li { position: relative; padding-left: 20px; }
-  dd li::before { content: ''; position: absolute; left: 0; top: .72em; width: 8px; height: 2px; background: var(--red); }
-  dd.gets { color: var(--light); font-weight: 500; }
+  /* products: three equal columns, same image ratio */
+  .products { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .product { display: flex; flex-direction: column; gap: 18px; }
+  h3.display { font-size: clamp(22px, 1.9vw, 27px); line-height: 1.02; letter-spacing: -.02em; }
+  dl { margin: 0; }
+  dt { font: 400 11px/1.4 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--dim); padding-top: 12px; border-top: 1px solid var(--line); }
+  dd { margin: 6px 0 14px; font-size: 15.5px; line-height: 1.5; color: #CFCBC5; }
+  dd p { margin: 0; }
+  dd ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 5px; }
+  dd li { position: relative; padding-left: 16px; }
+  dd li::before { content: ''; position: absolute; left: 0; top: .72em; width: 7px; height: 2px; background: var(--red); }
+  dd.gets { color: var(--light); font-weight: 500; margin-bottom: 0; }
 
   /* steps */
-  .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
-  .steps li { border-top: 2px solid var(--red); padding-top: 18px; display: flex; flex-direction: column; gap: 10px; }
-  .n { font: 400 12px var(--mono); letter-spacing: .06em; color: var(--dim); }
-  .steps h3 { margin: 0; font-weight: 900; font-size: 22px; line-height: 1.1; letter-spacing: -.01em; }
-  .steps p { margin: 0; color: #CFCBC5; line-height: 1.5; }
-  .billing { margin: 40px 0 0; padding: 22px 26px; border-radius: 12px; background: #161618; box-shadow: inset 0 0 0 1px var(--line); font-size: 18px; line-height: 1.5; }
+  .steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; counter-reset: s; }
+  .steps li { border-top: 2px solid var(--red); padding-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+  .steps h3 { margin: 0; font-weight: 900; font-size: 20px; line-height: 1.1; letter-spacing: -.01em; }
+  .steps p { margin: 0; color: #CFCBC5; line-height: 1.5; font-size: 15.5px; }
+  .billing { font-size: 16px; }
 
-  /* cases */
-  .cases { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(40px, 5vw, 64px) 24px; }
-  .case { display: flex; flex-direction: column; gap: 22px; }
-  .case .pic { aspect-ratio: 16 / 10; }
-  .case.wide { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 24px clamp(32px, 5vw, 72px); align-items: center; }
-  .ctext { display: flex; flex-direction: column; gap: 14px; }
-  .case h3.display { font-size: clamp(24px, 2.2vw, 30px); }
-  .ctext p { margin: 0; color: #CFCBC5; line-height: 1.55; max-width: 60ch; }
-  .links { display: flex; gap: 22px; flex-wrap: wrap; padding-top: 4px; }
-
-  @media (max-width: 1100px) {
-    .pane { inset: 0; }
-    .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 36px; }
+  /* cases: tabs on the left, one fixed-ratio stage on the right */
+  .cases { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 24px clamp(32px, 4vw, 56px); align-items: start; }
+  .tabs { display: flex; flex-direction: column; }
+  .tab {
+    all: unset; cursor: pointer; display: flex; flex-direction: column; gap: 12px;
+    padding: 16px 0 0; font: 900 clamp(18px, 1.5vw, 21px)/1.1 var(--sans); letter-spacing: -.01em; color: #6E6B68;
+    transition: color .2s;
   }
-  @media (max-width: 900px) {
+  .tab:hover { color: var(--light); }
+  .tab[aria-selected='true'] { color: var(--light); }
+  .tab:focus-visible { outline: 2px solid var(--red); outline-offset: 4px; border-radius: 2px; }
+  .bar { display: block; height: 2px; background: var(--line); }
+  .bar span { display: block; height: 100%; width: calc(var(--p, 0) * 100%); background: var(--red); }
+  .manual .tab[aria-selected='true'] .bar span, .tab[aria-selected='true'] .bar span { min-width: 0; }
+  .manual .tab[aria-selected='true'] .bar span { width: 100%; }
+
+  .stage { position: relative; }
+  .panel { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 20px 32px; align-items: start; animation: fade .45s ease; }
+  .panel[hidden] { display: none; }
+  @keyframes fade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  .ctext { display: flex; flex-direction: column; gap: 12px; padding-bottom: 56px; }
+  .ctext p { margin: 0; color: #CFCBC5; line-height: 1.55; font-size: 16px; }
+  .links { display: flex; gap: 20px; flex-wrap: wrap; padding-top: 4px; }
+  .arrows { position: absolute; right: 0; bottom: 0; display: flex; gap: 8px; }
+  .arrow { all: unset; cursor: pointer; width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; color: var(--light); box-shadow: inset 0 0 0 1px #3A3836; transition: background .15s, color .15s; }
+  .arrow:hover { background: var(--light); color: var(--dark); }
+  .arrow:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+  .arrow svg { width: 16px; height: 16px; }
+
+  @media (max-width: 1180px) {
+    .panel { grid-template-columns: 1fr; }
+    .ctext { padding-right: 110px; padding-bottom: 0; min-height: 44px; }
+  }
+  @media (max-width: 1000px) {
+    .hero-in { grid-template-columns: 1fr; }
+    h1 { max-width: 18ch; }
+    .himg { max-width: 720px; }
+    .products { grid-template-columns: 1fr; gap: 48px; }
+    .product { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 0 32px; align-items: start; }
+    .product .pic { grid-row: 1 / span 2; }
+    .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; }
     .head { grid-template-columns: 1fr; }
-    .product, .case.wide { grid-template-columns: 1fr; }
-    .product:nth-child(even) .pic { order: 0; }
-    .product .pic { aspect-ratio: 16 / 10; }
     .cases { grid-template-columns: 1fr; }
+    .tabs { flex-direction: row; gap: 20px; overflow-x: auto; scrollbar-width: none; margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter); }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab { flex: none; padding-top: 0; font-size: 17px; }
   }
-  @media (max-width: 640px) {
-    .hero { height: auto; min-height: 92vh; margin-top: -84px; }
-    .pane { align-items: flex-end; }
-    .in { padding-top: 120px; padding-bottom: 44px; }
-    dl { grid-template-columns: 1fr; }
-    dt { border-bottom: 0; padding: 16px 0 4px; }
-    dd { padding-top: 0; }
+  @media (max-width: 680px) {
+    .hero { margin-top: -84px; padding-top: 84px; }
+    h1 { font-size: 31px; }
+    .product { display: flex; }
     .steps { grid-template-columns: 1fr; }
+    .ctext { padding-right: 0; }
+    .arrows { position: static; justify-content: flex-end; margin-top: 16px; }
   }
 </style>
