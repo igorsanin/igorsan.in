@@ -22,9 +22,9 @@ gallery:
   - file: /media/riw-conference/01.webp
     size: auto
   - file: /media/riw-conference/02.webp
-    size: auto
+    size: full
   - file: /media/riw-conference/03.webp
-    size: auto
+    size: full
 credits: ""
 award: ""
 ---
