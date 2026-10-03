@@ -176,7 +176,7 @@ const cases: Case[] = data.cases ?? [];
   .himg { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 16px; box-shadow: 0 30px 80px rgba(0,0,0,.5), 0 0 0 1px rgba(244,242,239,.12); }
 
   .block { padding-top: clamp(64px, 7vw, 96px); }
-  .head { display: grid; grid-template-columns: minmax(0, 360px) minmax(0, 1fr); gap: 12px 72px; align-items: baseline; margin-bottom: clamp(24px, 3vw, 36px); }
+  .head { display: flex; flex-direction: column; gap: 12px; margin-bottom: clamp(24px, 3vw, 36px); }
   h2 { font-size: clamp(30px, 3vw, 40px); letter-spacing: -.02em; }
   .intro { margin: 0; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.45; color: #CFCBC5; max-width: 60ch; }
 
@@ -200,7 +200,7 @@ const cases: Case[] = data.cases ?? [];
   .steps li { border-top: 2px solid var(--red); padding-top: 16px; display: flex; flex-direction: column; gap: 8px; }
   .steps h3 { margin: 0; font-weight: 900; font-size: 20px; line-height: 1.1; letter-spacing: -.01em; }
   .steps p { margin: 0; color: #CFCBC5; line-height: 1.5; font-size: 15.5px; }
-  .billing { font-size: 16px; }
+
 
   /* cases: tabs on the left, one fixed-ratio stage on the right */
   .cases { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 24px clamp(32px, 4vw, 56px); align-items: start; }
@@ -243,7 +243,6 @@ const cases: Case[] = data.cases ?? [];
     .product { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 0 32px; align-items: start; }
     .product .pic { grid-row: 1 / span 2; }
     .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 28px; }
-    .head { grid-template-columns: 1fr; }
     .cases { grid-template-columns: 1fr; }
     .tabs { flex-direction: row; gap: 20px; overflow-x: auto; scrollbar-width: none; margin: 0 calc(var(--gutter) * -1); padding: 0 var(--gutter); }
     .tabs::-webkit-scrollbar { display: none; }
