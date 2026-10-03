@@ -1,44 +1,41 @@
 ---
-title: "Runet Prize 2022: an identity made with AI"
+title: 'Runet Prize 2022: an identity made with AI'
 year: 2022
-client: "RAEC"
-agency: ""
-role: "Idea, Creative Direction"
-production: "Production: Igor Sanin & team"
-summary: "One of the first ceremony identities made with generative AI — by a dozen people and several neural networks working as one team."
-visibility: "public"
-tier: "B"
+client: RAEC
+agency: ''
+role: Idea, Creative Direction
+production: 'Production: Igor Sanin & team'
+summary: One of the first ceremony identities made with generative AI — by a dozen people and several neural networks working as one team.
+visibility: public
+tier: B
 featured: true
 order: 6
-sectors: ["Internet", "Events"]
-formats: ["Ceremony identity"]
-cover: "/media/the-runet-awards-2022/cover.webp"
+cover: /media/the-runet-awards-2022/the-runet-awards-2022_no-text.png
 video:
-  vimeo: "787021477"
-  youtube: ""
-  legacy: ""
-  more: ["vimeo:787017283"]
+  vimeo: '787021477'
+  youtube: ''
+  legacy: ''
+  more:
+    - vimeo:787017283
 gallery:
-  - file: /media/the-runet-awards-2022/01.webp
-    size: auto
-  - file: /media/the-runet-awards-2022/02.webp
-    size: auto
   - file: /media/the-runet-awards-2022/03.webp
+    top: false
     size: full
-  - file: /media/the-runet-awards-2022/04.webp
-    size: auto
-  - file: /media/the-runet-awards-2022/05.webp
-    size: auto
   - file: /media/the-runet-awards-2022/06.webp
-    size: auto
+    top: false
+    size: half
   - file: /media/the-runet-awards-2022/07.webp
-    size: auto
-  - file: /media/the-runet-awards-2022/08.webp
-    size: auto
+    top: false
+    size: half
   - file: /media/the-runet-awards-2022/09.webp
+    top: false
+    size: full
+  - file: /media/the-runet-awards-2022/08.webp
+    top: false
     size: full
   - file: /media/the-runet-awards-2022/10.webp
-    size: auto
+    top: false
+    size: full
 credits: |-
   SILICON INTELLIGENCE
   Concept Artist — Midjourney
@@ -56,8 +53,14 @@ credits: |-
   Digital Artists — Ekaterina Pesterova, Svetlana Mikheeva, Veronika Sklyarova, Marina Zolina
   Animation — Mikhail Chuchkalov, Pavel Leonov, Sergey Kononenko
   Voiceover — Yulia Bocharova
-award: ""
+award: ''
+sectors:
+  - Internet
+  - Events
+formats:
+  - Ceremony identity
 ---
+
 For the 19th Runet Prize — the award for the year's most influential web projects and initiatives — we made the entire ceremony video design with generative AI: 11 opening and nomination films and the screens for the hall.
 
 In 2022 generative AI was the trend that was reshaping visual culture, so the ceremony itself became a statement about it. We put a dozen human artists and several machine ones in the same virtual office: Midjourney as concept artist, Stable Diffusion on animation and VFX, neural networks on sound design and music.
