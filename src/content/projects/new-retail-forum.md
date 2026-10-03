@@ -58,7 +58,7 @@ gallery:
     size: half
   - file: /media/new-retail-forum/14.webp
     top: false
-    size: half
+    size: full
   - file: /media/new-retail-forum/15.webp
     top: false
     size: half
