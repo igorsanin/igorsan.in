@@ -3,9 +3,9 @@ title: "Runet Prize 2021"
 year: 2021
 client: "RAEC"
 agency: ""
-role: "Creative Direction"
+role: "Idea, Creative Direction"
 production: "Production: Igor Sanin & team"
-summary: "Ceremony identity, openers and nomination graphics."
+summary: "Fourteen nomination films in which the internet is a source of light."
 visibility: "public"
 tier: "B"
 featured: false
@@ -89,7 +89,18 @@ gallery:
     size: auto
   - file: /media/runet-award-2021/35.webp
     size: auto
-credits: ""
+credits: |-
+  Idea — Dmitry Zakharchenko (RAEC), Sergey Grebennikov (RAEC), Igor Sanin
+  Creative Director — Igor Sanin
+  Art Direction — Sergey Eroshenko
+  3D — Sergey Eroshenko, Anton Galkin, Alex Kolomeytsev
+  2D — Timur Kamalev, Alex Kolomeytsev
+  Producers — Viktoria Dulshchikova, Lana Shakirova
+  Music & SFX — Ivan Nikandrov
 award: ""
 ---
-Ceremony identity for the Runet Prize 2021: opening sequence, nomination screens and stage graphics for the main award of the internet industry.
+Ceremony identity for the 18th Runet Prize, the main award of the Russian-language internet industry. Each year it goes to the most notable websites, apps and companies.
+
+Together with the organizers at RAEC we built the whole ceremony around one idea: the internet as a source of light. Light shows you the landmarks and helps you find your way to an idea. We made 14 opening films for the nominations — from gaming and esports to science, medicine, education and culture. Each one is a short adventure with its own storyline and the same hero: the light itself.
+
+Every nomination got its own neon symbol and its own world — red desert, ice, clouds, a night lake — so each film was designed separately. Before production we wrote a storyline and made styleframes for every nomination, then moved into 3D. The ceremony was streamed live on YouTube.
