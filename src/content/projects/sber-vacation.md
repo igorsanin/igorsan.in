@@ -17,7 +17,13 @@ video:
   vimeo: ""
   youtube: "zROk_2kGKbM"
   legacy: ""
-  more: ["yt:Lj2ZE4isc3g", "yt:IJGEwWiXllk", "yt:kYpwiLesz6Q"]
+  more:
+    - id: yt:Lj2ZE4isc3g
+      size: auto
+    - id: yt:IJGEwWiXllk
+      size: auto
+    - id: yt:kYpwiLesz6Q
+      size: auto
 gallery:
   - file: /media/sber-vacation/01.webp
     size: auto

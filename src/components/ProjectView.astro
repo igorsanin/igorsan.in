@@ -5,7 +5,7 @@ import Card from './Card.astro';
 import Gallery from './Gallery.astro';
 import { type Project } from '../lib/projects';
 import { nbsp } from '../lib/typo';
-import { layout, normalize } from '../lib/media';
+import { layout, layoutVideos, normalize } from '../lib/media';
 interface Props { project: Project; related?: Project[]; back?: boolean }
 const { project, related = [], back = true } = Astro.props;
 const d = project.data;
@@ -23,6 +23,7 @@ const items = normalize(d.gallery);
 // pictures ticked "Show at the top" go between the title and the description, above the video
 const topRows = await layout(items.filter((g) => g.top));
 const rows = await layout(items.filter((g) => !g.top));
+const videoRows = layoutVideos(d.video.more);
 ---
 <article class="proj">
   <div class="wrap">
@@ -48,15 +49,21 @@ const rows = await layout(items.filter((g) => !g.top));
       <div class="text">
         {d.summary && <p class="lead">{nbsp(d.summary)}</p>}
         <Content />
-        {d.credits && <p class="credits">{d.credits}</p>}
+        {d.credits && d.showCredits && <p class="credits">{d.credits}</p>}
       </div>
     </div>
 
-    {d.video.more.length > 0 && (
-      <div class="grid2">
-        {d.video.more.map((v) => v.startsWith('yt:')
-          ? <Player youtube={v.slice(3)} title={d.title} />
-          : <Player vimeo={v.replace('vimeo:', '')} title={d.title} />)}
+    {videoRows.length > 0 && (
+      <div class="videos">
+        {videoRows.map((row) => (
+          <div class="v-row">
+            {row.map((v) => (
+              <div class={`v-item s${v.span}`}>
+                <Player vimeo={v.vimeo} youtube={v.youtube} title={d.title} />
+              </div>
+            ))}
+          </div>
+        ))}
       </div>
     )}
 
@@ -93,8 +100,13 @@ const rows = await layout(items.filter((g) => !g.top));
   .lead { font-size: clamp(21px, 2vw, 26px) !important; line-height: 1.35; font-weight: 500; color: var(--light); }
   .credits { font: 400 13px/1.7 var(--mono); color: var(--dim); white-space: pre-line; border-top: 1px solid var(--line); padding-top: 18px; margin-top: 28px; }
 
-  .grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-bottom: 24px; }
-  .grid2 > :global(*) { border-radius: 12px; overflow: hidden; }
+  /* more videos: rows of up to 6 columns (full = 6, half = 3, third = 2), centred */
+  .videos { --gap: 24px; display: flex; flex-direction: column; gap: var(--gap); margin-bottom: var(--gap); }
+  .v-row { display: flex; justify-content: center; gap: var(--gap); }
+  .v-item { flex: 0 0 auto; border-radius: 12px; overflow: hidden; }
+  .v-item.s6 { width: 100%; }
+  .v-item.s3 { width: calc((100% - var(--gap)) / 2); }
+  .v-item.s2 { width: calc((100% - 2 * var(--gap)) / 3); }
 
   .related { margin-top: clamp(80px, 10vw, 128px); }
   .rel-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 28px; }
@@ -104,7 +116,10 @@ const rows = await layout(items.filter((g) => !g.top));
   @media (max-width: 640px) { .rel-grid { grid-template-columns: 1fr; } }
   @media (max-width: 760px) {
     .body { grid-template-columns: 1fr; }
-    .grid2 { grid-template-columns: 1fr; }
+    .videos { --gap: 16px; }
+    .v-row { flex-wrap: wrap; }
+    .v-item.s3, .v-item.s6 { width: 100%; }
+    .v-item.s2 { width: calc((100% - var(--gap)) / 2); }
     .media { gap: 16px; }
   }
 </style>

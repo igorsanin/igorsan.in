@@ -17,7 +17,19 @@ video:
   vimeo: "976195912"
   youtube: ""
   legacy: ""
-  more: ["vimeo:999513018", "vimeo:999518350", "vimeo:999521084", "vimeo:999510460", "vimeo:1001531128", "vimeo:1001615006"]
+  more:
+    - id: vimeo:999513018
+      size: auto
+    - id: vimeo:999518350
+      size: auto
+    - id: vimeo:999521084
+      size: auto
+    - id: vimeo:999510460
+      size: auto
+    - id: vimeo:1001531128
+      size: auto
+    - id: vimeo:1001615006
+      size: auto
 gallery:
   - file: /media/bam/01.webp
     size: auto

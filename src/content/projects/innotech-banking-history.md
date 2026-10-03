@@ -17,7 +17,17 @@ video:
   vimeo: "842826982"
   youtube: ""
   legacy: ""
-  more: ["vimeo:842827193", "vimeo:842899508", "vimeo:842827230", "vimeo:842827257", "vimeo:842827275"]
+  more:
+    - id: vimeo:842827193
+      size: auto
+    - id: vimeo:842899508
+      size: auto
+    - id: vimeo:842827230
+      size: auto
+    - id: vimeo:842827257
+      size: auto
+    - id: vimeo:842827275
+      size: auto
 gallery:
   - file: /media/innotech-banking-history/01.webp
     size: auto

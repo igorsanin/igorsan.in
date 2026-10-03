@@ -16,7 +16,8 @@ video:
   youtube: ''
   legacy: ''
   more:
-    - vimeo:787017283
+    - id: vimeo:787017283
+      size: auto
 gallery:
   - file: /media/the-runet-awards-2022/03.webp
     top: false

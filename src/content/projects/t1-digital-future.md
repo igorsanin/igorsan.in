@@ -17,7 +17,17 @@ video:
   vimeo: "847038839"
   youtube: ""
   legacy: ""
-  more: ["vimeo:847038804", "vimeo:847038917", "vimeo:847038672", "vimeo:847038873", "vimeo:847331418"]
+  more:
+    - id: vimeo:847038804
+      size: auto
+    - id: vimeo:847038917
+      size: auto
+    - id: vimeo:847038672
+      size: auto
+    - id: vimeo:847038873
+      size: auto
+    - id: vimeo:847331418
+      size: auto
 gallery:
   - file: /media/t1-digital-future/01.webp
     size: auto

@@ -17,7 +17,13 @@ video:
   vimeo: "660066018"
   youtube: ""
   legacy: ""
-  more: ["vimeo:660066398", "vimeo:660361774", "yt:KvwXNZUIi1w"]
+  more:
+    - id: vimeo:660066398
+      size: auto
+    - id: vimeo:660361774
+      size: auto
+    - id: yt:KvwXNZUIi1w
+      size: auto
 gallery:
   - file: /media/runet-award-2021/01.webp
     size: auto

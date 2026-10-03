@@ -16,10 +16,14 @@ video:
   youtube: ''
   legacy: ''
   more:
-    - vimeo:389448527
-    - vimeo:389448288
-    - vimeo:389448736
-    - vimeo:389448767
+    - id: vimeo:389448527
+      size: auto
+    - id: vimeo:389448288
+      size: auto
+    - id: vimeo:389448736
+      size: auto
+    - id: vimeo:389448767
+      size: auto
 gallery:
   - file: /media/runet-2019/01.webp
     top: false

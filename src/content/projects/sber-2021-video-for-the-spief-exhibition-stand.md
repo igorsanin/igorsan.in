@@ -17,7 +17,19 @@ video:
   vimeo: "572172598"
   youtube: ""
   legacy: ""
-  more: ["vimeo:572539438", "vimeo:572556347", "vimeo:572583251", "vimeo:572590643", "vimeo:572600154", "vimeo:572599265"]
+  more:
+    - id: vimeo:572539438
+      size: auto
+    - id: vimeo:572556347
+      size: auto
+    - id: vimeo:572583251
+      size: auto
+    - id: vimeo:572590643
+      size: auto
+    - id: vimeo:572600154
+      size: auto
+    - id: vimeo:572599265
+      size: auto
 gallery:
   - file: /media/sber-2021-video-for-the-spief-exhibition-stand/01.webp
     size: auto

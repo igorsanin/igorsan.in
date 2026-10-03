@@ -28,7 +28,12 @@ const projects = defineCollection({
       vimeo: z.string().default(''),
       youtube: z.string().default(''),
       legacy: z.string().default(''),        // old Adobe Portfolio player id, until re-uploaded to Vimeo
-      more: z.array(z.string()).default([]), // extra videos: "vimeo:123456" or "yt:abcDEF"
+      // extra videos: "vimeo:123456", "yt:abcDEF" or a Vimeo/YouTube link; size like the gallery
+      // (old plain strings still accepted)
+      more: z.array(z.union([
+        z.string(),
+        z.object({ id: z.string(), size: z.enum(['auto', 'full', 'half', 'third']).default('auto') }),
+      ])).default([]),
     }).default({ vimeo: '', youtube: '', legacy: '', more: [] }),
     // /media/<slug>/NN.webp or .mp4; size: auto | full | half | third (old plain strings still accepted)
     gallery: z.array(z.union([
@@ -36,6 +41,7 @@ const projects = defineCollection({
       z.object({ file: z.string(), size: z.enum(['auto', 'full', 'half', 'third']).default('auto'), top: z.boolean().default(false) }),
     ])).default([]),
     credits: z.string().default(''),
+    showCredits: z.boolean().default(true),
     award: z.string().default(''),
   }),
 });

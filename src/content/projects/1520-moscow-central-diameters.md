@@ -17,7 +17,17 @@ video:
   vimeo: "896453216"
   youtube: ""
   legacy: ""
-  more: ["vimeo:896454084", "vimeo:896484560", "vimeo:896454039", "vimeo:896484542", "vimeo:896454060"]
+  more:
+    - id: vimeo:896454084
+      size: auto
+    - id: vimeo:896484560
+      size: auto
+    - id: vimeo:896454039
+      size: auto
+    - id: vimeo:896484542
+      size: auto
+    - id: vimeo:896454060
+      size: auto
 gallery:
   - file: /media/1520-moscow-central-diameters/01.webp
     size: auto

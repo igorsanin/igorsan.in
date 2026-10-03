@@ -17,7 +17,11 @@ video:
   vimeo: ""
   youtube: "D5pbAcFyHtI"
   legacy: ""
-  more: ["yt:QmXbeEOO6ZE", "yt:6mROEBKSAYA"]
+  more:
+    - id: yt:QmXbeEOO6ZE
+      size: auto
+    - id: yt:6mROEBKSAYA
+      size: auto
 gallery:
   - file: /media/rostelekom-onlain-programma-dlya-hr-biznes-partnyorov/01.mp4
     size: auto

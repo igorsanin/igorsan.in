@@ -17,7 +17,9 @@ video:
   vimeo: "789819295"
   youtube: ""
   legacy: ""
-  more: ["vimeo:789821113"]
+  more:
+    - id: vimeo:789821113
+      size: auto
 gallery:
   - file: /media/riw-conference/01.webp
     size: auto

@@ -65,3 +65,40 @@ export async function layout(list: GalleryItem[]): Promise<Placed[][]> {
   for (const r of rows) if (r.length === 1 && r[0].auto && r[0].span === 3 && r[0].max === 6) r[0].span = 6;
   return rows.map((r) => r.map(({ max, auto, ...p }) => p));
 }
+
+// ---------- extra videos ("More videos") ----------
+export interface VideoSlot { vimeo?: string; youtube?: string; span: 2 | 3 | 6 }
+
+/** "vimeo:123", "yt:abc", a bare number, or a vimeo.com / youtube.com / youtu.be link. */
+export function parseVideo(raw: string): { vimeo?: string; youtube?: string } | null {
+  const s = (raw ?? '').trim();
+  if (!s) return null;
+  let m;
+  if ((m = s.match(/^vimeo:\s*(\d+)/i))) return { vimeo: m[1] };
+  if ((m = s.match(/^(?:yt|youtube):\s*([\w-]{6,})/i))) return { youtube: m[1] };
+  if ((m = s.match(/^\d+$/))) return { vimeo: s };
+  if ((m = s.match(/vimeo\.com\/(?:.*\/)?(\d+)/i))) return { vimeo: m[1] };
+  if ((m = s.match(/(?:youtu\.be\/|[?&]v=|\/embed\/|\/shorts\/)([\w-]{6,})/i))) return { youtube: m[1] };
+  return null;
+}
+
+/** Auto = two per row; an auto video left alone in its row goes full width. Manual sizes are used as set. */
+export function layoutVideos(list: (string | { id: string; size?: Size })[]): VideoSlot[][] {
+  const items = (list ?? []).map((v) => (typeof v === 'string' ? { id: v, size: 'auto' as Size } : { id: v.id, size: v.size ?? 'auto' }));
+  const placed: (VideoSlot & { auto: boolean })[] = [];
+  for (const it of items) {
+    const p = parseVideo(it.id);
+    if (!p) continue;
+    const span = it.size === 'auto' ? 3 : SPAN[it.size];
+    placed.push({ ...p, span, auto: it.size === 'auto' });
+  }
+  const rows: typeof placed[] = [];
+  let row: typeof placed = [], used = 0;
+  for (const p of placed) {
+    if (used + p.span > 6 && row.length) { rows.push(row); row = []; used = 0; }
+    row.push(p); used += p.span;
+  }
+  if (row.length) rows.push(row);
+  for (const r of rows) if (r.length === 1 && r[0].auto) r[0].span = 6;
+  return rows.map((r) => r.map(({ auto, ...p }) => p));
+}

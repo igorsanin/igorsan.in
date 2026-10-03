@@ -74,7 +74,23 @@ collections:
           - { name: vimeo, label: Vimeo ID, widget: string, required: false, hint: 'The number from vimeo.com/123456789' }
           - { name: youtube, label: YouTube ID, widget: string, required: false }
           - { name: legacy, label: Old Adobe player ID (temporary), widget: string, required: false }
-          - { name: more, label: 'More videos (vimeo:123456 or yt:abcDEF)', widget: list, required: false }
+          - name: more
+            label: More videos
+            widget: list
+            required: false
+            hint: 'Auto: two per row, a single one left over goes full width.'
+            summary: '{{fields.size}} · {{fields.id}}'
+            fields:
+              - { name: id, label: 'Video (vimeo:123456, yt:abcDEF or a Vimeo / YouTube link)', widget: string }
+              - name: size
+                label: Size
+                widget: select
+                default: auto
+                options:
+                  - { label: 'Auto — two per row', value: auto }
+                  - { label: 'Full width', value: full }
+                  - { label: 'Half', value: half }
+                  - { label: 'Third', value: third }
       - { name: body, label: Description, widget: markdown }
       - name: gallery
         label: Gallery (images or mp4)
@@ -95,6 +111,7 @@ collections:
               - { label: 'Half', value: half }
               - { label: 'Third', value: third }
       - { name: credits, label: Credits, widget: text, required: false }
+      - { name: showCredits, label: Show credits on the page, widget: boolean, default: true, required: false }
       - { name: award, label: Award, widget: string, required: false }
       - { name: sectors, label: Sectors, widget: list, required: false }
       - { name: formats, label: Formats, widget: list, required: false }

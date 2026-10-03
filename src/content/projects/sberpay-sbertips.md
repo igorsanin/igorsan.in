@@ -17,7 +17,9 @@ video:
   vimeo: "868664413"
   youtube: ""
   legacy: ""
-  more: ["vimeo:868667606"]
+  more:
+    - id: vimeo:868667606
+      size: auto
 gallery:
   - file: /media/sberpay-sbertips/01.webp
     size: auto
