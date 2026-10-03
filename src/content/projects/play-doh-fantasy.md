@@ -14,7 +14,7 @@ cover: /media/play-doh-fantasy/cover.webp
 video:
   vimeo: '1232581179'
   youtube: ''
-  legacy: PGfcg6LftRa
+  legacy: ''
   more: []
 gallery:
   - /media/play-doh-fantasy/01.webp
@@ -30,14 +30,6 @@ gallery:
   - /media/play-doh-fantasy/11.webp
   - /media/play-doh-fantasy/12.webp
   - /media/play-doh-fantasy/13.webp
-  - /media/play-doh-fantasy/14.webp
-  - /media/play-doh-fantasy/15.webp
-  - /media/play-doh-fantasy/16.webp
-  - /media/play-doh-fantasy/17.webp
-  - /media/play-doh-fantasy/18.webp
-  - /media/play-doh-fantasy/19.webp
-  - /media/play-doh-fantasy/20.webp
-  - /media/play-doh-fantasy/21.webp
 credits: ''
 award: ''
 sectors:
